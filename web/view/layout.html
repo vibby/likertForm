@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="no-js ie7 oldie" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="fr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]><script src="../js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../css/knacss.css" media="all">
+    <link rel="stylesheet" href="../css/knacss-garni.css" media="all">
+    <style>
+        /* box-sizing for IE6/IE7 */
+        /* https://github.com/Schepp/box-sizing-polyfill*/
+        .ie7 * {
+            behavior: url(../js/boxsizing.htc);
+        }
+        form { max-width: 100%; }
+        form label { float: left; }
+    </style>
+    {% block head %}
+    {% endblock %}
+</head>
+
+
+<body class="mw960p center">
+    <header class="line mod">
+        <p>header</p>
+    </header>
+    <div class="line">
+        <div class="content mod">
+            <h1>{% block h1 %}{% endblock %}</h1>
+            <div class="item">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+    <footer class="line mod">
+        <p>footer</p>
+    </footer>
+</body>
+</html>

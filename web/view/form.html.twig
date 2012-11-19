@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+{% form_theme form _self %}
+
+{% block form_row %}
+    <p>
+        {{ form_label(form) }}
+        {{ form_widget(form) }}
+    </p>
+    {% if help is defined %}
+        <p class="form-help">
+            {{ help }}
+        </p>
+    {% endif %}
+    {% if form_errors(form) %}
+        <p class="form-error">{{ form_errors(form) }}</p>
+    {% endif %}
+{% endblock %}
+
+
+{% block title %}Questionaire{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <form action="#" method="post">
+        {{ form_widget(form) }}
+
+        <input type="submit" name="submit" value="Continuer" />
+    </form>
+{% endblock %}
+
+
+
