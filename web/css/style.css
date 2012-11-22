@@ -1,0 +1,13 @@
+form label {
+    min-width: 400px;
+}
+form label+div>label{
+    float:none;
+    min-width: auto;
+}
+div.ok4+div.ok4 div label{
+    display:none;
+}
+div.ok7+div.ok7 div label{
+    display:none;
+}

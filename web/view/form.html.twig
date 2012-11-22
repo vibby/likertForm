@@ -4,10 +4,10 @@
 {% form_theme form _self %}
 
 {% block form_row %}
-    <p>
+    <div class="{{ form.get('attr').class }}">
         {{ form_label(form) }}
         {{ form_widget(form) }}
-    </p>
+    </div>
     {% if help is defined %}
         <p class="form-help">
             {{ help }}
@@ -18,6 +18,14 @@
     {% endif %}
 {% endblock %}
 
+
+{#
+    TODO
+    grouper dans une span les label et radio
+    mettre le label devant la radio et pas derrière
+    appliquer table-cell à la span, et display block au label
+    un text-align center permettra de les aligner nickel
+#}
 
 {% block title %}Questionaire{% endblock %}
 {% block head %}

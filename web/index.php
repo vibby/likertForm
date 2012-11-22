@@ -16,8 +16,10 @@ $app->register(new Silex\Provider\TranslationServiceProvider(), array(
     'translator.messages' => array(),
 ));
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/view',
+    'twig.path' => __DIR__ . '/view',
+    'twig.options' => array('debug' => true)
 ));
+// $app['twig']->addExtension(new Twig_Extensions_Extension_Debug());
 
 $app->match('/', function (Request $request) use ($app) {
     return $app['twig']->render('index.html.twig');
@@ -30,17 +32,21 @@ $app->match('/merci', function (Request $request) use ($app) {
 $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use ($app) {
 
 	$likertScales = array(
-	    '4ok' => array( 'Pas du tout d\'accord', 'Pas d\'accord', 'D\'accord', 'Tout � fait d\'accord'),
+	    'ok4' => array( 'Pas du tout d\'accord', 'Pas d\'accord', 'D\'accord', 'Tout à fait d\'accord'),
+      'ok7' => array( 'Rien', 'Rare', 'Peu', 'Moyen', 'Courant', 'Frequent', 'Omniprésent'),
 	);
 
 	$likertQuestions = array(
 	    array(
-		array ('Ce programme est-il bien fait ?', '4ok'),
-		array ('Page 1 question 2', '4ok'),
-	    ),
+  		  array ('Ce programme est-il bien fait ?', 'ok4'),
+  		  array ('Page 1 question 2', 'ok4'),
+        array ('Ce programme est-il vraiment bien fait ?', 'ok7'),
+        array ('Page 1 question 4', 'ok7'),
+        array ('Page 1 question 5', 'ok4'),
+      ),
 	    array(
-		array ('Ce programme est-il bien fait 2 ?', '4ok'),
-		array ('Page 2 question 2', '4ok'),
+        array ('Ce programme est-il bien fait 2 ?', 'ok4'),
+        array ('Page 2 question 2', 'ok4'),
 	    ),
 	);
 
@@ -66,6 +72,9 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
               'expanded' => true,
               'multiple' => false,
               'constraints' => new Assert\Choice(array_keys($likertScales[ $likertQuestion[1] ])),
+              'attr' => array(
+                'class' => $likertQuestion[1],
+              ),
 		          'label' => $likertQuestion[0],
           ));
       }
