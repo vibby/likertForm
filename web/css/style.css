@@ -1,13 +1,26 @@
 form label {
     min-width: 400px;
 }
-form label+div>label{
+form label+div label{
     float:none;
     min-width: auto;
 }
-div.ok4+div.ok4 div label{
-    display:none;
+.ok7{
+    margin-top: 30px;
 }
-div.ok7+div.ok7 div label{
-    display:none;
+.ok4+.ok4, .ok7+.ok7{
+    background: #f00;
+    margin-top: 1px:
+}
+.ok4+.ok4 div label, .ok7+.ok7 div label{
+    visibility:hidden;
+    height: 1px;
+}
+.choiceItem{
+    display: table-cell;
+    text-align: center;
+}
+.choiceItem label{
+    display: block;
+    padding: 0 6px;
 }

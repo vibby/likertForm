@@ -18,16 +18,23 @@
     {% endif %}
 {% endblock %}
 
-
-{#
-    TODO
-    grouper dans une span les label et radio
-    mettre le label devant la radio et pas derrière
-    appliquer table-cell à la span, et display block au label
-    un text-align center permettra de les aligner nickel
-#}
+{% block choice_widget_expanded %}
+{% spaceless %}
+    <div {{ block('widget_container_attributes') }}>
+    {% for child in form %}
+        <span class="choiceItem">
+            {{ form_label(child) }}
+            {{ form_widget(child) }}
+        </span>
+    {% endfor %}
+    </div>
+{% endspaceless %}
+{% endblock choice_widget_expanded %}
 
 {% block title %}Questionaire{% endblock %}
+
+{% block h1 %}Page {{ idPage }}{% endblock %}
+
 {% block head %}
     {{ parent() }}
     <style type="text/css">
