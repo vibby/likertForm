@@ -31,6 +31,7 @@ $app->match('/merci', function (Request $request) use ($app) {
 
 $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use ($app) {
 
+// CONFIGURATION
 	$likertScales = array(
 	    'ok4' => array( 'Pas du tout d\'accord', 'Pas d\'accord', 'D\'accord', 'Tout à fait d\'accord'),
       'ok7' => array( 'Rien', 'Rare', 'Peu', 'Moyen', 'Courant', 'Frequent', 'Omniprésent'),
@@ -49,6 +50,7 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
         array ('Page 2 question 2', 'ok4'),
 	    ),
 	);
+// END CONFIGURATION
 
 	$domains = array(
 	  'Industrie',
@@ -76,6 +78,7 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
                 'class' => $likertQuestion[1],
               ),
 		          'label' => $likertQuestion[0],
+              // 'widget_type' => 'likert',
           ));
       }
      } else {
@@ -88,6 +91,7 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
             'expanded' => true,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($domains)),
+            // 'widget_type' => 'likert',
         ))
       ;
     }

@@ -4,7 +4,7 @@
 {% form_theme form _self %}
 
 {% block form_row %}
-    <div class="{{ form.get('attr').class }}">
+    <div {% if form.get('attr').class is defined %}class="{{ form.get('attr').class }}"{% endif %}>
         {{ form_label(form) }}
         {{ form_widget(form) }}
     </div>

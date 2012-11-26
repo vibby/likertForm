@@ -5,17 +5,32 @@ form label+div label{
     float:none;
     min-width: auto;
 }
-.ok7{
-    margin-top: 30px;
+
+
+#form>div{
+    /*background: #0f0;*/
+    margin-top: 50px;
 }
-.ok4+.ok4, .ok7+.ok7{
-    background: #f00;
-    margin-top: 1px:
+#form>.ok4+.ok4,#form>.ok7+.ok7{
+    /*background: #f00;*/
+    margin-top: 0 !important;
 }
+
 .ok4+.ok4 div label, .ok7+.ok7 div label{
     visibility:hidden;
-    height: 1px;
+    height: 0;
+    overflow: hidden;
 }
+
+#form>div>label:before{
+    content: "-";
+    display: block;
+}
+#form>.ok4+.ok4>label:before, #form>.ok7+.ok7>label:before{
+    content: "";
+    display: inline;
+}
+
 .choiceItem{
     display: table-cell;
     text-align: center;
