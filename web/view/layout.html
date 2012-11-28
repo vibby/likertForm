@@ -16,8 +16,16 @@
         .ie7 * {
             behavior: url(../js/boxsizing.htc);
         }
-        form { max-width: 100%; }
-        form label { float: left; }
+        {% for class in scales %}#form>.{{ class }}+.{{ class }}{% if not loop.last %},{% endif %}{% endif %}{
+            margin-top: 0 !important;
+        }
+        
+        {% for class in scales %}#form>.{{ class }}+.{{ class }} div label{% if not loop.last %},{% endif %}{% endif %}{
+            visibility:hidden;
+            height: 0;
+            overflow: hidden;
+        }
+
     </style>
     {% block head %}
     {% endblock %}
