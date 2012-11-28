@@ -1,3 +1,6 @@
+form { max-width: 100%; }
+form label { float: left; }
+
 form label {
     min-width: 400px;
 }
