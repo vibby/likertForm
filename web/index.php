@@ -5,6 +5,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 use Symfony\Component\Validator\Constraints as Assert;
 use Silex\Provider\FormServiceProvider;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Yaml\Yaml;
 
 $app = new Silex\Application();
 $app['debug'] = true;
@@ -31,26 +32,9 @@ $app->match('/merci', function (Request $request) use ($app) {
 
 $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use ($app) {
 
-// CONFIGURATION
-	$likertScales = array(
-	    'ok4' => array( 'Pas du tout d\'accord', 'Pas d\'accord', 'D\'accord', 'Tout à fait d\'accord'),
-      'ok7' => array( 'Rien', 'Rare', 'Peu', 'Moyen', 'Courant', 'Frequent', 'Omniprésent'),
-	);
-
-	$likertQuestions = array(
-	    array(
-  		  array ('Ce programme est-il bien fait ?', 'ok4'),
-  		  array ('Page 1 question 2', 'ok4'),
-        array ('Ce programme est-il vraiment bien fait ?', 'ok7'),
-        array ('Page 1 question 4', 'ok7'),
-        array ('Page 1 question 5', 'ok4'),
-      ),
-	    array(
-        array ('Ce programme est-il bien fait 2 ?', 'ok4'),
-        array ('Page 2 question 2', 'ok4'),
-	    ),
-	);
-// END CONFIGURATION
+  $data  = Yaml::parse(file_get_contents(__DIR__ . '/../config/questions.yml'));
+  $likertScales = $data['likertScales'];
+  $likertQuestions = $data['likertQuestions'];
 
 	$domains = array(
 	  'Industrie',
@@ -68,16 +52,16 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
 
     $formBuilder = $app['form.factory']->createBuilder('form', $sessionData);
     if ($idPage <= count($likertQuestions)) {
-      foreach( $likertQuestions[$idPage - 1] as $qKey => $likertQuestion) {
+      foreach( $likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
           $formBuilder->add( 'page'.$idPage.'_item'.$qKey , 'choice', array(
-              'choices' => $likertScales[ $likertQuestion[1] ] ,
+              'choices' => $likertScales[ $likertQuestion['scale'] ] ,
               'expanded' => true,
               'multiple' => false,
-              'constraints' => new Assert\Choice(array_keys($likertScales[ $likertQuestion[1] ])),
+              'constraints' => new Assert\Choice(array_keys($likertScales[ $likertQuestion['scale'] ])),
               'attr' => array(
-                'class' => $likertQuestion[1],
+                'class' => $likertQuestion['scale'],
               ),
-		          'label' => $likertQuestion[0],
+		          'label' => $likertQuestion['label'],
               // 'widget_type' => 'likert',
           ));
       }

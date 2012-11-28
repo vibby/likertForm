@@ -1,0 +1,42 @@
+likertScales:
+  ok4:
+    - Pas du tout d'accord
+    - Pas d'accord
+    - D'accord
+    - Tout à fait d'accord
+  ok7:
+    - Rien
+    - Rare
+    - Peu
+    - Moyen
+    - Courant
+    - Frequent
+    - Omniprésent
+
+
+likertQuestions:
+
+  page1:
+    q1:
+      label: Ce programme est-il bien fait ?
+      scale: ok4
+    q2:
+      label: Page 1 question 2
+      scale: ok4
+    q3:
+      label: Ce programme est-il vraiment bien fait ?
+      scale: ok7
+    q4:
+      label: Page 1 question 4
+      scale: ok7
+    q5:
+      label: Page 1 question 5
+      scale: ok4
+
+  page2:
+    q1:
+      label: Ce programme est-il bien fait 2 ?
+      scale: ok4
+    q2:
+      label: Page 2 question 2
+      scale: ok4

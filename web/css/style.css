@@ -39,3 +39,7 @@ form label+div label{
     display: block;
     padding: 0 6px;
 }
+
+#form>div:hover {
+    background-color: #ddd;
+}
