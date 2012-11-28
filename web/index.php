@@ -99,7 +99,11 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
     }
 
     // display the form
-    return $app['twig']->render('form.html.twig', array('form' => $form->createView(), 'idPage' => $idPage));
+    return $app['twig']->render('form.html.twig', array(
+    	'form' => $form->createView(),
+    	'idPage' => $idPage,
+    	'scales' => array_keys($likertScales),
+    ));
 })->convert('idPage', function ($id) { return (int) $id; });
 
 $app->run();
