@@ -59,10 +59,9 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
               'multiple' => false,
               'constraints' => new Assert\Choice(array_keys($likertScales[ $likertQuestion['scale'] ])),
               'attr' => array(
-                'class' => $likertQuestion['scale'],
+                'class' => $likertQuestion['scale']. ' likert',
               ),
-		          'label' => $likertQuestion['label'],
-              // 'widget_type' => 'likert',
+              'label' => $likertQuestion['label'],
           ));
       }
      } else {
@@ -75,7 +74,6 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
             'expanded' => true,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($domains)),
-            // 'widget_type' => 'likert',
         ))
       ;
     }
