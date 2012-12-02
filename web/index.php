@@ -40,6 +40,49 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
 	  'Industrie',
 	  'Agroalimentaire',
 	);
+    $sectors = array(
+	  'Public',
+	  'Privé',
+      'Parapublic',
+	);
+	$jobs = array(
+    	"Agriculteurs exploitants",
+    	"Artisans",
+    	"Commerçants et assimilés",
+    	"Chefs d'entreprise de plus de 10 salariés ou plus",
+    	"Professions libérales et assimilés",
+    	"Cadres de la fonction publique, professions intellectuelles et artistiques",
+    	"Cadres d'entreprise",
+    	"Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés",
+    	"Professions intermédiaires administratives et commerciales des entreprises",
+    	"Techniciens",
+    	"Contremaîtres, agents de maîtrise",
+    	"Employés de la fonction publique",
+    	"Employés administratifs d'entreprise",
+    	"Employés de commerce",
+    	"Personnels de services directs aux particuliers",
+    	"Ouvriers qualifiés",
+    	"Ouvriers non qualifiés",
+    	"Ouvriers agricoles"
+	);
+    $domains = array(
+        "Agriculture",
+        "Industrie",
+    	"Électricité, gaz et eau",
+    	"Construction",
+    	"Commerce",
+    	"Hôtels et restaurants",
+    	"Transport",
+    	"Communication",
+    	"Finances, banques et assurances",
+    	"Immobilier",
+    	"Administration publique",
+    	"Education - Enseignement",
+    	"Social - Aide aux personnes",
+    	"Santé",
+    	"Informatique et nouvelles technologies"
+        "Autre, préciser ci-dessous",
+    )
 
     $sessionData = $app['session']->get('data');
 	if(!$sessionData)  {
@@ -66,16 +109,80 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
       }
      } else {
       $formBuilder
+        ->add( 'Age', 'text', array(
+            'constraints' => new Assert\Integer(),
+            'label' => "Age :"
+        ))
+        ->add( 'Sexe', 'choice', array(
+            'choices' => array('Homme','Femme') ,
+            'expanded' => true,
+            'multiple' => false,
+            'constraints' => new Assert\Choice(array(0,1)),
+            'label' => "Sexe :"
+        ))
+        ->add( 'Situation_famille', 'choice', array(
+            'choices' => array('Seul','En couple') ,
+            'expanded' => true,
+            'multiple' => false,
+            'constraints' => new Assert\Choice(array(0,1)),
+            'label' => "Situation familiale :"
+        ))
+        ->add( 'Nombre_enfants_a_charge', 'text', array(
+            'constraints' => new Assert\Integer(),
+            'label' => "Nombre d'enfants ou de personnes à votre charge :"
+        ))
+        ->add( 'Profession', 'choice', array(
+            'choices' => $jobs ,
+            'expanded' => true,
+            'multiple' => false,
+            'constraints' => new Assert\Choice(array_keys($jobs)),
+            'label' => "Quelle est votre profession ?"            
+        ))
+        ->add( 'Secteur', 'choice', array(
+            'choices' => $sectors ,
+            'expanded' => true,
+            'multiple' => false,
+            'constraints' => new Assert\Choice(array_keys($sectors)),
+            'label' => "Quel est le type de secteur de votre entreprise ?"
+        ))
+        ->add( 'Intitule_poste', 'text', array(
+            'label' => "Quel est l'intitulé exact de votre poste actuel ?"
+        ))
+        ->add( 'Heures_travail_semaine', 'text', array(
+            'label' => "Combien d'heures par semaine travaillez-vous ?"
+        ))
+        ->add( 'Heures_travail_semaine', 'text', array(
+            'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?"
+        ))
+        ->add( 'Satisfaction_salaire', 'text', array(
+            'label' => "Êtes-vous satisfait(e) de votre salaire net mensuel ?"
+        ))
+        ->add( 'Duree_poste', 'text', array(
+            'label' => "Depuis quand travaillez-vous dans votre poste actuel ?"
+        ))
+        ->add( 'Duree_entreprise', 'text', array(
+            'label' => "Depuis quand travaillez-vous dans votre entreprise actuelle ?"
+        ))
         ->add( 'Societe', 'text', array(
             'required' => false ,
+            'label' => "Nom de votre entreprise (facultatif) :"
         ))
-        ->add( 'Domaine', 'choice', array(
+        ->add( 'Domain', 'choice', array(
             'choices' => $domains ,
             'expanded' => true,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($domains)),
+            'label' => "A quelle branche appartient votre entreprise ?"
+        ))        
+        ->add( 'Nombre_salaries_etablissement', 'text', array(
+            'required' => false ,
+            'label' => "Nombre de salariés dans votre  établissement (facultatif) :"
         ))
-      ;
+        ->add( 'Nombre_salaries_entreprise', 'text', array(
+            'required' => false ,
+            'label' => "Nombre total de salariés dans votre entreprise (facultatif) :"
+        ))
+        ;
     }
     $form = $formBuilder->getForm();
 
@@ -88,8 +195,8 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
 	    $app['session']->set('data',$data);
 
             if ($idPage > count($likertQuestions)) {
-              // Store data in CSV
-              // Send mail with data
+              // TODO : Store data in CSV
+              // TODO : Send mail with data
               $nextPage = '/merci';
             } else {
               $nextPage = '/questionnaire/'.($idPage+1);;
