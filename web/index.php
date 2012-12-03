@@ -30,6 +30,10 @@ $app->match('/merci', function (Request $request) use ($app) {
     return $app['twig']->render('merci.html.twig');
 });
 
+$app->match('/questionnaire', function () use ($app) {
+    return $app->redirect('/questionnaire/1');
+});
+
 $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use ($app) {
 
   $data  = Yaml::parse(file_get_contents(__DIR__ . '/../config/questions.yml'));
@@ -80,9 +84,9 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
     	"Education - Enseignement",
     	"Social - Aide aux personnes",
     	"Santé",
-    	"Informatique et nouvelles technologies"
+    	"Informatique et nouvelles technologies",
         "Autre, préciser ci-dessous",
-    )
+    );
 
     $sessionData = $app['session']->get('data');
 	if(!$sessionData)  {
@@ -110,48 +114,54 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
      } else {
       $formBuilder
         ->add( 'Age', 'text', array(
-            'constraints' => new Assert\Integer(),
+            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
             'label' => "Age :"
         ))
         ->add( 'Sexe', 'choice', array(
             'choices' => array('Homme','Femme') ,
-            'expanded' => true,
+            'expanded' => false,
             'multiple' => false,
             'constraints' => new Assert\Choice(array(0,1)),
-            'label' => "Sexe :"
+            'label' => "Sexe :",
+            'empty_value' => '',
         ))
         ->add( 'Situation_famille', 'choice', array(
             'choices' => array('Seul','En couple') ,
-            'expanded' => true,
+            'expanded' => false,
             'multiple' => false,
             'constraints' => new Assert\Choice(array(0,1)),
-            'label' => "Situation familiale :"
+            'label' => "Situation familiale :",
+            'empty_value' => '',
         ))
         ->add( 'Nombre_enfants_a_charge', 'text', array(
-            'constraints' => new Assert\Integer(),
+            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
             'label' => "Nombre d'enfants ou de personnes à votre charge :"
         ))
         ->add( 'Profession', 'choice', array(
             'choices' => $jobs ,
-            'expanded' => true,
+            'expanded' => false,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($jobs)),
-            'label' => "Quelle est votre profession ?"            
+            'label' => "Quelle est votre profession ?",
+            'empty_value' => '',
         ))
         ->add( 'Secteur', 'choice', array(
             'choices' => $sectors ,
-            'expanded' => true,
+            'expanded' => false,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($sectors)),
-            'label' => "Quel est le type de secteur de votre entreprise ?"
+            'label' => "Quel est le type de secteur de votre entreprise ?",
+            'empty_value' => '',
         ))
         ->add( 'Intitule_poste', 'text', array(
             'label' => "Quel est l'intitulé exact de votre poste actuel ?"
         ))
         ->add( 'Heures_travail_semaine', 'text', array(
+            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
             'label' => "Combien d'heures par semaine travaillez-vous ?"
         ))
         ->add( 'Heures_travail_semaine', 'text', array(
+            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
             'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?"
         ))
         ->add( 'Satisfaction_salaire', 'text', array(
@@ -169,16 +179,23 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
         ))
         ->add( 'Domain', 'choice', array(
             'choices' => $domains ,
-            'expanded' => true,
+            'expanded' => false,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($domains)),
-            'label' => "A quelle branche appartient votre entreprise ?"
-        ))        
+            'label' => "A quelle branche appartient votre entreprise ?",
+            'empty_value' => '',
+        ))
+        ->add( 'Domain_other', 'text', array(
+            'required' => false ,
+            'label' => "Si autre, préciser"
+        ))
         ->add( 'Nombre_salaries_etablissement', 'text', array(
+            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
             'required' => false ,
             'label' => "Nombre de salariés dans votre  établissement (facultatif) :"
         ))
         ->add( 'Nombre_salaries_entreprise', 'text', array(
+            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
             'required' => false ,
             'label' => "Nombre total de salariés dans votre entreprise (facultatif) :"
         ))

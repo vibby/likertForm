@@ -14,15 +14,6 @@ form label+div label{
     margin-top: 50px;
 }
 
-#form>div>label:before{
-    content: "-";
-    display: block;
-}
-#form>.ok4+.ok4>label:before, #form>.ok7+.ok7>label:before{
-    content: "";
-    display: inline;
-}
-
 .likert .choiceItem{
     display: table-cell;
     text-align: center;
@@ -34,4 +25,29 @@ form label+div label{
 
 #form>div:hover {
     background-color: #ddd;
+}
+
+body:before{
+    z-index: -12;
+    content: " ";
+    display: block;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
+    background-image: -o-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
+    background-image: -moz-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
+    background-image: -webkit-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
+    background-image: -ms-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, #18305E),
+        color-stop(0.37, #0D305A),
+        color-stop(1, #0259A5)
+    );
 }

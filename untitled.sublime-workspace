@@ -287,6 +287,70 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "config/questions.yml",
+			"settings":
+			{
+				"buffer_size": 691,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/index.php",
+			"settings":
+			{
+				"buffer_size": 8609,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/view/layout.html.twig",
+			"settings":
+			{
+				"buffer_size": 1444,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/view/index.html.twig",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/view/form.html.twig",
+			"settings":
+			{
+				"buffer_size": 2094,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/view/merci.html.twig",
+			"settings":
+			{
+				"buffer_size": 123,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/symfony/validator/Symfony/Component/Validator/Constraints/Type.php",
+			"settings":
+			{
+				"buffer_size": 720,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/css/style.css",
+			"settings":
+			{
+				"buffer_size": 1215,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -376,6 +440,7 @@
 	},
 	"file_history":
 	[
+		"/var/www/html/likertForm/web/view/layout.html",
 		"/var/www/html/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
 		"/var/www/html/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Tests/Extension/custom_widgets.html.twig",
 		"/var/www/html/likertForm/web/css/knacss.css",
@@ -383,7 +448,6 @@
 		"/var/www/html/likertForm/web/demos/5.html",
 		"/var/www/html/likertForm/web/css/style.css",
 		"/var/www/html/likertForm/web/view/index.html.twig",
-		"/var/www/html/likertForm/web/view/layout.html",
 		"/var/www/html/likertForm/web/view/merci.html.twig",
 		"/var/www/html/likertForm/config/questions.yml",
 		"/var/www/html/likertForm/web/view/form.html.twig",
@@ -568,6 +632,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"integ",
 			"radio",
 			"radio_widget",
 			"m_row",
@@ -694,8 +759,7 @@
 			"dropdownLinkBackgroundHover",
 			"dropdownBackground",
 			"58",
-			"alpha(opacity=",
-			"small"
+			"alpha(opacity="
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -745,8 +809,229 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "config/questions.yml",
+					"settings":
+					{
+						"buffer_size": 691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								147,
+								147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "web/index.php",
+					"settings":
+					{
+						"buffer_size": 8609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								763,
+								763
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "web/view/layout.html.twig",
+					"settings":
+					{
+						"buffer_size": 1444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1290,
+								1290
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "web/view/index.html.twig",
+					"settings":
+					{
+						"buffer_size": 229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Anomareh-PHP-Twig.tmbundle-fcb67a8/Syntaxes/HTML (Twig).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "web/view/form.html.twig",
+					"settings":
+					{
+						"buffer_size": 2094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1760,
+								1760
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Anomareh-PHP-Twig.tmbundle-fcb67a8/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 457.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "web/view/merci.html.twig",
+					"settings":
+					{
+						"buffer_size": 123,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Anomareh-PHP-Twig.tmbundle-fcb67a8/Syntaxes/HTML (Twig).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "vendor/symfony/validator/Symfony/Component/Validator/Constraints/Type.php",
+					"settings":
+					{
+						"buffer_size": 720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "web/css/style.css",
+					"settings":
+					{
+						"buffer_size": 1215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								410,
+								410
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -791,6 +1076,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"type",
+				"vendor/symfony/validator/Symfony/Component/Validator/Constraints/Type.php"
+			],
 			[
 				"formview",
 				"vendor/symfony/form/Symfony/Component/Form/FormView.php"
@@ -1298,10 +1587,6 @@
 			[
 				"clo",
 				"src/Faros/AdminBundle/Entity/Repository/ClosureTreeRepository.php"
-			],
-			[
-				"closure",
-				"vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Strategy/ORM/Closure.php"
 			]
 		],
 		"width": 0.0

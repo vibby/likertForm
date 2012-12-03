@@ -16,16 +16,6 @@
         .ie7 * {
             behavior: url(../js/boxsizing.htc);
         }
-        {% for class in scales %}#form>.{{ class }}+.{{ class }}{% if not loop.last %},{% endif %}{% endif %}{
-            margin-top: 0 !important;
-        }
-        
-        {% for class in scales %}#form>.{{ class }}+.{{ class }} div label{% if not loop.last %},{% endif %}{% endif %}{
-            visibility:hidden;
-            height: 0;
-            overflow: hidden;
-        }
-
     </style>
     {% block head %}
     {% endblock %}
@@ -34,7 +24,8 @@
 
 <body class="mw960p center">
     <header class="line mod">
-        <p>Univesité de Nantes-UFR de Psychologie</p>
+        <img alt="Site de l'Université" src="http://www.univ-nantes.fr/images/logo.png?new=2012050301"></a>
+        <p class="right">UFR de Psychologie</p>
     </header>
     <div class="line">
         <div class="content mod">

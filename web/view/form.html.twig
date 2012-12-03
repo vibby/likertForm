@@ -1,7 +1,42 @@
-
-{% extends "layout.html" %}
+{% extends "layout.html.twig" %}
 
 {% form_theme form _self %}
+
+{% block head %}
+    <style>
+        .important { color: #336699; }
+
+        {% for class in scales -%}
+            #form>.{{ class }}+.{{ class }}
+            {% if not loop.last %},{% endif %}
+        {%- endfor %}{
+            margin-top: 0 !important;
+        }
+
+        {% for class in scales -%}
+            #form>.{{ class }}+.{{ class }} div label
+            {% if not loop.last %},{% endif %}
+        {%- endfor %}{
+            visibility:hidden;
+            height: 0;
+            overflow: hidden;
+        }
+        {% for class in scales -%}
+            #form>.{{ class }}>label:before
+            {% if not loop.last %},{% endif %}
+        {%- endfor %}{
+            content: "→";
+            display: block;
+        }
+        {% for class in scales -%}
+            #form>.{{ class }}+.{{ class }}>label:before
+            {% if not loop.last %},{% endif %}
+        {%- endfor %}{
+            content: "";
+            display: inline;
+        }
+    </style>
+{% endblock %}
 
 {% block form_row %}
     <div {% if form.get('attr').class is defined %}class="{{ form.get('attr').class }}"{% endif %}>
@@ -35,12 +70,6 @@
 
 {% block h1 %}Page {{ idPage }}{% endblock %}
 
-{% block head %}
-    {{ parent() }}
-    <style type="text/css">
-        .important { color: #336699; }
-    </style>
-{% endblock %}
 {% block content %}
     <form action="#" method="post">
         {{ form_widget(form) }}
