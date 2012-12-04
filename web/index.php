@@ -113,13 +113,12 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
       }
      } else {
       $formBuilder
-        ->add( 'Age', 'text', array(
-            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
+        ->add( 'Age', 'integer', array(
             'label' => "Age :"
         ))
         ->add( 'Sexe', 'choice', array(
             'choices' => array('Homme','Femme') ,
-            'expanded' => false,
+            'expanded' => true,
             'multiple' => false,
             'constraints' => new Assert\Choice(array(0,1)),
             'label' => "Sexe :",
@@ -127,13 +126,13 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
         ))
         ->add( 'Situation_famille', 'choice', array(
             'choices' => array('Seul','En couple') ,
-            'expanded' => false,
+            'expanded' => true,
             'multiple' => false,
             'constraints' => new Assert\Choice(array(0,1)),
             'label' => "Situation familiale :",
             'empty_value' => '',
         ))
-        ->add( 'Nombre_enfants_a_charge', 'text', array(
+        ->add( 'Nombre_enfants_a_charge', 'integer', array(
             'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
             'label' => "Nombre d'enfants ou de personnes à votre charge :"
         ))
@@ -156,12 +155,10 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
         ->add( 'Intitule_poste', 'text', array(
             'label' => "Quel est l'intitulé exact de votre poste actuel ?"
         ))
-        ->add( 'Heures_travail_semaine', 'text', array(
-            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
+        ->add( 'Heures_travail_semaine', 'integer', array(
             'label' => "Combien d'heures par semaine travaillez-vous ?"
         ))
-        ->add( 'Heures_travail_semaine', 'text', array(
-            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
+        ->add( 'Heures_travail_semaine', 'integer', array(
             'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?"
         ))
         ->add( 'Satisfaction_salaire', 'text', array(
@@ -189,13 +186,11 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
             'required' => false ,
             'label' => "Si autre, préciser"
         ))
-        ->add( 'Nombre_salaries_etablissement', 'text', array(
-            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
+        ->add( 'Nombre_salaries_etablissement', 'integer', array(
             'required' => false ,
             'label' => "Nombre de salariés dans votre  établissement (facultatif) :"
         ))
-        ->add( 'Nombre_salaries_entreprise', 'text', array(
-            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
+        ->add( 'Nombre_salaries_entreprise', 'integer', array(
             'required' => false ,
             'label' => "Nombre total de salariés dans votre entreprise (facultatif) :"
         ))
