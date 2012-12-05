@@ -307,7 +307,7 @@
 			"file": "config/questions.yml",
 			"settings":
 			{
-				"buffer_size": 691,
+				"buffer_size": 5137,
 				"line_ending": "Unix"
 			}
 		},
@@ -339,7 +339,7 @@
 			"file": "web/view/form.html.twig",
 			"settings":
 			{
-				"buffer_size": 2147,
+				"buffer_size": 2402,
 				"line_ending": "Unix"
 			}
 		},
@@ -656,6 +656,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ok5",
+			"'",
 			"clear",
 			"integ",
 			"radio",
@@ -781,9 +783,7 @@
 			"@",
 			"linkColor",
 			"linkColor	",
-			"dropdownLinkBackgroundHover",
-			"dropdownBackground",
-			"58"
+			"dropdownLinkBackgroundHover"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -791,6 +791,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"freq5",
+			"’",
 			"Address",
 			"admin",
 			"request",
@@ -833,7 +835,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -841,15 +843,15 @@
 					"file": "config/questions.yml",
 					"settings":
 					{
-						"buffer_size": 691,
+						"buffer_size": 5137,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								305,
-								305
+								4399,
+								4399
 							]
 						],
 						"settings":
@@ -859,7 +861,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1695.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -932,13 +934,15 @@
 						"selection":
 						[
 							[
-								1142,
-								1142
+								163,
+								163
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Anomareh-PHP-Twig.tmbundle-fcb67a8/Syntaxes/HTML (Twig).tmLanguage"
+							"syntax": "Packages/Anomareh-PHP-Twig.tmbundle-fcb67a8/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -951,15 +955,15 @@
 					"file": "web/view/form.html.twig",
 					"settings":
 					{
-						"buffer_size": 2147,
+						"buffer_size": 2402,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1679,
-								1679
+								1898,
+								1898
 							]
 						],
 						"settings":
@@ -969,7 +973,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 408.0,
+						"translation.y": 546.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

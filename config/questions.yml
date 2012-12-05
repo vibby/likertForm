@@ -1,42 +1,173 @@
 likertScales:
   ok4:
-    - Pas du tout d'accord
-    - Pas d'accord
-    - D'accord
-    - Tout à fait d'accord
+    - Pas du tout d’accord
+    - Pas d’accord
+    - D’accord
+    - Tout à fait d’accord
+  yesno:
+    - Oui
+    - Non
   ok7:
-    - Rien
-    - Rare
-    - Peu
-    - Moyen
-    - Courant
-    - Frequent
-    - Omniprésent
+    - Pas du tout d’accord
+    - Plutôt en désaccord
+    - Pas d’accord
+    - Neutre
+    - D’accord
+    - Plutôt d’accord
+    - Tout à fait d’accord
+  freq5:
+    - Presque jamais
+    - Rarement
+    - La moitié du temps
+    - Fréquemment
+    - Presque toujours
+
 
 
 likertQuestions:
 
   page1:
     q1:
-      label: Ce programme est-il bien fait ?
+      label: "J’éprouve vraiment un sentiment d’appartenance à mon organisation"
       scale: ok4
     q2:
-      label: Page 1 question 2
+      label: "Il ne serait pas moralement correct de quitter mon entreprise actuelle maintenant"
       scale: ok4
     q3:
-      label: Ce programme est-il vraiment bien fait ?
-      scale: ok7
-    q4:
-      label: Page 1 question 4
-      scale: ok7
-    q5:
-      label: Page 1 question 5
+      label: "Je ne voudrais pas quitter mon entreprise actuelle parce que j’aurais beaucoup à y perdre"
       scale: ok4
+    q4:
+      label: "Mon entreprise représente beaucoup pour moi"
+      scale: ok4
+    q5:
+      label: "Il ne serait pas correct de quitter maintenant mon entreprise actuelle, même si j’y trouvais avantage"
+      scale: ok4
+    q6:
+      label: "Pour moi, personnellement, quitter mon entreprise actuelle aurait beaucoup plus d’inconvénients que d’avantages"
+      scale: ok4
+    q7:
+      label: "Je suis fier d’appartenir à cette organisation"
+      scale: ok4
+    q8:
+      label: "Si on m’offre un poste dans une autre entreprise, je ne trouverai pas correct de quitter mon entreprise actuelle"
+      scale: ok4
+    q9:
+      label: "Je continue à travailler pour cette entreprise parce que je ne pense pas qu’une autre pourrait m’offrir les mêmes avantages"
+      scale: ok4
+    q10:
+      label: "Je ne me sens pas affectivement attaché(e) à mon entreprise"
+      scale: ok4
+    q11:
+      label: "J’estime que je serais coupable si je quittais maintenant mon entreprise actuelle"
+      scale: ok4
+    q12:
+      label: "Je reste dans mon entreprise actuelle parce que je ne vois pas où je pourrais aller ailleurs"
+      scale: ok4
+    q13:
+      label: "Je ressens vraiment les problèmes de mon entreprise comme si c’était les miens"
+      scale: ok4
+    q14:
+      label: "Je trahirais la confiance que l’on me fait si je quittais maintenant mon entreprise actuelle"
+      scale: ok4
+    q15:
+      label: "J’estime mes possibilités de choix très limitées pour envisager de quitter mon entreprise actuelle"
+      scale: ok4
+    q16:
+      label: "Je n’ai pas le sentiment de « faire partie de la famille » dans mon entreprise"
+      scale: ok4
+    q17:
+      label: "Je ne quitterais pas mon entreprise maintenant parce que j’estime avoir des obligations envers certaines personnes qui y travaillent"
+      scale: ok4
+    q18:
+      label: "Je n’ai pas d’autre choix que de rester dans mon entreprise actuelle"
+      scale: ok4
+    q19:
+      label: "J’envisage parfois de changer d’emploi"
+      scale: yesno
+    q20:
+      label: "J’envisage parfois de chercher du travail en dehors de cette organisation"
+      scale: yesno
+    q21:
+      label: "J’ai l’intention de changer d’emploi l’année prochaine"
+      scale: yesno
+    q22:
+      label: "L’année prochaine, j’ai l’intention de chercher un emploi en dehors de cette organisation"
+      scale: yesno
 
   page2:
-    q1:
-      label: Ce programme est-il bien fait 2 ?
-      scale: ok4
-    q2:
-      label: Page 2 question 2
-      scale: ok4
+    q23:
+      label: "Pour la plupart de ses aspects, ma vie est proche de mon idéal"
+      scale: ok7
+    q24:
+      label: "Les conditions de vie qui sont les miennes sont excellentes"
+      scale: ok7
+    q25:
+      label: "Je suis satisfait(e) de ma vie"
+      scale: ok7
+    q26:
+      label: "Jusqu’à présent, j’ai obtenu les choses importantes que je voulais atteindre dans la vie"
+      scale: ok7
+    q27:
+      label: "Si je pouvais revivre ma vie, je ne changerais presque rien"
+      scale: ok7
+    q28:
+      label: "Je pense être Intéressé(e), curieux(se), motivé(e)"
+      scale: freq5
+    q29:
+      label: "Je pense être Angoissé(e)"
+      scale: freq5
+    q30:
+      label: "Je pense être Excité(e), animé(e), éveillé(e)"
+      scale: freq5
+    q31:
+      label: "Je pense être Contrarié(e)"
+      scale: freq5
+    q32:
+      label: "Je pense être Fort(e)"
+      scale: freq5
+    q33:
+      label: "Je pense être Coupable"
+      scale: freq5
+    q34:
+      label: "Je pense être Effrayé(e)"
+      scale: freq5
+    q35:
+      label: "Je pense être Hostile"
+      scale: freq5
+    q36:
+      label: "Je pense être Enthousiaste"
+      scale: freq5
+    q37:
+      label: "Je pense être Fier(e)"
+      scale: freq5
+    q38:
+      label: "Je pense être Irritable"
+      scale: freq5
+    q39:
+      label: "Je pense être Alerte, vigilant(e)"
+      scale: freq5
+    q40:
+      label: "Je pense être Honteux(se)"
+      scale: freq5
+    q41:
+      label: "Je pense être Inspiré(e), stimulé(e)"
+      scale: freq5
+    q42:
+      label: "Je pense être Nerveux(se)"
+      scale: freq5
+    q43:
+      label: "Je pense être Déterminé(e)"
+      scale: freq5
+    q44:
+      label: "Je pense être Attentif(ve), soigneux(se)"
+      scale: freq5
+    q45:
+      label: "Je pense être Froussard(e), peureux(se)"
+      scale: freq5
+    q46:
+      label: "Je pense être Actif(ve)"
+      scale: freq5
+    q47:
+      label: "Je pense être Craintif(ve)"
+      scale: freq5
+
