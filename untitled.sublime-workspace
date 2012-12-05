@@ -4,8 +4,32 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
 				"ba",
-				"background-color"
+				"background"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"b",
+				"border-image"
+			],
+			[
+				"co",
+				"color"
 			],
 			[
 				"o",
@@ -78,10 +102,6 @@
 			[
 				"s",
 				"stmt"
-			],
-			[
-				"co",
-				"constant"
 			],
 			[
 				"array_m",
@@ -200,10 +220,6 @@
 				"neededRole"
 			],
 			[
-				"fo",
-				"foreach	foreach …"
-			],
-			[
 				"role",
 				"rolesList"
 			],
@@ -299,7 +315,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 8609,
+				"buffer_size": 8125,
 				"line_ending": "Unix"
 			}
 		},
@@ -307,7 +323,7 @@
 			"file": "web/view/layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 1444,
+				"buffer_size": 1437,
 				"line_ending": "Unix"
 			}
 		},
@@ -315,7 +331,7 @@
 			"file": "web/view/index.html.twig",
 			"settings":
 			{
-				"buffer_size": 229,
+				"buffer_size": 1142,
 				"line_ending": "Unix"
 			}
 		},
@@ -323,7 +339,7 @@
 			"file": "web/view/form.html.twig",
 			"settings":
 			{
-				"buffer_size": 2094,
+				"buffer_size": 2147,
 				"line_ending": "Unix"
 			}
 		},
@@ -347,7 +363,15 @@
 			"file": "web/css/style.css",
 			"settings":
 			{
-				"buffer_size": 1215,
+				"buffer_size": 2440,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/css/knacss.css",
+			"settings":
+			{
+				"buffer_size": 10857,
 				"line_ending": "Unix"
 			}
 		}
@@ -355,9 +379,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 112.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"lo",
+				"Convert Case: Lower Case"
+			],
 			[
 				"low",
 				"Convert Case: Lower Case"
@@ -385,10 +413,6 @@
 			[
 				"uppe",
 				"Convert Case: Upper Case"
-			],
-			[
-				"lo",
-				"Convert Case: Lower Case"
 			],
 			[
 				"case",
@@ -423,7 +447,7 @@
 				"Set Syntax: PHP"
 			]
 		],
-		"width": 449.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -632,6 +656,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"clear",
 			"integ",
 			"radio",
 			"radio_widget",
@@ -758,8 +783,7 @@
 			"linkColor	",
 			"dropdownLinkBackgroundHover",
 			"dropdownBackground",
-			"58",
-			"alpha(opacity="
+			"58"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -809,7 +833,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -824,8 +848,8 @@
 						"selection":
 						[
 							[
-								147,
-								147
+								305,
+								305
 							]
 						],
 						"settings":
@@ -845,15 +869,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 8609,
+						"buffer_size": 8125,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								763,
-								763
+								716,
+								716
 							]
 						],
 						"settings":
@@ -873,15 +897,15 @@
 					"file": "web/view/layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 1444,
+						"buffer_size": 1437,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1290,
-								1290
+								1271,
+								1271
 							]
 						],
 						"settings":
@@ -891,7 +915,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 184.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -901,15 +925,15 @@
 					"file": "web/view/index.html.twig",
 					"settings":
 					{
-						"buffer_size": 229,
+						"buffer_size": 1142,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								33,
-								33
+								1142,
+								1142
 							]
 						],
 						"settings":
@@ -927,15 +951,15 @@
 					"file": "web/view/form.html.twig",
 					"settings":
 					{
-						"buffer_size": 2094,
+						"buffer_size": 2147,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1760,
-								1760
+								1679,
+								1679
 							]
 						],
 						"settings":
@@ -945,7 +969,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 457.0,
+						"translation.y": 408.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -988,8 +1012,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								6,
+								6
 							]
 						],
 						"settings":
@@ -1009,15 +1033,43 @@
 					"file": "web/css/style.css",
 					"settings":
 					{
-						"buffer_size": 1215,
+						"buffer_size": 2440,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								410,
-								410
+								1944,
+								1944
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 873.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "web/css/knacss.css",
+					"settings":
+					{
+						"buffer_size": 10857,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								665,
+								665
 							]
 						],
 						"settings":
