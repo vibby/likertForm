@@ -21,6 +21,12 @@ likertScales:
     - La moitié du temps
     - Fréquemment
     - Presque toujours
+  fewhigh5:
+    - Dans une très faible mesure
+    - Dans une faible mesure
+    - Neutre
+    - Dans une large mesure
+    - Dans une très large mesure
 
 
 
@@ -110,6 +116,8 @@ likertQuestions:
     q27:
       label: "Si je pouvais revivre ma vie, je ne changerais presque rien"
       scale: ok7
+    intro1:
+      label: "Les propositions suivantes se réfèrent à votre personnalité. Globalement vous pensez être"
     q28:
       label: "Je pense être Intéressé(e), curieux(se), motivé(e)"
       scale: freq5
@@ -171,3 +179,9 @@ likertQuestions:
       label: "Je pense être Craintif(ve)"
       scale: freq5
 
+    intro2:
+      label: "Les questions qui suivent se réfèrent à votre rémunération. Globalement vous trouvez que"
+    q48:
+      label: "Votre rémunération reflète l’effort que vous mettez dans votre travail"
+      scale: fewhigh5
+    
