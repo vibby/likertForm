@@ -15,6 +15,12 @@ likertScales:
     - D’accord
     - Plutôt d’accord
     - Tout à fait d’accord
+  ok5:
+    - Fortement en désaccord
+    - En désaccord
+    - Neutre
+    - D’accord
+    - Fortement d’accord
   freq5:
     - Presque jamais
     - Rarement
@@ -27,6 +33,17 @@ likertScales:
     - Neutre
     - Dans une large mesure
     - Dans une très large mesure
+  freq4:
+    - Jamais
+    - Parfois
+    - Une fois par mois
+    - Une fois par semaine
+  yesnofreq5:
+    - "Non, jamais"
+    - "Oui, rarement"
+    - "Oui, parfois"
+    - "Oui, plusieurs fois par semaine"
+    - "Oui, presque tous les jours"
 
 
 
@@ -184,4 +201,453 @@ likertQuestions:
     q48:
       label: "Votre rémunération reflète l’effort que vous mettez dans votre travail"
       scale: fewhigh5
-    
+    q49:
+      label: "Votre rémunération est appropriée au travail que vous fournissez"
+      scale: fewhigh5
+    q50:
+      label: "Votre rémunération reflète votre contribution à l’entreprise"
+      scale: fewhigh5
+    q51:
+      label: "Votre rémunération est justifiée, au regard de votre performance"
+      scale: fewhigh5
+
+    intro3:
+      label: "Les propositions suivantes se réfèrent aux procédures utilisées par l’entreprise pour prendre des décisions vous concernant. Dans quelle mesure ces procédures"
+
+    q52:
+      label: "Vous permettent d’exprimer vos opinions et sentiments durant la prise de décisions"
+      scale: fewhigh5
+    q53:
+      label: "Vous permettent d’avoir de l’influence sur les décisions"
+      scale: fewhigh5
+    q54:
+      label: "Sont toujours appliquées de la même façon"
+      scale: fewhigh5
+    q55:
+      label: "Ne font pas intervenir de préjugés"
+      scale: fewhigh5
+    q56:
+      label: "Sont basées sur des informations exactes"
+      scale: fewhigh5
+    q57:
+      label: "Vous permettent de demander de réexaminer la décision une fois qu’elle est prise"
+      scale: fewhigh5
+    q58:
+      label: "Respectent des règles de morale"
+      scale: fewhigh5
+
+    intro4:
+      label: "Les propositions suivantes se réfèrent aux personnes responsables des décisions vous concernant. Dans quelle mesure vous trouvez que ces personnes"
+
+    q59:
+      label: "Vous traitent poliment"
+      scale: fewhigh5
+    q60:
+      label: "Vous traitent avec dignité"
+      scale: fewhigh5
+    q61:
+      label: "Vous traitent avec respect"
+      scale: fewhigh5
+    q62:
+      label: "Évitent de vous faire des remarques ou des commentaires déplacés"
+      scale: fewhigh5
+
+    intro5:
+      label: "Les propositions suivantes se réfèrent aux personnes responsables des décisions vous concernant. Dans quelle mesure vous trouvez que ces personnes"
+
+    q63:
+      label: "Ont eu une communication franche avec vous"
+      scale: fewhigh5
+    q64:
+      label: "Expliquent de façon complète les procédures utilisées pour prendre les décisions"
+      scale: fewhigh5
+    q65:
+      label: "Vous donnent des explications pertinentes sur les procédures servant aux prises de décisions"
+      scale: fewhigh5
+    q66:
+      label: "Vous communiquent des informations détaillées dans des délais raisonnables"
+      scale: fewhigh5
+    q67:
+      label: "Semblent adapter leurs communications selon les besoins spécifiques de chaque personne"
+      scale: fewhigh5
+
+
+    intro6:
+      label: "Les propositions suivantes se réfèrent à ce que vous pensez en général"
+
+    q68:
+      label: "Je pense que, dans la vie, je reçois en général ce que je mérite"
+      scale: ok5
+    q69:
+      label: "Je pense que les efforts que fait une personne sont remarqués et récompensés"
+      scale: ok5
+    q70:
+      label: "Les gens sont traités le plus souvent de façon juste"
+      scale: ok5
+    q71:
+      label: "Je pense que les efforts que je fais sont remarqués et récompensés"
+      scale: ok5
+    q72:
+      label: "Je pense que, dans la vie, les gens reçoivent en général ce qu'ils méritent"
+      scale: ok5
+    q73:
+      label: "On me traite le plus souvent de façon juste"
+      scale: ok5
+    q74:
+      label: "Naturellement, le fait de désigner des personnes qui vont porter le poids des problèmes va soulager les maux"
+      scale: ok5
+    q75:
+      label: "Je crois qu’il est nécessaire que certaines personnes payent lors d’une situation problématique"
+      scale: ok5
+    q76:
+      label: "Je crois que la désignation de victimes participe à l’équilibre de la société"
+      scale: ok5
+    q77:
+      label: "Afin d’éviter le pire pour une collectivité, il vaut mieux que des personnes soient désignées comme responsables de ce qui arrive"
+      scale: ok5
+    q78:
+      label: "La paix au sein d’une collectivité s’obtient au prix de sacrifices humains"
+      scale: ok5
+    q79:
+      label: "La présence de boucs émissaires dans notre société permet de se libérer"
+      scale: ok5
+    q80:
+      label: "Je pense qu’il est juste que des personnes soient sacrifiées"
+      scale: ok5
+    q81:
+      label: "Je pense que le fait de désigner des victimes permet de canaliser la violence dans la société"
+      scale: ok5
+    q82:
+      label: "Je pense qu’il est juste qu’il y ait des victimes dans notre société"
+      scale: ok5
+    q83:
+      label: "Dans l’ensemble, je pense que la société a besoin de victimes pour survivre"
+      scale: ok5
+    q84:
+      label: "En cas de problème, il est important qu’un responsable de celui-ci soit désigné afin que la situation ne dégénère pas"
+      scale: ok5
+    q85:
+      label: "Je pense qu’il est juste que des personnes soient sacrifiées"
+      scale: ok5
+    q86:
+      label: "Je pense que, globalement, l’existence de victimes est utile"
+      scale: ok5
+    q87:
+      label: "Le fait de désigner des responsables à l’origine d’un problème permet, en partie, la résolution de ce dernier"
+      scale: ok5
+    q88:
+      label: "Il y a toujours eu des boucs émissaires dans notre société et on ne peut faire sans"
+      scale: ok5
+    q89:
+      label: "Il est parfois nécessaire que des sacrifices humains soient consentis lors de situations problématiques"
+      scale: ok5
+
+    intro7:
+      label: "Les propositions suivantes traitent des relations que vous entretenez avec vos collègues et supérieurs hiérarchiques. En général, vous trouvez qu'ils "
+
+    q90:
+      label: "Retiennent de l’information qui vous est nécessaire et rend ainsi votre travail plus difficile"
+      scale: freq4
+    q91:
+      label: "Vous font des plaisanteries insultantes ou ridiculisantes"
+      scale: freq4
+    q92:
+      label: "Vous imposent du travail en dessous de votre niveau de compétence"
+      scale: freq4
+    q93:
+      label: "Vous privent de votre travail ou on vous enlèvent vos responsabilités"
+      scale: freq4
+    q94:
+      label: "Lancent des rumeurs à votre encontre"
+      scale: freq4
+    q95:
+      label: "Vous excluent des activités de groupe, exclusion de la part des collègues"
+      scale: freq4
+    q96:
+      label: "Vous font des remarques répétées à l'encontre de votre vie privée ou de vous-même"
+      scale: freq4
+    q97:
+      label: "Vous insultent"
+      scale: freq4
+    q98:
+      label: "Ont des remarques ou comportements vous indiquant que vous deviez quitter votre travail"
+      scale: freq4
+    q99:
+      label: "Font des remarques répétées concernant vos erreurs"
+      scale: freq4
+    q100:
+      label: "Portent silence ou hostilité face à vos questions ou vos tentatives d'entrer en conversation"
+      scale: freq4
+    q101:
+      label: "Dévalorisent votre travail et vos efforts"
+      scale: freq4
+    q102:
+      label: "Négligent  vos points de vues"
+      scale: freq4
+    q103:
+      label: "Vous font des « blagues », « surprises » désagréables"
+      scale: freq4
+    q104:
+      label: "Ne respectent pas vos droits et opinions en raison de votre âge"
+      scale: freq4
+    q105:
+      label: "Exploitent votre travail à des fins privées"
+      scale: freq4
+
+    intro8:
+      label: "En quelle mesure pouvez-vous témoigner de ces comportements"
+
+    q106:
+      label: "Réactions négatives des autres parce que vous travaillez trop dur"
+      scale: freq4
+    q107:
+      label: "Quelqu'un m'agresse physiquement sur mon lieu de travail"
+      scale: freq4
+    q108:
+      label: "J'ai dû répondre à des frais causés par l'un de mes collègues volontairement"
+      scale: freq4
+    q109:
+      label: "Je suis agressé(e) sexuellement sur mon lieu de travaillez"
+      scale: freq4
+    q110:
+      label: "Certains de mes collègues refusent tout contact, même visuel, avec moi, comme si je n'existais pas"
+      scale: freq4
+
+    q111:
+      label: "Avez-vous été harcelé(e) ces six derniers mois ?"
+      scale: yesnofreq5
+    q112:
+      label: "Avez-vous le sentiment d'avoir harcelé d'autres personnes pendant ces six derniers mois ?"
+      scale: yesnofreq5
+    q113:
+      label: "Avez-vous été témoin de harcèlement ces derniers mois ?"
+      scale: yesnofreq5
+
+    q114:
+      label: ""
+      scale: ok4
+    q115:
+      label: ""
+      scale: ok4
+    q116:
+      label: ""
+      scale: ok4
+    q117:
+      label: ""
+      scale: ok4
+    q118:
+      label: ""
+      scale: ok4
+    q119:
+      label: ""
+      scale: ok4
+    q120:
+      label: ""
+      scale: ok4
+    q121:
+      label: ""
+      scale: ok4
+    q122:
+      label: ""
+      scale: ok4
+    q123:
+      label: ""
+      scale: ok4
+    q124:
+      label: ""
+      scale: ok4
+    q125:
+      label: ""
+      scale: ok4
+    q126:
+      label: ""
+      scale: ok4
+    q127:
+      label: ""
+      scale: ok4
+    q128:
+      label: ""
+      scale: ok4
+    q129:
+      label: ""
+      scale: ok4
+    q130:
+      label: ""
+      scale: ok4
+    q131:
+      label: ""
+      scale: ok4
+    q132:
+      label: ""
+      scale: ok4
+    q133:
+      label: ""
+      scale: ok4
+    q134:
+      label: ""
+      scale: ok4
+    q135:
+      label: ""
+      scale: ok4
+    q136:
+      label: ""
+      scale: ok4
+    q137:
+      label: ""
+      scale: ok4
+    q138:
+      label: ""
+      scale: ok4
+    q139:
+      label: ""
+      scale: ok4
+    q140:
+      label: ""
+      scale: ok4
+    q141:
+      label: ""
+      scale: ok4
+    q142:
+      label: ""
+      scale: ok4
+    q143:
+      label: ""
+      scale: ok4
+    q144:
+      label: ""
+      scale: ok4
+    q145:
+      label: ""
+      scale: ok4
+    q146:
+      label: ""
+      scale: ok4
+    q147:
+      label: ""
+      scale: ok4
+    q148:
+      label: ""
+      scale: ok4
+    q149:
+      label: ""
+      scale: ok4
+    q150:
+      label: ""
+      scale: ok4
+    q151:
+      label: ""
+      scale: ok4
+    q152:
+      label: ""
+      scale: ok4
+    q153:
+      label: ""
+      scale: ok4
+    q154:
+      label: ""
+      scale: ok4
+    q155:
+      label: ""
+      scale: ok4
+    q156:
+      label: ""
+      scale: ok4
+    q157:
+      label: ""
+      scale: ok4
+    q158:
+      label: ""
+      scale: ok4
+    q159:
+      label: ""
+      scale: ok4
+    q160:
+      label: ""
+      scale: ok4
+    q161:
+      label: ""
+      scale: ok4
+    q162:
+      label: ""
+      scale: ok4
+    q163:
+      label: ""
+      scale: ok4
+    q164:
+      label: ""
+      scale: ok4
+    q165:
+      label: ""
+      scale: ok4
+    q166:
+      label: ""
+      scale: ok4
+    q167:
+      label: ""
+      scale: ok4
+    q168:
+      label: ""
+      scale: ok4
+    q169:
+      label: ""
+      scale: ok4
+    q170:
+      label: ""
+      scale: ok4
+    q171:
+      label: ""
+      scale: ok4
+    q172:
+      label: ""
+      scale: ok4
+    q173:
+      label: ""
+      scale: ok4
+    q174:
+      label: ""
+      scale: ok4
+    q175:
+      label: ""
+      scale: ok4
+    q176:
+      label: ""
+      scale: ok4
+    q177:
+      label: ""
+      scale: ok4
+    q178:
+      label: ""
+      scale: ok4
+    q179:
+      label: ""
+      scale: ok4
+    q180:
+      label: ""
+      scale: ok4
+    q181:
+      label: ""
+      scale: ok4
+    q182:
+      label: ""
+      scale: ok4
+    q183:
+      label: ""
+      scale: ok4
+    q184:
+      label: ""
+      scale: ok4
+    q185:
+      label: ""
+      scale: ok4
+    q186:
+      label: ""
+      scale: ok4
+    q187:
+      label: ""
+      scale: ok4
+    q188:
+      label: ""
+      scale: ok4
+    q189:
+      label: ""
+      scale: ok4

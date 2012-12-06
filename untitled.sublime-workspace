@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"intro7"
+			],
+			[
 				"text",
 				"text-decoration"
 			],
@@ -307,7 +311,7 @@
 			"file": "config/questions.yml",
 			"settings":
 			{
-				"buffer_size": 5137,
+				"buffer_size": 17380,
 				"line_ending": "Unix"
 			}
 		},
@@ -656,6 +660,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"yesnofreq5",
+			"freq4",
+			"ok5",
+			"    q90:\n      label: \"\"\n",
+			"fewhigh5",
+			"q7",
 			"ok5",
 			"'",
 			"clear",
@@ -777,20 +787,31 @@
 			"sprites",
 			"spr",
 			"gly",
-			"borderRadiusLarge",
-			"dropdownLinkBackgroundActive",
-			"gradient",
-			"@",
-			"linkColor",
-			"linkColor	",
-			"dropdownLinkBackgroundHover"
+			"borderRadiusLarge"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"ok4",
+			"yesnofreq5",
+			"freq4",
+			"ok5",
+			"      scale: ok5\n      scale: ok5\nok5",
+			"q18",
+			"q17",
+			"q16",
+			"q15",
+			"q14",
+			"q13",
+			"q12",
+			"q11",
+			"q10",
+			"q9",
+			"q8",
+			"Q8",
 			"freq5",
 			"’",
 			"Address",
@@ -843,15 +864,15 @@
 					"file": "config/questions.yml",
 					"settings":
 					{
-						"buffer_size": 5137,
+						"buffer_size": 17380,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4399,
-								4399
+								2926,
+								2926
 							]
 						],
 						"settings":
@@ -861,7 +882,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1695.0,
+						"translation.y": 1131.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
