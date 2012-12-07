@@ -1,3 +1,46 @@
+/* base font-size corresponds to 10px and is adapted to rem unit */
+html {
+    font-size: 62.5%;
+}
+body {
+    color: #000;
+    font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;
+    font-size: 1.4em; /* equiv 14px */
+}
+
+/* font-sizing for content */
+/* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea {
+    font-size: 1em; /* equiv 14px */
+    line-height: 1.5em;
+    margin: 21px 0;
+}
+
+
+/* soft reset */
+html,
+body,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 960px;
+    margin: auto;
+}
+
+
+
 form { max-width: 100%; }
 form label { float: left; }
 
@@ -57,10 +100,22 @@ body:before{
     color: #fff;
 }
 
-body>div.line {
+body>div.content {
     background: #fff;
     border-radius: 1.6em;
     border: 1px solid #0F305A;
+    padding: 0 12px;
+}
+
+.right {
+    float: right;
+    margin-left: 14px;
+}
+
+.clear,
+.line,
+.row {
+    clear: both;
 }
 
 body>header>img {
@@ -112,3 +167,27 @@ input.button {
     vertical-align: middle;
     text-decoration: none;
 }
+
+.steps{
+    float: right;
+    font-size: .9em;
+}
+.steps .separator{
+    color: #ccc;
+}
+.steps .item{
+    display: inline-block;
+    padding: .5em .25em;
+    vertical-align: middle;
+    text-align: center;
+    color: #777;
+}
+.steps .done{
+    color: #000;
+}
+.steps .active{
+    background: #0F305A;
+    border-radius: .8em;
+    color: #fff;
+}
+

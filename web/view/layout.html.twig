@@ -7,7 +7,7 @@
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]><script src="../js/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="../css/knacss.css" media="all">
+    <!-- <link rel="stylesheet" href="../css/knacss.css" media="all"> -->
     <!-- <link rel="stylesheet" href="../css/knacss-garni.css" media="all"> -->
     <link rel="stylesheet" href="../css/style.css" media="all">
     <style>
@@ -22,17 +22,14 @@
 </head>
 
 
-<body class="mw960p center">
+<body>
     <header class="line mod">
         <img alt="Université de Nantes" src="http://www.univ-nantes.fr/images/logo.png?new=2012050301"></a>
         <p class="title right">Faculté de Psychologie</p>
     </header>
-    <div class="line">
-        <div class="content mod">
-            {% block content %}
-
-            {% endblock %}
-        </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
     </div>
     <footer class="line mod">
         <p>Tous droits réservés Propriété intellectuelle Desrumaux & Jeoffrion &copy; 2012</p>

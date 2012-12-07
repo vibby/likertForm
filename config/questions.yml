@@ -38,18 +38,30 @@ likertScales:
     - Parfois
     - Une fois par mois
     - Une fois par semaine
+  freq7:
+    - Jamais
+    - Presque jamais
+    - Rarement
+    - Parfois
+    - Souvent
+    - Très souvent
+    - Toujours
   yesnofreq5:
     - "Non, jamais"
     - "Oui, rarement"
     - "Oui, parfois"
     - "Oui, plusieurs fois par semaine"
     - "Oui, presque tous les jours"
+  none: ~
 
 
 
 likertQuestions:
 
   page1:
+    # intro0:
+    #   label: "Voici une série de propositions suivies d’une échelle de réponse allant de «pas du tout d’accord» à «tout à fait d’accord». Entourez le chiffre qui correspond le mieux à votre opinion. Vous pouvez nuancer votre jugement grâce aux chiffres proposés."
+    #   scale: none
     q1:
       label: "J’éprouve vraiment un sentiment d’appartenance à mon organisation"
       scale: ok4
@@ -135,6 +147,7 @@ likertQuestions:
       scale: ok7
     intro1:
       label: "Les propositions suivantes se réfèrent à votre personnalité. Globalement vous pensez être"
+      scale: none
     q28:
       label: "Je pense être Intéressé(e), curieux(se), motivé(e)"
       scale: freq5
@@ -196,8 +209,11 @@ likertQuestions:
       label: "Je pense être Craintif(ve)"
       scale: freq5
 
+  page3:
+
     intro2:
       label: "Les questions qui suivent se réfèrent à votre rémunération. Globalement vous trouvez que"
+      scale: none
     q48:
       label: "Votre rémunération reflète l’effort que vous mettez dans votre travail"
       scale: fewhigh5
@@ -213,6 +229,7 @@ likertQuestions:
 
     intro3:
       label: "Les propositions suivantes se réfèrent aux procédures utilisées par l’entreprise pour prendre des décisions vous concernant. Dans quelle mesure ces procédures"
+      scale: none
 
     q52:
       label: "Vous permettent d’exprimer vos opinions et sentiments durant la prise de décisions"
@@ -238,6 +255,7 @@ likertQuestions:
 
     intro4:
       label: "Les propositions suivantes se réfèrent aux personnes responsables des décisions vous concernant. Dans quelle mesure vous trouvez que ces personnes"
+      scale: none
 
     q59:
       label: "Vous traitent poliment"
@@ -254,6 +272,7 @@ likertQuestions:
 
     intro5:
       label: "Les propositions suivantes se réfèrent aux personnes responsables des décisions vous concernant. Dans quelle mesure vous trouvez que ces personnes"
+      scale: none
 
     q63:
       label: "Ont eu une communication franche avec vous"
@@ -272,8 +291,11 @@ likertQuestions:
       scale: fewhigh5
 
 
+  page4:
+
     intro6:
       label: "Les propositions suivantes se réfèrent à ce que vous pensez en général"
+      scale: none
 
     q68:
       label: "Je pense que, dans la vie, je reçois en général ce que je mérite"
@@ -288,7 +310,7 @@ likertQuestions:
       label: "Je pense que les efforts que je fais sont remarqués et récompensés"
       scale: ok5
     q72:
-      label: "Je pense que, dans la vie, les gens reçoivent en général ce qu'ils méritent"
+      label: "Je pense que, dans la vie, les gens reçoivent en général ce qu’ils méritent"
       scale: ok5
     q73:
       label: "On me traite le plus souvent de façon juste"
@@ -342,8 +364,11 @@ likertQuestions:
       label: "Il est parfois nécessaire que des sacrifices humains soient consentis lors de situations problématiques"
       scale: ok5
 
+  page5:
+
     intro7:
-      label: "Les propositions suivantes traitent des relations que vous entretenez avec vos collègues et supérieurs hiérarchiques. En général, vous trouvez qu'ils "
+      label: "Les propositions suivantes traitent des relations que vous entretenez avec vos collègues et supérieurs hiérarchiques. En général, vous trouvez qu’ils "
+      scale: none
 
     q90:
       label: "Retiennent de l’information qui vous est nécessaire et rend ainsi votre travail plus difficile"
@@ -364,7 +389,7 @@ likertQuestions:
       label: "Vous excluent des activités de groupe, exclusion de la part des collègues"
       scale: freq4
     q96:
-      label: "Vous font des remarques répétées à l'encontre de votre vie privée ou de vous-même"
+      label: "Vous font des remarques répétées à l’encontre de votre vie privée ou de vous-même"
       scale: freq4
     q97:
       label: "Vous insultent"
@@ -376,7 +401,7 @@ likertQuestions:
       label: "Font des remarques répétées concernant vos erreurs"
       scale: freq4
     q100:
-      label: "Portent silence ou hostilité face à vos questions ou vos tentatives d'entrer en conversation"
+      label: "Portent silence ou hostilité face à vos questions ou vos tentatives d’entrer en conversation"
       scale: freq4
     q101:
       label: "Dévalorisent votre travail et vos efforts"
@@ -396,258 +421,264 @@ likertQuestions:
 
     intro8:
       label: "En quelle mesure pouvez-vous témoigner de ces comportements"
+      scale: none
 
     q106:
       label: "Réactions négatives des autres parce que vous travaillez trop dur"
       scale: freq4
     q107:
-      label: "Quelqu'un m'agresse physiquement sur mon lieu de travail"
+      label: "Quelqu’un m’agresse physiquement sur mon lieu de travail"
       scale: freq4
     q108:
-      label: "J'ai dû répondre à des frais causés par l'un de mes collègues volontairement"
+      label: "J’ai dû répondre à des frais causés par l’un de mes collègues volontairement"
       scale: freq4
     q109:
       label: "Je suis agressé(e) sexuellement sur mon lieu de travaillez"
       scale: freq4
     q110:
-      label: "Certains de mes collègues refusent tout contact, même visuel, avec moi, comme si je n'existais pas"
+      label: "Certains de mes collègues refusent tout contact, même visuel, avec moi, comme si je n’existais pas"
       scale: freq4
+
+  page6:
 
     q111:
       label: "Avez-vous été harcelé(e) ces six derniers mois ?"
       scale: yesnofreq5
     q112:
-      label: "Avez-vous le sentiment d'avoir harcelé d'autres personnes pendant ces six derniers mois ?"
+      label: "Avez-vous le sentiment d’avoir harcelé d’autres personnes pendant ces six derniers mois ?"
       scale: yesnofreq5
     q113:
       label: "Avez-vous été témoin de harcèlement ces derniers mois ?"
       scale: yesnofreq5
 
     q114:
-      label: ""
+      label: "Les collègues avec qui je travaille sont des gens professionnellement compétents"
       scale: ok4
     q115:
-      label: ""
+      label: "Les collègues avec qui je travaille me manifestent de l’intérêt"
       scale: ok4
     q116:
-      label: ""
+      label: "Les collègues avec qui je travaille ont des attitudes hostiles ou conflictuelles avec moi"
       scale: ok4
     q117:
-      label: ""
+      label: "Les collègues avec qui je travaille sont amicaux"
       scale: ok4
     q118:
-      label: ""
+      label: "Les collègues avec qui je travaille s’encouragent mutuellement à travailler ensemble"
       scale: ok4
     q119:
-      label: ""
+      label: "Les collègues avec qui je travaille m’aident à mener à bien les tâches"
       scale: ok4
     q120:
-      label: ""
+      label: "Mon chef immédiat se soucie du bien être des travailleurs qui sont sous ses ordres"
       scale: ok4
     q121:
-      label: ""
+      label: "Mon chef immédiat fait attention à ce que je lui dis"
       scale: ok4
     q122:
-      label: ""
+      label: "Mon chef immédiat a une attitude hostile et conflictuelle avec moi"
       scale: ok4
     q123:
-      label: ""
+      label: "Mon chef immédiat facilite la réalisation du travail"
       scale: ok4
     q124:
-      label: ""
+      label: "Mon chef immédiat réussit à faire travailler les gens ensemble"
       scale: ok4
     q125:
-      label: ""
+      label: "Je peux partager mes problèmes professionnels autant avec ma famille"
       scale: ok4
     q126:
-      label: ""
+      label: "Je peux partager mes problèmes professionnels autant avec mes amis"
       scale: ok4
     q127:
-      label: ""
+      label: "Je ne peux pas me confier à ma famille quand je rentre du travail"
       scale: ok4
     q128:
-      label: ""
+      label: "Je ne peux pas me confier à mes amis quand je rentre du travail"
       scale: ok4
     q129:
-      label: ""
+      label: "Ma famille me manifeste de l’intérêt en ce qui concerne ma vie de travail"
       scale: ok4
     q130:
-      label: ""
+      label: "Mes amis me manifestent de l’intérêt en ce qui concerne ma vie de travail"
       scale: ok4
     q131:
-      label: ""
+      label: "Ma famille a tendance à prendre mes problèmes professionnels à la légère"
       scale: ok4
     q132:
-      label: ""
+      label: "Mes amis ont tendance à prendre mes problèmes professionnels à la légère"
       scale: ok4
     q133:
-      label: ""
+      label: "Je discute facilement de mes difficultés professionnelles avec ma famille"
       scale: ok4
     q134:
-      label: ""
+      label: "Je discute facilement de mes difficultés professionnelles avec mes amis"
       scale: ok4
     q135:
-      label: ""
+      label: "Je bénéficie de conseils de ma famille pour les domaines professionnel et personnel"
       scale: ok4
     q136:
-      label: ""
+      label: "Je bénéficie de conseils de mes amis pour les domaines professionnel et personnel"
       scale: ok4
     q137:
-      label: ""
+      label: "J’entretiens de bonnes relations avec ma famille"
       scale: ok4
     q138:
-      label: ""
+      label: "J’entretiens de bonnes relations avec mes amis"
       scale: ok4
     q139:
-      label: ""
+      label: "Je ne peux pas avoir confiance en ma famille"
       scale: ok4
     q140:
-      label: ""
+      label: "Je ne peux pas avoir confiance en mes amis"
       scale: ok4
     q141:
-      label: ""
+      label: "Je me sens accepté(e) et aimé(e) par ma famille"
       scale: ok4
     q142:
-      label: ""
+      label: "Je me sens accepté(e) et aimé(e) par mes amis"
       scale: ok4
     q143:
-      label: ""
+      label: "Je peux être aidé(e) financièrement par ma famille"
       scale: ok4
     q144:
-      label: ""
+      label: "Je peux être aidé(e) financièrement par mes amis"
       scale: ok4
+
+  page7:
+
     q145:
-      label: ""
-      scale: ok4
+      label: "Je suis agressif(ve) pour tout et pour rien"
+      scale: freq5
     q146:
-      label: ""
-      scale: ok4
+      label: "J’ai tendance à m’isoler, à me couper du monde"
+      scale: freq5
     q147:
-      label: ""
-      scale: ok4
+      label: "J’ai l’impression d’avoir raté ma carrière"
+      scale: freq5
     q148:
-      label: ""
-      scale: ok4
+      label: "J’éprouve de la difficulté à faire face à mes problèmes"
+      scale: freq5
     q149:
-      label: ""
-      scale: ok4
+      label: "Je suis facilement irritable, je réagis plutôt mal et/ou avec colère aux commentaires qu’on me fait"
+      scale: freq5
     q150:
-      label: ""
-      scale: ok4
+      label: "Je n’ai plus le goût de faire quoi que ce soit de plus"
+      scale: freq5
     q151:
-      label: ""
-      scale: ok4
+      label: "Je me sens dévalorisé(e), je me sens diminué(e)"
+      scale: freq5
     q152:
-      label: ""
-      scale: ok4
+      label: "Je suis en conflit avec mes collègues de travail"
+      scale: freq5
     q153:
-      label: ""
-      scale: ok4
+      label: "J’ai envie de tout lâcher, de tout abandonner"
+      scale: freq5
     q154:
-      label: ""
-      scale: ok4
+      label: "Je me sens triste"
+      scale: freq5
     q155:
-      label: ""
-      scale: ok4
+      label: "J’ai l’impression que personne ne m’aime"
+      scale: freq5
     q156:
-      label: ""
-      scale: ok4
+      label: "Je suis arrogant(e) et même maladroit(e) avec mes collègues de travail"
+      scale: freq5
     q157:
-      label: ""
-      scale: ok4
+      label: "Je manque de confiance en moi"
+      scale: freq5
     q158:
-      label: ""
-      scale: ok4
+      label: "Je suis préoccupé(e), anxieux(se)"
+      scale: freq5
     q159:
-      label: ""
-      scale: ok4
+      label: "Je perds patience facilement"
+      scale: freq5
     q160:
-      label: ""
-      scale: ok4
+      label: "Je me sens déprimé(e)"
+      scale: freq5
     q161:
-      label: ""
-      scale: ok4
+      label: "Je manque d’initiative en général, je suis moins fonceur(se)"
+      scale: freq5
     q162:
-      label: ""
-      scale: ok4
+      label: "J’ai le sentiment d’être inutile"
+      scale: freq5
     q163:
-      label: ""
-      scale: ok4
+      label: "Je me sens désintéressé(e) par mon travail"
+      scale: freq5
     q164:
-      label: ""
-      scale: ok4
+      label: "Je me sens mal dans ma peau"
+      scale: freq5
     q165:
-      label: ""
-      scale: ok4
+      label: "Je me sens stressé(e) sous pression"
+      scale: freq5
     q166:
-      label: ""
-      scale: ok4
+      label: "J’ai tendance à être moins réceptif(ve) aux idées (opinions) de mes collègues de travail"
+      scale: freq5
     q167:
-      label: ""
-      scale: ok4
+      label: "J’éprouve de la difficulté à me concentrer sur quoi que ce soit"
+      scale: freq5
+
+  page8:
+
     q168:
-      label: ""
-      scale: ok4
+      label: "Je me sens émotionnellement pompé(e) par mon travail"
+      scale: freq7
     q169:
-      label: ""
-      scale: ok4
+      label: "Je me sens à bout à la fin d’une journée"
+      scale: freq7
     q170:
-      label: ""
-      scale: ok4
+      label: "Je me sens fatigué(e) lorsque je me lève le matin et que je vais affronter une autre journée de travail"
+      scale: freq7
     q171:
-      label: ""
-      scale: ok4
+      label: "Je peux comprendre facilement ce que les autres ressentent"
+      scale: freq7
     q172:
-      label: ""
-      scale: ok4
+      label: "Je sens que je traite les autres de façon impersonnelle"
+      scale: freq7
     q173:
-      label: ""
-      scale: ok4
+      label: "Travailler chaque jour avec des gens, c’est vraiment un fardeau pour moi"
+      scale: freq7
     q174:
-      label: ""
-      scale: ok4
+      label: "Je résous avec efficacité les problèmes des gens"
+      scale: freq7
     q175:
-      label: ""
-      scale: ok4
+      label: "Je sens que j’ai brûlé toutes mes cartes face à mon travail"
+      scale: freq7
     q176:
-      label: ""
-      scale: ok4
+      label: "Je crée une influence positive sur les gens que je côtoie à mon travail"
+      scale: freq7
     q177:
-      label: ""
-      scale: ok4
+      label: "Je suis devenu(e) plus insensible aux gens depuis que j’ai cet emploi"
+      scale: freq7
     q178:
-      label: ""
-      scale: ok4
+      label: "Je crains que ce travail ne m’endurcisse émotionnellement"
+      scale: freq7
     q179:
-      label: ""
-      scale: ok4
+      label: "Je me sens très énergique"
+      scale: freq7
     q180:
-      label: ""
-      scale: ok4
+      label: "Je me sens frustré(e) par mon travail"
+      scale: freq7
     q181:
-      label: ""
-      scale: ok4
+      label: "Je sens que je travaille trop fort à mon emploi"
+      scale: freq7
     q182:
-      label: ""
-      scale: ok4
+      label: "Je ne fais pas vraiment attention à ce qui arrive aux autres"
+      scale: freq7
     q183:
-      label: ""
-      scale: ok4
+      label: "Travailler directement avec des gens me stresse beaucoup"
+      scale: freq7
     q184:
-      label: ""
-      scale: ok4
+      label: "Je peux facilement créer une atmosphère détendue avec les autres"
+      scale: freq7
     q185:
-      label: ""
-      scale: ok4
+      label: "J’ai accompli plusieurs choses utiles dans ce travail"
+      scale: freq7
     q186:
-      label: ""
-      scale: ok4
+      label: "Je me sens au bout du rouleau"
+      scale: freq7
     q187:
-      label: ""
-      scale: ok4
+      label: "Dans mon travail, je traite les problèmes émotionnels très calmement"
+      scale: freq7
     q188:
-      label: ""
-      scale: ok4
-    q189:
-      label: ""
-      scale: ok4
+      label: "Je ressens que les autres me critiquent indûment"
+      scale: freq7

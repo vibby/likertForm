@@ -67,8 +67,15 @@
 {% endblock choice_widget_expanded %}
 
 {% block content %}
-    <h1>Enquête 2013 sur la vie au travail - Partie {{ idPage }}</h1>
-    <div class="item">Voici une série de propositions suivies d'une échelle de réponse allant de "pas du tout d'accord" à "tout à fait d'accord". Entourez le chiffre qui correspond le mieux à votre opinion. Vous pouvez nuancer votre jugement grâce aux chiffres proposés.</div>
+    <h2 class="steps">Étapes
+        {% for page in pages -%}
+            <span class="item {% if page < shownPage %}done{% endif %}{% if page == shownPage %}active{% endif %}" >
+                {{ page }}
+            </span>
+            {% if not loop.last %}<span class="separator">&gt;</span>{% endif %}
+        {%- endfor %}
+    </h2>
+    <h1>Enquête 2013 sur la vie au travail</h1>
     <form action="#" method="post">
         {{ form_widget(form) }}
 

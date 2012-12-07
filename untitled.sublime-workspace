@@ -871,8 +871,8 @@
 						"selection":
 						[
 							[
-								2926,
-								2926
+								127,
+								127
 							]
 						],
 						"settings":
@@ -882,7 +882,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1131.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
