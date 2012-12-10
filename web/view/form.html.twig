@@ -3,14 +3,14 @@
 {% form_theme form _self %}
 
 {% block head %}
-    <style>
+    <style >
         .important { color: #336699; }
 
         {% for class in scales -%}
             #form>.{{ class }}+.{{ class }}
             {% if not loop.last %},{% endif %}
         {%- endfor %}{
-            margin-top: 0 !important;
+            margin-top: .3em !important;
         }
 
         {% for class in scales -%}
@@ -35,23 +35,30 @@
             content: "";
             display: inline;
         }
+        {% for class in scales -%}
+            #form>.likert.{{ class }}>label:before
+            {% if not loop.last %},{% endif %}
+        {%- endfor %}{
+            content: "";
+            display: inline;
+        }
     </style>
 {% endblock %}
 
 {% block form_row %}
+{% spaceless %}
     <div {% if form.get('attr').class is defined %}class="{{ form.get('attr').class }}"{% endif %}>
         {{ form_label(form) }}
+        {{ form_errors(form) }}
         {{ form_widget(form) }}
     </div>
-    {% if help is defined %}
-        <p class="form-help">
-            {{ help }}
-        </p>
-    {% endif %}
-    {% if form_errors(form) %}
-        <p class="form-error">{{ form_errors(form) }}</p>
-    {% endif %}
-{% endblock %}
+{% endspaceless %}
+{% endblock form_row %}
+
+{% block hidden_row %}
+    {{ form_widget(form) }}
+{% endblock hidden_row %}
+
 
 {% block choice_widget_expanded %}
 {% spaceless %}
@@ -72,7 +79,7 @@
             <span class="item {% if page < shownPage %}done{% endif %}{% if page == shownPage %}active{% endif %}" >
                 {{ page }}
             </span>
-            {% if not loop.last %}<span class="separator">&gt;</span>{% endif %}
+            {% if not loop.last %}<span class="separator">| </span>{% endif %}
         {%- endfor %}
     </h2>
     <h1>Enquête 2013 sur la vie au travail</h1>

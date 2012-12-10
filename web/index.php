@@ -99,18 +99,22 @@ $app->match('/questionnaire/{idPage}', function (Request $request, $idPage) use 
 
     $formBuilder = $app['form.factory']->createBuilder('form', $sessionData);
     if ($idPage <= count($likertQuestions)) {
-      foreach( $likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
-          $formBuilder->add( 'page'.$idPage.'_item'.$qKey , 'choice', array(
-              'choices' => $likertScales[ $likertQuestion['scale'] ] ,
-              'expanded' => true,
-              'multiple' => false,
-              'constraints' => new Assert\Choice(array_keys($likertScales[ $likertQuestion['scale'] ])),
-              'attr' => array(
-                'class' => $likertQuestion['scale']. ' likert',
-              ),
-              'label' => $likertQuestion['label'],
-          ));
-      }
+        foreach( $likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
+            $constraint =
+                null == is_array($likertQuestion['scale']) ?
+                null :
+                new Assert\Choice(array_keys($likertScales[ $likertQuestion['scale'] ])) ;
+            $formBuilder->add( 'page'.$idPage.'_item'.$qKey , 'choice', array(
+                'choices' => $likertScales[ $likertQuestion['scale'] ] ,
+                'expanded' => true,
+                'multiple' => false,
+                'constraints' => $constraint,
+                'attr' => array(
+                    'class' => $likertQuestion['scale']. ' likert',
+                ),
+                'label' => $likertQuestion['label'],
+            ));
+        }
      } else {
       $formBuilder
         ->add( 'Age', 'integer', array(

@@ -59,9 +59,9 @@ likertScales:
 likertQuestions:
 
   page1:
-    # intro0:
-    #   label: "Voici une série de propositions suivies d’une échelle de réponse allant de «pas du tout d’accord» à «tout à fait d’accord». Entourez le chiffre qui correspond le mieux à votre opinion. Vous pouvez nuancer votre jugement grâce aux chiffres proposés."
-    #   scale: none
+    intro0:
+      label: "Voici une série de propositions suivies d’une échelle de réponse allant de «pas du tout d’accord» à «tout à fait d’accord». Entourez le chiffre qui correspond le mieux à votre opinion. Vous pouvez nuancer votre jugement grâce aux chiffres proposés."
+      scale: none
     q1:
       label: "J’éprouve vraiment un sentiment d’appartenance à mon organisation"
       scale: ok4

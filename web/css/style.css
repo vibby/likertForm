@@ -25,7 +25,6 @@ textarea {
     margin: 21px 0;
 }
 
-
 /* soft reset */
 html,
 body,
@@ -39,13 +38,16 @@ body {
     margin: auto;
 }
 
-
-
 form { max-width: 100%; }
-form label { float: left; }
+#form>div { clear: both; display: table-row; }
 
 form label {
-    min-width: 400px;
+    /*width: 50%;*/
+    display: table-cell;
+}
+#form>div.none.likert>label{
+    display: block;
+    font-size: 1.2em;
 }
 form label+div label{
     float:none;

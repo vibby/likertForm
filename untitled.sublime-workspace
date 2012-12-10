@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"array_ke",
+				"array_key_exists"
+			],
+			[
+				"tab",
+				"table-row"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
 				"i",
 				"intro7"
 			],
@@ -311,7 +327,7 @@
 			"file": "config/questions.yml",
 			"settings":
 			{
-				"buffer_size": 17380,
+				"buffer_size": 22268,
 				"line_ending": "Unix"
 			}
 		},
@@ -319,7 +335,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 8125,
+				"buffer_size": 8352,
 				"line_ending": "Unix"
 			}
 		},
@@ -327,7 +343,7 @@
 			"file": "web/view/layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 1437,
+				"buffer_size": 1369,
 				"line_ending": "Unix"
 			}
 		},
@@ -336,14 +352,6 @@
 			"settings":
 			{
 				"buffer_size": 1142,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "web/view/form.html.twig",
-			"settings":
-			{
-				"buffer_size": 2402,
 				"line_ending": "Unix"
 			}
 		},
@@ -364,18 +372,18 @@
 			}
 		},
 		{
-			"file": "web/css/style.css",
-			"settings":
-			{
-				"buffer_size": 2440,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "web/css/knacss.css",
 			"settings":
 			{
 				"buffer_size": 10857,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
+			"settings":
+			{
+				"buffer_size": 10419,
 				"line_ending": "Unix"
 			}
 		}
@@ -468,17 +476,17 @@
 	},
 	"file_history":
 	[
+		"/var/www/html/likertForm/web/view/form.html.twig",
+		"/var/www/html/likertForm/web/css/style.css",
 		"/var/www/html/likertForm/web/view/layout.html",
 		"/var/www/html/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
 		"/var/www/html/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Tests/Extension/custom_widgets.html.twig",
 		"/var/www/html/likertForm/web/css/knacss.css",
 		"/var/www/html/likertForm/web/css/forms.css",
 		"/var/www/html/likertForm/web/demos/5.html",
-		"/var/www/html/likertForm/web/css/style.css",
 		"/var/www/html/likertForm/web/view/index.html.twig",
 		"/var/www/html/likertForm/web/view/merci.html.twig",
 		"/var/www/html/likertForm/config/questions.yml",
-		"/var/www/html/likertForm/web/view/form.html.twig",
 		"/var/www/html/likertForm/web/index.php",
 		"/var/www/html/likertForm/composer.json",
 		"/var/www/html/likertForm/vendor/symfony/yaml/Symfony/Component/Yaml/Yaml.php",
@@ -660,6 +668,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"choiceItem",
+			"choice_widget_expanded",
+			"row",
+			"clear",
+			"clear ",
+			"line ",
+			"intro",
+			"'",
+			"intro",
+			"'",
+			"id",
+			"freq5",
+			"ok4",
 			"yesnofreq5",
 			"freq4",
 			"ok5",
@@ -774,27 +795,17 @@
 			"isSubclassOf",
 			"code",
 			"throw",
-			" style=\"margin-left: 120px;\"",
-			" style=\"width: 115px;\"",
-			"Consulter",
-			"getModelBaseName",
-			"getTemplateName",
-			"prefix",
-			"var_",
-			"createListQuery",
-			"createEntity",
-			"icon",
-			"sprites",
-			"spr",
-			"gly",
-			"borderRadiusLarge"
+			" style=\"margin-left: 120px;\""
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"’",
+			"freq7",
+			"freq5",
 			"ok4",
 			"yesnofreq5",
 			"freq4",
@@ -856,7 +867,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -864,15 +875,15 @@
 					"file": "config/questions.yml",
 					"settings":
 					{
-						"buffer_size": 17380,
+						"buffer_size": 22268,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								127,
-								127
+								985,
+								985
 							]
 						],
 						"settings":
@@ -882,7 +893,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 546.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -892,15 +903,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 8125,
+						"buffer_size": 8352,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								716,
-								716
+								3283,
+								3283
 							]
 						],
 						"settings":
@@ -910,7 +921,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 936.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -920,15 +931,15 @@
 					"file": "web/view/layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 1437,
+						"buffer_size": 1369,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1271,
-								1271
+								1189,
+								1189
 							]
 						],
 						"settings":
@@ -938,7 +949,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 184.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -973,34 +984,6 @@
 				},
 				{
 					"buffer": 4,
-					"file": "web/view/form.html.twig",
-					"settings":
-					{
-						"buffer_size": 2402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1898,
-								1898
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Anomareh-PHP-Twig.tmbundle-fcb67a8/Syntaxes/HTML (Twig).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 546.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "web/view/merci.html.twig",
 					"settings":
 					{
@@ -1026,7 +1009,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "vendor/symfony/validator/Symfony/Component/Validator/Constraints/Type.php",
 					"settings":
 					{
@@ -1054,35 +1037,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "web/css/style.css",
-					"settings":
-					{
-						"buffer_size": 2440,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1944,
-								1944
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 873.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
+					"buffer": 6,
 					"file": "web/css/knacss.css",
 					"settings":
 					{
@@ -1093,13 +1048,41 @@
 						"selection":
 						[
 							[
-								665,
-								665
+								4319,
+								4319
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2592.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
+					"settings":
+					{
+						"buffer_size": 10419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1596,
+								1596
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Anomareh-PHP-Twig.tmbundle-fcb67a8/Syntaxes/HTML (Twig).tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -1153,6 +1136,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"form.html.",
+				"vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig"
+			],
 			[
 				"type",
 				"vendor/symfony/validator/Symfony/Component/Validator/Constraints/Type.php"
@@ -1660,10 +1647,6 @@
 			[
 				"closretreerepo",
 				"vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity/Repository/ClosureTreeRepository.php"
-			],
-			[
-				"clo",
-				"src/Faros/AdminBundle/Entity/Repository/ClosureTreeRepository.php"
 			]
 		],
 		"width": 0.0
