@@ -38,11 +38,63 @@ body {
     margin: auto;
 }
 
+
+
+form {
+    overflow-x:scroll;
+    overflow-y:hidden;
+    width: 940px;
+    height: 500px;
+    margin-bottom: 20px;
+}
+#form {
+    width: 8000px;
+}
+#form>div {
+    float: left;
+  width: 300px;
+  display:block;
+  margin-right:20px;
+  border-radius:8px;
+  background:#ccc;
+  padding:5px;
+  margin:5px;
+}
+#form>div>label {
+  padding: 1.6em;
+  display: block;
+  font-size: 1.3em;
+}
+#form>div.none>label {
+  font-size: 1em;
+}
+.choiceItem {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+.choiceItem > label {
+  background:#fff;
+  border-radius:4px;
+  border:3px #fff solid;
+  padding:3px;
+  margin:3px;
+  display:block;
+  text-align: center;
+}
+.choiceItem > input {
+    visibility: hidden;
+    position:absolute;
+    top:1px;
+}
+.choiceItem > input:checked + label {
+    background: #afa;
+}
+/*
 form { max-width: 100%; }
 #form>div { clear: both; display: table-row; }
 
 form label {
-    /*width: 50%;*/
     display: table-cell;
 }
 #form>div.none.likert>label{
@@ -55,7 +107,6 @@ form label+div label{
 }
 
 #form>.likert{
-    /*background: #0f0;*/
     margin-top: 50px;
 }
 
@@ -71,6 +122,8 @@ form label+div label{
 #form>div:hover {
     background-color: #ddd;
 }
+*/
+
 
 body:before{
     z-index: -12;

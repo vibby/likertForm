@@ -2,8 +2,8 @@
 
 {% form_theme form _self %}
 
-{% block head %}
-    <style >
+{#% block head %}
+    <!--style >
         .important { color: #336699; }
 
         {% for class in scales -%}
@@ -43,7 +43,7 @@
             display: inline;
         }
     </style>
-{% endblock %}
+{% endblock %#}
 
 {% block form_row %}
 {% spaceless %}
@@ -65,8 +65,8 @@
     <div {{ block('widget_container_attributes') }}>
     {% for child in form %}
         <span class="choiceItem">
-            {{ form_label(child) }}
             {{ form_widget(child) }}
+            {{ form_label(child) }}
         </span>
     {% endfor %}
     </div>
@@ -86,8 +86,9 @@
     <form action="#" method="post">
         {{ form_widget(form) }}
 
-        <input type="submit" class="right button" name="submit" value="Continuer" />
-        <div class="clear"></div>
+        <div>
+            Valider cette partie et commencer la suivante :
+            <input type="submit" class="button" name="submit" value="Continuer" />
+        </div>
     </form>
 {% endblock %}
-
