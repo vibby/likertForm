@@ -84,11 +84,14 @@
     </h2>
     <h1>Enquête 2013 sur la vie au travail</h1>
     <form action="#" method="post">
-        {{ form_widget(form) }}
-
         <div>
-            Valider cette partie et commencer la suivante :
-            <input type="submit" class="button" name="submit" value="Continuer" />
+            <div class="mask">
+            </div>
+            {{ form_widget(form) }}
+            <div>
+                <p>Valider cette partie et commencer la suivante :</p>
+                <input type="submit" class="button button-primary right" name="submit" value="Continuer" />
+            </div>
         </div>
     </form>
 {% endblock %}

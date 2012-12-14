@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ma",
+				"margin-bottom"
+			],
+			[
 				"array_ke",
 				"array_key_exists"
 			],
@@ -54,10 +58,6 @@
 			[
 				"o",
 				"overflow"
-			],
-			[
-				"ma",
-				"margin-bottom"
 			],
 			[
 				"hei",
@@ -386,14 +386,34 @@
 				"buffer_size": 10419,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "web/css/style.css",
+			"settings":
+			{
+				"buffer_size": 4659,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/view/form.html.twig",
+			"settings":
+			{
+				"buffer_size": 2786,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 272.0,
 		"selected_items":
 		[
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
 			[
 				"lo",
 				"Convert Case: Lower Case"
@@ -435,10 +455,6 @@
 				"Toggle Comment"
 			],
 			[
-				"inde",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"re",
 				"Indentation: Reindent Lines"
 			],
@@ -459,7 +475,7 @@
 				"Set Syntax: PHP"
 			]
 		],
-		"width": 575.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -867,7 +883,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -882,8 +898,8 @@
 						"selection":
 						[
 							[
-								985,
-								985
+								1021,
+								1021
 							]
 						],
 						"settings":
@@ -893,7 +909,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 546.0,
+						"translation.y": 312.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1020,8 +1036,8 @@
 						"selection":
 						[
 							[
-								6,
-								6
+								720,
+								720
 							]
 						],
 						"settings":
@@ -1088,6 +1104,62 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "web/css/style.css",
+					"settings":
+					{
+						"buffer_size": 4659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								564,
+								564
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 127.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "web/view/form.html.twig",
+					"settings":
+					{
+						"buffer_size": 2786,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2466,
+								2466
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Anomareh-PHP-Twig.tmbundle-fcb67a8/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 546.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
