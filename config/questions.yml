@@ -128,8 +128,6 @@ likertQuestions:
     q22:
       label: "L’année prochaine, j’ai l’intention de chercher un emploi en dehors de cette organisation"
       scale: yesno
-
-  page2:
     q23:
       label: "Pour la plupart de ses aspects, ma vie est proche de mon idéal"
       scale: ok7
@@ -145,6 +143,8 @@ likertQuestions:
     q27:
       label: "Si je pouvais revivre ma vie, je ne changerais presque rien"
       scale: ok7
+
+  page2:
     intro1:
       label: "Les propositions suivantes se réfèrent à votre personnalité. Globalement vous pensez être"
       scale: none
@@ -209,8 +209,6 @@ likertQuestions:
       label: "Je pense être Craintif(ve)"
       scale: freq5
 
-  page3:
-
     intro2:
       label: "Les questions qui suivent se réfèrent à votre rémunération. Globalement vous trouvez que"
       scale: none
@@ -226,6 +224,8 @@ likertQuestions:
     q51:
       label: "Votre rémunération est justifiée, au regard de votre performance"
       scale: fewhigh5
+
+  page3:
 
     intro3:
       label: "Les propositions suivantes se réfèrent aux procédures utilisées par l’entreprise pour prendre des décisions vous concernant. Dans quelle mesure ces procédures"
@@ -419,6 +419,8 @@ likertQuestions:
       label: "Exploitent votre travail à des fins privées"
       scale: freq4
 
+  page6:
+
     intro8:
       label: "En quelle mesure pouvez-vous témoigner de ces comportements"
       scale: none
@@ -438,8 +440,6 @@ likertQuestions:
     q110:
       label: "Certains de mes collègues refusent tout contact, même visuel, avec moi, comme si je n’existais pas"
       scale: freq4
-
-  page6:
 
     q111:
       label: "Avez-vous été harcelé(e) ces six derniers mois ?"

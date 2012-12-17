@@ -39,6 +39,10 @@ body {
 }
 
 
+.main {
+    position: relative;
+    width: 101%;
+}
 
 form {
     overflow-x:scroll;
@@ -48,14 +52,26 @@ form {
     margin-bottom: 20px;
 }
 form>div {
-    width: 9000px;
+    width: 10000px;
 }
 form>div>div {
     float: left;
 }
-form div.mask {
+div.mask {
     position: absolute;
-    width: 50%;
+    display: block;
+    width: 30%;
+    height: 95%;
+    right: 0;
+    z-index: 100;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,100%,0)), color-stop(100%,hsla(0,0%,100%,1)));
+    background: -webkit-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
+    background: -o-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
+    background: -ms-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
+    background: linear-gradient(to right, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
 }
 #form>div, form>div>div:last-child {
     float: left;
@@ -71,9 +87,20 @@ form div.mask {
   padding: 1.6em;
   display: block;
   font-size: 1.3em;
+    position: relative;
 }
 #form>div.none>label {
-  font-size: 1em;
+    font-size: 1em;
+    padding-bottom: 8em;
+}
+#form>div.likert.none>label:after {
+    bottom: 0;
+    color: #BBB;
+    content: "→";
+    font-size: 16em;
+    line-height: 0.6em;
+    position: absolute;
+    right: 0;
 }
 .choiceItem {
   overflow: hidden;
@@ -227,13 +254,18 @@ input.button {
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
+    background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom, #EFEFEF, #D8D8D8);
 }
 .button-primary, .choiceItem > input:checked + label {
     background-color: #0074CC;
     background-image: linear-gradient(to bottom, #0258A3, #17305D);
     color: #FFFFFF;
 }
-
+.choiceItem label:hover {
+    background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E8E8E8);
+}
 .steps{
     float: right;
     font-size: .9em;
@@ -257,3 +289,14 @@ input.button {
     color: #fff;
 }
 
+.nav{
+    display: inline-block;
+    position: absolute;
+    bottom: 1.5em;
+    left: 0;
+}
+.nav a{
+    padding: .5em;
+    font-size: 1.4em;
+    color: #777;
+}
