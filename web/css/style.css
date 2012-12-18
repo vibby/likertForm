@@ -90,6 +90,7 @@ div.mask {
     position: relative;
 }
 #form>div.none>label {
+    cursor: pointer;
     font-size: 1em;
     padding-bottom: 8em;
 }
@@ -299,4 +300,7 @@ input.button {
     padding: .5em;
     font-size: 1.4em;
     color: #777;
+}
+#form .needed{
+    border-color:#F00;
 }
