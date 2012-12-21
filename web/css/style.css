@@ -52,7 +52,7 @@ form {
     margin-bottom: 20px;
 }
 form>div {
-    width: 10000px;
+    width: 9338px; /* (27 questions max + 2) * 322 = 9016 */
 }
 form>div>div {
     float: left;
@@ -93,6 +93,9 @@ div.mask {
     cursor: pointer;
     font-size: 1em;
     padding-bottom: 8em;
+}
+#form>div.likert.none:hover>label:after {
+    color: #999;
 }
 #form>div.likert.none>label:after {
     bottom: 0;

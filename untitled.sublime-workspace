@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"sc",
+				"scroll"
+			],
+			[
+				"qu",
+				"likertQuestions"
+			],
+			[
+				"arra_k",
+				"array_key_exists"
+			],
+			[
+				"array_k",
+				"array_key_exists"
+			],
+			[
+				"se",
+				"sessionData"
+			],
+			[
 				"in",
 				"inline-block"
 			],
@@ -296,10 +316,6 @@
 				"public"
 			],
 			[
-				"array_k",
-				"array_key_exists"
-			],
-			[
 				"bu",
 				"bundleBaseName"
 			],
@@ -335,7 +351,7 @@
 			"file": "config/questions.yml",
 			"settings":
 			{
-				"buffer_size": 22268,
+				"buffer_size": 22251,
 				"line_ending": "Unix"
 			}
 		},
@@ -343,7 +359,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 8352,
+				"buffer_size": 8752,
 				"line_ending": "Unix"
 			}
 		},
@@ -359,7 +375,7 @@
 			"file": "web/view/index.html.twig",
 			"settings":
 			{
-				"buffer_size": 1157,
+				"buffer_size": 1155,
 				"line_ending": "Unix"
 			}
 		},
@@ -380,14 +396,6 @@
 			}
 		},
 		{
-			"file": "web/css/knacss.css",
-			"settings":
-			{
-				"buffer_size": 10857,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
 			"settings":
 			{
@@ -399,7 +407,7 @@
 			"file": "web/css/style.css",
 			"settings":
 			{
-				"buffer_size": 6763,
+				"buffer_size": 6926,
 				"line_ending": "Unix"
 			}
 		},
@@ -407,7 +415,7 @@
 			"file": "web/view/form.html.twig",
 			"settings":
 			{
-				"buffer_size": 3107,
+				"buffer_size": 1935,
 				"line_ending": "Unix"
 			}
 		},
@@ -415,7 +423,7 @@
 			"file": "web/js/likert.js",
 			"settings":
 			{
-				"buffer_size": 635,
+				"buffer_size": 2704,
 				"line_ending": "Unix"
 			}
 		}
@@ -423,11 +431,23 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 272.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
 				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"indent",
 				"Indentation: Reindent Lines"
 			],
 			[
@@ -449,10 +469,6 @@
 			[
 				"upee",
 				"Convert Case: Upper Case"
-			],
-			[
-				"in",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"cas",
@@ -508,12 +524,12 @@
 	},
 	"file_history":
 	[
+		"/var/www/html/likertForm/web/css/knacss.css",
 		"/var/www/html/likertForm/web/view/layout.html",
 		"/var/www/html/likertForm/web/css/style.css",
 		"/var/www/html/likertForm/web/view/form.html.twig",
 		"/var/www/html/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
 		"/var/www/html/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Tests/Extension/custom_widgets.html.twig",
-		"/var/www/html/likertForm/web/css/knacss.css",
 		"/var/www/html/likertForm/web/css/forms.css",
 		"/var/www/html/likertForm/web/demos/5.html",
 		"/var/www/html/likertForm/web/view/index.html.twig",
@@ -700,6 +716,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"redir",
+			".none",
+			"console",
 			"back",
 			"intro",
 			"#form > div.none > label",
@@ -824,10 +843,7 @@
 			"LogAction",
 			"trackingSources",
 			"throw",
-			"login",
-			"Tracking",
-			"reflClass",
-			"isSubclassOf"
+			"login"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -899,7 +915,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -907,15 +923,15 @@
 					"file": "config/questions.yml",
 					"settings":
 					{
-						"buffer_size": 22268,
+						"buffer_size": 22251,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9357,
-								9357
+								17654,
+								17654
 							]
 						],
 						"settings":
@@ -925,7 +941,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3510.0,
+						"translation.y": 6305.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -935,15 +951,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 8352,
+						"buffer_size": 8752,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3283,
-								3283
+								2999,
+								2999
 							]
 						],
 						"settings":
@@ -953,7 +969,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 936.0,
+						"translation.y": 507.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -991,15 +1007,15 @@
 					"file": "web/view/index.html.twig",
 					"settings":
 					{
-						"buffer_size": 1157,
+						"buffer_size": 1155,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								974,
-								974
+								1042,
+								1042
 							]
 						],
 						"settings":
@@ -1070,34 +1086,6 @@
 				},
 				{
 					"buffer": 6,
-					"file": "web/css/knacss.css",
-					"settings":
-					{
-						"buffer_size": 10857,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4319,
-								4319
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2592.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
 					"settings":
 					{
@@ -1125,19 +1113,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "web/css/style.css",
 					"settings":
 					{
-						"buffer_size": 6763,
+						"buffer_size": 6926,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6694,
-								6694
+								2778,
+								2778
 							]
 						],
 						"settings":
@@ -1147,25 +1135,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3562.0,
+						"translation.y": 624.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "web/view/form.html.twig",
 					"settings":
 					{
-						"buffer_size": 3107,
+						"buffer_size": 1935,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2813,
-								2813
+								636,
+								636
 							]
 						],
 						"settings":
@@ -1175,33 +1163,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 819.0,
+						"translation.y": 195.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "web/js/likert.js",
 					"settings":
 					{
-						"buffer_size": 635,
+						"buffer_size": 2704,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								635,
-								635
+								867,
+								867
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

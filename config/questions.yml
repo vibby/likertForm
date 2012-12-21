@@ -128,6 +128,8 @@ likertQuestions:
     q22:
       label: "L’année prochaine, j’ai l’intention de chercher un emploi en dehors de cette organisation"
       scale: yesno
+
+  page2:
     q23:
       label: "Pour la plupart de ses aspects, ma vie est proche de mon idéal"
       scale: ok7
@@ -143,8 +145,6 @@ likertQuestions:
     q27:
       label: "Si je pouvais revivre ma vie, je ne changerais presque rien"
       scale: ok7
-
-  page2:
     intro1:
       label: "Les propositions suivantes se réfèrent à votre personnalité. Globalement vous pensez être"
       scale: none
@@ -209,6 +209,7 @@ likertQuestions:
       label: "Je pense être Craintif(ve)"
       scale: freq5
 
+  page3:
     intro2:
       label: "Les questions qui suivent se réfèrent à votre rémunération. Globalement vous trouvez que"
       scale: none
@@ -224,13 +225,9 @@ likertQuestions:
     q51:
       label: "Votre rémunération est justifiée, au regard de votre performance"
       scale: fewhigh5
-
-  page3:
-
     intro3:
       label: "Les propositions suivantes se réfèrent aux procédures utilisées par l’entreprise pour prendre des décisions vous concernant. Dans quelle mesure ces procédures"
       scale: none
-
     q52:
       label: "Vous permettent d’exprimer vos opinions et sentiments durant la prise de décisions"
       scale: fewhigh5
@@ -252,11 +249,9 @@ likertQuestions:
     q58:
       label: "Respectent des règles de morale"
       scale: fewhigh5
-
     intro4:
       label: "Les propositions suivantes se réfèrent aux personnes responsables des décisions vous concernant. Dans quelle mesure vous trouvez que ces personnes"
       scale: none
-
     q59:
       label: "Vous traitent poliment"
       scale: fewhigh5
@@ -269,11 +264,9 @@ likertQuestions:
     q62:
       label: "Évitent de vous faire des remarques ou des commentaires déplacés"
       scale: fewhigh5
-
     intro5:
       label: "Les propositions suivantes se réfèrent aux personnes responsables des décisions vous concernant. Dans quelle mesure vous trouvez que ces personnes"
       scale: none
-
     q63:
       label: "Ont eu une communication franche avec vous"
       scale: fewhigh5
@@ -292,11 +285,9 @@ likertQuestions:
 
 
   page4:
-
     intro6:
       label: "Les propositions suivantes se réfèrent à ce que vous pensez en général"
       scale: none
-
     q68:
       label: "Je pense que, dans la vie, je reçois en général ce que je mérite"
       scale: ok5
@@ -365,11 +356,9 @@ likertQuestions:
       scale: ok5
 
   page5:
-
     intro7:
       label: "Les propositions suivantes traitent des relations que vous entretenez avec vos collègues et supérieurs hiérarchiques. En général, vous trouvez qu’ils "
       scale: none
-
     q90:
       label: "Retiennent de l’information qui vous est nécessaire et rend ainsi votre travail plus difficile"
       scale: freq4
@@ -418,13 +407,9 @@ likertQuestions:
     q105:
       label: "Exploitent votre travail à des fins privées"
       scale: freq4
-
-  page6:
-
     intro8:
       label: "En quelle mesure pouvez-vous témoigner de ces comportements"
       scale: none
-
     q106:
       label: "Réactions négatives des autres parce que vous travaillez trop dur"
       scale: freq4
@@ -440,7 +425,6 @@ likertQuestions:
     q110:
       label: "Certains de mes collègues refusent tout contact, même visuel, avec moi, comme si je n’existais pas"
       scale: freq4
-
     q111:
       label: "Avez-vous été harcelé(e) ces six derniers mois ?"
       scale: yesnofreq5
@@ -451,6 +435,7 @@ likertQuestions:
       label: "Avez-vous été témoin de harcèlement ces derniers mois ?"
       scale: yesnofreq5
 
+  page6:
     q114:
       label: "Les collègues avec qui je travaille sont des gens professionnellement compétents"
       scale: ok4
@@ -532,6 +517,8 @@ likertQuestions:
     q140:
       label: "Je ne peux pas avoir confiance en mes amis"
       scale: ok4
+
+  page7:
     q141:
       label: "Je me sens accepté(e) et aimé(e) par ma famille"
       scale: ok4
@@ -544,9 +531,6 @@ likertQuestions:
     q144:
       label: "Je peux être aidé(e) financièrement par mes amis"
       scale: ok4
-
-  page7:
-
     q145:
       label: "Je suis agressif(ve) pour tout et pour rien"
       scale: freq5
@@ -618,7 +602,6 @@ likertQuestions:
       scale: freq5
 
   page8:
-
     q168:
       label: "Je me sens émotionnellement pompé(e) par mon travail"
       scale: freq7

@@ -39,12 +39,12 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
     $domains = array(
         'Industrie',
         'Agroalimentaire',
-    );
+        );
     $sectors = array(
         'Public',
         'Privé',
         'Parapublic',
-    );
+        );
     $jobs = array(
         "Agriculteurs exploitants",
         "Artisans",
@@ -64,7 +64,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
         "Ouvriers qualifiés",
         "Ouvriers non qualifiés",
         "Ouvriers agricoles"
-    );
+        );
     $domains = array(
         "Agriculture",
         "Industrie",
@@ -82,162 +82,155 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
         "Santé",
         "Informatique et nouvelles technologies",
         "Autre, préciser ci-dessous",
-    );
+        );
 
     $sessionData = $app['session']->get('data');
-    if(!$sessionData)  {
+    if(!$sessionData) {
       $sessionData = array();
-      if($idPage != 1)  {
-       $nextPage = '/questionnaire/1';
-       return $app->redirect($nextPage);
-   }
-}
-
-// var_dump($sessionData);
-// var_dump($data);
-// die;
-$idPage = 0;
-$found = false;
-do {
-    $idPage++;
-    foreach ($likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
-        if (!array_key_exists('page'. $idPage.'_item'.$qKey, $sessionData))
-            $found = true;
-     # code...
     }
-} while (array_key_exists('page'. $idPage, $likertQuestions) && !$found);
 
-$formBuilder = $app['form.factory']->createBuilder('form', $sessionData);
-if ($idPage <= count($likertQuestions)) {
-    foreach( $likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
-        $constraint =
-        null == is_array($likertQuestion['scale']) ?
-        null :
-        new Assert\Choice(array_keys($likertScales[ $likertQuestion['scale'] ])) ;
-        $formBuilder->add( 'page'.$idPage.'_item'.$qKey , 'choice', array(
-            'choices' => $likertScales[ $likertQuestion['scale'] ] ,
+    $idPage = 0;
+    $found = false;
+    do {
+        $idPage++;
+        foreach ($likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
+            if (!array_key_exists('page'. $idPage.'_item'.$qKey, $sessionData)) {
+                $found = true;
+            }
+        }
+    } while (array_key_exists('page'. $idPage, $likertQuestions) && !$found);
+
+    $formBuilder = $app['form.factory']->createBuilder('form', $sessionData);
+    if ($idPage <= count($likertQuestions)) {
+        foreach( $likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
+            $constraint =
+            null == is_array($likertQuestion['scale']) ?
+            null :
+            new Assert\Choice(array_keys($likertScales[ $likertQuestion['scale'] ])) ;
+            $formBuilder->add( 'page'.$idPage.'_item'.$qKey , 'choice', array(
+                'choices' => $likertScales[ $likertQuestion['scale'] ] ,
+                'expanded' => true,
+                'multiple' => false,
+                'constraints' => $constraint,
+                'attr' => array(
+                    'class' => $likertQuestion['scale']. ' likert',
+                    ),
+                'label' => $likertQuestion['label'],
+                ));
+        }
+    } else {
+        $formBuilder
+        ->add( 'Age', 'integer', array(
+            'label' => "Age :"
+            ))
+        ->add( 'Sexe', 'choice', array(
+            'choices' => array('Homme','Femme') ,
             'expanded' => true,
             'multiple' => false,
-            'constraints' => $constraint,
-            'attr' => array(
-                'class' => $likertQuestion['scale']. ' likert',
-                ),
-            'label' => $likertQuestion['label'],
-            ));
+            'constraints' => new Assert\Choice(array(0,1)),
+            'label' => "Sexe :",
+            'empty_value' => '',
+            ))
+        ->add( 'Situation_famille', 'choice', array(
+            'choices' => array('Seul','En couple') ,
+            'expanded' => true,
+            'multiple' => false,
+            'constraints' => new Assert\Choice(array(0,1)),
+            'label' => "Situation familiale :",
+            'empty_value' => '',
+            ))
+        ->add( 'Nombre_enfants_a_charge', 'integer', array(
+            'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
+            'label' => "Nombre d'enfants ou de personnes à votre charge :"
+            ))
+        ->add( 'Profession', 'choice', array(
+            'choices' => $jobs ,
+            'expanded' => false,
+            'multiple' => false,
+            'constraints' => new Assert\Choice(array_keys($jobs)),
+            'label' => "Quelle est votre profession ?",
+            'empty_value' => '',
+            ))
+        ->add( 'Secteur', 'choice', array(
+            'choices' => $sectors ,
+            'expanded' => false,
+            'multiple' => false,
+            'constraints' => new Assert\Choice(array_keys($sectors)),
+            'label' => "Quel est le type de secteur de votre entreprise ?",
+            'empty_value' => '',
+            ))
+        ->add( 'Intitule_poste', 'text', array(
+            'label' => "Quel est l'intitulé exact de votre poste actuel ?"
+            ))
+        ->add( 'Heures_travail_semaine', 'integer', array(
+            'label' => "Combien d'heures par semaine travaillez-vous ?"
+            ))
+        ->add( 'Heures_travail_semaine', 'integer', array(
+            'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?"
+            ))
+        ->add( 'Satisfaction_salaire', 'text', array(
+            'label' => "Êtes-vous satisfait(e) de votre salaire net mensuel ?"
+            ))
+        ->add( 'Duree_poste', 'text', array(
+            'label' => "Depuis quand travaillez-vous dans votre poste actuel ?"
+            ))
+        ->add( 'Duree_entreprise', 'text', array(
+            'label' => "Depuis quand travaillez-vous dans votre entreprise actuelle ?"
+            ))
+        ->add( 'Societe', 'text', array(
+            'required' => false ,
+            'label' => "Nom de votre entreprise (facultatif) :"
+            ))
+        ->add( 'Domain', 'choice', array(
+            'choices' => $domains ,
+            'expanded' => false,
+            'multiple' => false,
+            'constraints' => new Assert\Choice(array_keys($domains)),
+            'label' => "A quelle branche appartient votre entreprise ?",
+            'empty_value' => '',
+            ))
+        ->add( 'Domain_other', 'text', array(
+            'required' => false ,
+            'label' => "Si autre, préciser"
+            ))
+        ->add( 'Nombre_salaries_etablissement', 'integer', array(
+            'required' => false ,
+            'label' => "Nombre de salariés dans votre  établissement (facultatif) :"
+            ))
+        ->add( 'Nombre_salaries_entreprise', 'integer', array(
+            'required' => false ,
+            'label' => "Nombre total de salariés dans votre entreprise (facultatif) :"
+            ))
+        ;
     }
-} else {
-    $formBuilder
-    ->add( 'Age', 'integer', array(
-        'label' => "Age :"
-        ))
-    ->add( 'Sexe', 'choice', array(
-        'choices' => array('Homme','Femme') ,
-        'expanded' => true,
-        'multiple' => false,
-        'constraints' => new Assert\Choice(array(0,1)),
-        'label' => "Sexe :",
-        'empty_value' => '',
-        ))
-    ->add( 'Situation_famille', 'choice', array(
-        'choices' => array('Seul','En couple') ,
-        'expanded' => true,
-        'multiple' => false,
-        'constraints' => new Assert\Choice(array(0,1)),
-        'label' => "Situation familiale :",
-        'empty_value' => '',
-        ))
-    ->add( 'Nombre_enfants_a_charge', 'integer', array(
-        'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
-        'label' => "Nombre d'enfants ou de personnes à votre charge :"
-        ))
-    ->add( 'Profession', 'choice', array(
-        'choices' => $jobs ,
-        'expanded' => false,
-        'multiple' => false,
-        'constraints' => new Assert\Choice(array_keys($jobs)),
-        'label' => "Quelle est votre profession ?",
-        'empty_value' => '',
-        ))
-    ->add( 'Secteur', 'choice', array(
-        'choices' => $sectors ,
-        'expanded' => false,
-        'multiple' => false,
-        'constraints' => new Assert\Choice(array_keys($sectors)),
-        'label' => "Quel est le type de secteur de votre entreprise ?",
-        'empty_value' => '',
-        ))
-    ->add( 'Intitule_poste', 'text', array(
-        'label' => "Quel est l'intitulé exact de votre poste actuel ?"
-        ))
-    ->add( 'Heures_travail_semaine', 'integer', array(
-        'label' => "Combien d'heures par semaine travaillez-vous ?"
-        ))
-    ->add( 'Heures_travail_semaine', 'integer', array(
-        'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?"
-        ))
-    ->add( 'Satisfaction_salaire', 'text', array(
-        'label' => "Êtes-vous satisfait(e) de votre salaire net mensuel ?"
-        ))
-    ->add( 'Duree_poste', 'text', array(
-        'label' => "Depuis quand travaillez-vous dans votre poste actuel ?"
-        ))
-    ->add( 'Duree_entreprise', 'text', array(
-        'label' => "Depuis quand travaillez-vous dans votre entreprise actuelle ?"
-        ))
-    ->add( 'Societe', 'text', array(
-        'required' => false ,
-        'label' => "Nom de votre entreprise (facultatif) :"
-        ))
-    ->add( 'Domain', 'choice', array(
-        'choices' => $domains ,
-        'expanded' => false,
-        'multiple' => false,
-        'constraints' => new Assert\Choice(array_keys($domains)),
-        'label' => "A quelle branche appartient votre entreprise ?",
-        'empty_value' => '',
-        ))
-    ->add( 'Domain_other', 'text', array(
-        'required' => false ,
-        'label' => "Si autre, préciser"
-        ))
-    ->add( 'Nombre_salaries_etablissement', 'integer', array(
-        'required' => false ,
-        'label' => "Nombre de salariés dans votre  établissement (facultatif) :"
-        ))
-    ->add( 'Nombre_salaries_entreprise', 'integer', array(
-        'required' => false ,
-        'label' => "Nombre total de salariés dans votre entreprise (facultatif) :"
-        ))
-    ;
-}
-$form = $formBuilder->getForm();
+    $form = $formBuilder->getForm();
 
-if ('POST' == $request->getMethod()) {
-    $form->bind($request);
+    if ('POST' == $request->getMethod()) {
+        $form->bind($request);
 
-    if ($form->isValid()) {
-        $formData = $form->getData();
-        $data = array_merge($sessionData, $formData);
-        $app['session']->set('data',$data);
+        if ($form->isValid()) {
+            $formData = $form->getData();
+            $data = array_merge($sessionData, $formData);
+            $app['session']->set('data',$data);
 
-        if ($idPage > count($likertQuestions)) {
-                  // TODO : Store data in CSV
-                  // TODO : Send mail with data
-          $nextPage = '/merci';
-      } else {
-          $nextPage = '/questionnaire/'.($idPage+1);;
+            if ($idPage > count($likertQuestions)) {
+                      // TODO : Store data in CSV
+                      // TODO : Send mail with data
+              $nextPage = '/merci';
+          } else {
+              $nextPage = '/questionnaire';
+          }
+          return $app->redirect($nextPage);
       }
-      return $app->redirect($nextPage);
-  }
-}
+    }
 
-        // display the form
-return $app['twig']->render('form.html.twig', array(
-    'form' => $form->createView(),
-    'shownPage' => $idPage,
-    'scales' => array_keys($likertScales),
-    'pages' => range(1, count($likertQuestions) + 1),
-    ));
+            // display the form
+    return $app['twig']->render('form.html.twig', array(
+        'form' => $form->createView(),
+        'shownPage' => $idPage,
+        'scales' => array_keys($likertScales),
+        'pages' => range(1, count($likertQuestions) + 1),
+        ));
 })->convert('idPage', function ($id) { return (int) $id; });
 
 $app->run();
