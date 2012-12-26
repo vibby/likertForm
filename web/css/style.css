@@ -37,7 +37,11 @@ body {
     max-width: 960px;
     margin: auto;
 }
-
+@media screen and (max-width: 400px) {
+    h1{
+        font-size: 1em;
+    }
+}
 
 .main {
     position: relative;
@@ -57,21 +61,23 @@ form>div {
 form>div>div {
     float: left;
 }
-div.mask {
-    position: absolute;
-    display: block;
-    width: 30%;
-    height: 95%;
-    right: 0;
-    z-index: 100;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,1) 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,100%,0)), color-stop(100%,hsla(0,0%,100%,1)));
-    background: -webkit-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
-    background: -o-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
-    background: -ms-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
-    background: linear-gradient(to right, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+@media screen and (min-width: 400px) {
+    div.mask {
+        position: absolute;
+        display: block;
+        width: 30%;
+        height: 95%;
+        right: 0;
+        z-index: 100;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,1) 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,100%,0)), color-stop(100%,hsla(0,0%,100%,1)));
+        background: -webkit-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
+        background: -o-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
+        background: -ms-linear-gradient(left, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
+        background: linear-gradient(to right, hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+    }
 }
 #form>div, form>div>div:last-child {
     float: left;
@@ -167,7 +173,8 @@ body:before{
     z-index: -12;
     content: " ";
     display: block;
-    height: 260px;
+    height: 33%;
+    max-height: 260px;
     left: 0;
     position: absolute;
     right: 0;
@@ -177,7 +184,6 @@ body:before{
     background-image: -moz-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
     background-image: -webkit-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
     background-image: -ms-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
-
     background-image: -webkit-gradient(
         linear,
         left bottom,
@@ -194,10 +200,17 @@ body:before{
 }
 
 body>div.content {
+    overflow: hidden;
     background: #fff;
     border-radius: 1.6em;
     border: 1px solid #0F305A;
-    padding: 0 12px;
+    width: 99%;
+}
+@media screen and (min-width: 400px) {
+    body>div.content {
+        padding: 0 12px;
+        width: 100%;
+    }
 }
 
 .right {
@@ -212,7 +225,8 @@ body>div.content {
 }
 
 body>header>img {
-    margin: 2em 0;
+    margin: 3% 0;
+    max-width: 20%;
 }
 
 body>footer {
@@ -273,6 +287,7 @@ input.button {
 .steps{
     float: right;
     font-size: .9em;
+    margin-right: 0.6em;
 }
 .steps .separator{
     color: #ccc;
@@ -307,3 +322,5 @@ input.button {
 #form .needed{
     border-color:#F00;
 }
+
+

@@ -41,7 +41,7 @@
             <span class="item {% if page < shownPage %}done{% endif %}{% if page == shownPage %}active{% endif %}" >
                 {{ page }}
             </span>
-            {% if not loop.last %}<span class="separator">| </span>{% endif %}
+            {%- if not loop.last -%}<span class="separator">| </span>{%- endif -%}
         {%- endfor %}
     </h2>
     <h1>Enquête 2013 sur la vie au travail</h1>

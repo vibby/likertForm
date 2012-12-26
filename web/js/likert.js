@@ -40,6 +40,7 @@ $(document).ready(function() {
 // requestAnimationFrame polyfill by Erik Möller
 // fixes from Paul Irish and Tino Zijdel
 
+/*
 (function() {
     var lastTime = 0;
     var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -90,3 +91,4 @@ function scrollLeft(speed = 100) {
 ;
 
 window.onload = scrollLeft;
+*/
