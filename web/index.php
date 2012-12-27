@@ -93,7 +93,9 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
     $found = false;
     do {
         $idPage++;
-        foreach ($likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
+        if (!array_key_exists('page'. $idPage, $likertQuestions))
+            $found = true;
+        else foreach ($likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
             if (!array_key_exists('page'. $idPage.'_item'.$qKey, $sessionData)) {
                 $found = true;
             }
@@ -120,8 +122,8 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
         }
     } else {
         $formBuilder
-        ->add( 'Age', 'integer', array(
-            'label' => "Age :"
+        ->add( 'age', 'integer', array(
+            'label' => "Votre age"
             ))
         ->add( 'Sexe', 'choice', array(
             'choices' => array('Homme','Femme') ,

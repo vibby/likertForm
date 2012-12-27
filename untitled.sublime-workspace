@@ -359,7 +359,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 8752,
+				"buffer_size": 8854,
 				"line_ending": "Unix"
 			}
 		},
@@ -407,7 +407,7 @@
 			"file": "web/css/style.css",
 			"settings":
 			{
-				"buffer_size": 6926,
+				"buffer_size": 7495,
 				"line_ending": "Unix"
 			}
 		},
@@ -415,7 +415,7 @@
 			"file": "web/view/form.html.twig",
 			"settings":
 			{
-				"buffer_size": 1935,
+				"buffer_size": 1939,
 				"line_ending": "Unix"
 			}
 		},
@@ -423,7 +423,7 @@
 			"file": "web/js/likert.js",
 			"settings":
 			{
-				"buffer_size": 2704,
+				"buffer_size": 2780,
 				"line_ending": "Unix"
 			}
 		}
@@ -716,6 +716,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"steps",
+			"img",
+			"322",
+			"padd",
+			"100%",
 			"redir",
 			".none",
 			"console",
@@ -838,12 +843,7 @@
 			"createListQuery",
 			"trackingCode",
 			"gette",
-			"todo",
-			"merge",
-			"LogAction",
-			"trackingSources",
-			"throw",
-			"login"
+			"todo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -915,7 +915,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -951,15 +951,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 8752,
+						"buffer_size": 8854,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2999,
-								2999
+								4668,
+								4668
 							]
 						],
 						"settings":
@@ -969,7 +969,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 507.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1117,15 +1117,15 @@
 					"file": "web/css/style.css",
 					"settings":
 					{
-						"buffer_size": 6926,
+						"buffer_size": 7495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2778,
-								2778
+								6801,
+								6775
 							]
 						],
 						"settings":
@@ -1135,7 +1135,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 624.0,
+						"translation.y": 3666.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1145,15 +1145,15 @@
 					"file": "web/view/form.html.twig",
 					"settings":
 					{
-						"buffer_size": 1935,
+						"buffer_size": 1939,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								636,
-								636
+								977,
+								977
 							]
 						],
 						"settings":
@@ -1173,15 +1173,15 @@
 					"file": "web/js/likert.js",
 					"settings":
 					{
-						"buffer_size": 2704,
+						"buffer_size": 2780,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								867,
-								867
+								725,
+								725
 							]
 						],
 						"settings":
@@ -1191,7 +1191,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 39.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -67,7 +67,7 @@ form>div>div {
         display: block;
         width: 30%;
         height: 95%;
-        right: 0;
+        right: -2%;
         z-index: 100;
         background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
         background: -moz-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,1) 100%);
@@ -81,13 +81,13 @@ form>div>div {
 }
 #form>div, form>div>div:last-child {
     float: left;
-    width: 300px;
+    width: 282px;
     display:block;
     margin-right:20px;
     border-radius:8px;
     background:#ccc;
     padding:5px;
-    margin:5px;
+    margin:4px;
 }
 #form>div>label {
   padding: 1.6em;
@@ -133,6 +133,9 @@ form>div>div {
 }
 .choiceItem > input:checked + label {
     background: #afa;
+}
+select {
+    max-width:100%;
 }
 /*
 form { max-width: 100%; }
@@ -200,16 +203,16 @@ body:before{
 }
 
 body>div.content {
+    clear: both;
     overflow: hidden;
     background: #fff;
     border-radius: 1.6em;
     border: 1px solid #0F305A;
-    width: 99%;
 }
 @media screen and (min-width: 400px) {
     body>div.content {
         padding: 0 12px;
-        width: 100%;
+/*        width: 100%; */
     }
 }
 
@@ -225,8 +228,8 @@ body>div.content {
 }
 
 body>header>img {
-    margin: 3% 0;
-    max-width: 20%;
+    margin: 3%;
+    max-width: 24%;
 }
 
 body>footer {
@@ -307,16 +310,25 @@ input.button {
     border-radius: .8em;
     color: #fff;
 }
+@media screen and (max-width: 400px) {
+    h1{
+        font-size: 1em;
+    }
+    h2.steps{
+        font-size: .8em;
+        color: #666;
+    }
+}
 
-.nav{
+/*.nav{
     display: inline-block;
     position: absolute;
-    bottom: 1.5em;
+    top: -1em;
     left: 0;
 }
-.nav a{
-    padding: .5em;
-    font-size: 1.4em;
+*/.nav a{
+    padding: .2em .9em;
+    font-size: 1.6em;
     color: #777;
 }
 #form .needed{

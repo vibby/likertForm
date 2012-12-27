@@ -1,7 +1,7 @@
 
 
 $(document).ready(function() {
-    $('.likert input').change(function() {
+    $('input').change(function() {
       $('.nav .next').trigger('click');
     });
 
@@ -10,17 +10,19 @@ $(document).ready(function() {
     });
 
     $('.nav .back').click(function() {
+      var dec = $('form').scrollLeft() % 302;
+      dec = dec > 0 ? dec : 302;
       $('form').stop().animate({
-            scrollLeft: $('form').scrollLeft() - 322
+            scrollLeft: $('form').scrollLeft() - dec
         }, 500);
     });
 
     $('.nav .next').click(function() {
-      var count = Math.floor($('form').scrollLeft() / 322) + 1;
+      var count = Math.floor($('form').scrollLeft() / 302) + 1;
       var item = ($('#form>div:nth-child(' + count + ')'));
       if (item.hasClass('none') || item.find('input:checked').length) {
-        var dec = 322 - $('form').scrollLeft() % 322;
-        dec = dec > 0 ? dec : 322;
+        var dec = 302 - $('form').scrollLeft() % 302;
+        dec = dec > 0 ? dec : 302;
         $('form').stop().animate({
               scrollLeft: $('form').scrollLeft() + dec
         }, 500);
