@@ -1,6 +1,10 @@
 
 
 $(document).ready(function() {
+    $('select').change(function() {
+      $('.nav .next').trigger('click');
+    });
+
     $('input').change(function() {
       $('.nav .next').trigger('click');
     });
@@ -20,7 +24,7 @@ $(document).ready(function() {
     $('.nav .next').click(function() {
       var count = Math.floor($('form').scrollLeft() / 302) + 1;
       var item = ($('#form>div:nth-child(' + count + ')'));
-      if (item.hasClass('none') || item.find('input:checked').length) {
+      if (item.hasClass('none') || item.find('input:checked').length || item.find('input').val() != "") {
         var dec = 302 - $('form').scrollLeft() % 302;
         dec = dec > 0 ? dec : 302;
         $('form').stop().animate({

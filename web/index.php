@@ -21,6 +21,17 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.options' => array('debug' => true)
     ));
     // $app['twig']->addExtension(new Twig_Extensions_Extension_Debug());
+$app->register(new SwiftmailerExtension(), array(
+    'swiftmailer.options' => array(
+        'host' => 'smtp.gmail.com',
+        'port' => 465,
+        'username' => 'vincent.beauvivre@gmail.com',
+        'password' => 'twinsen00',
+        'encryption' => 'ssl',
+        'auth_mode' => 'login'
+    ),
+    'swiftmailer.class_path' => __DIR__.'/../vendor/swiftmailer/lib/classes'
+));
 
 $app->match('/', function (Request $request) use ($app) {
     return $app['twig']->render('index.html.twig');
@@ -86,7 +97,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
 
     $sessionData = $app['session']->get('data');
     if(!$sessionData) {
-      $sessionData = array();
+      $sessionData = array(time());
     }
 
     $idPage = 0;
@@ -216,14 +227,33 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             $app['session']->set('data',$data);
 
             if ($idPage > count($likertQuestions)) {
-                      // TODO : Store data in CSV
-                      // TODO : Send mail with data
+
+                $time = time();
+                $data = array_merge(array('dateFin' => $time),$data);
+
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('[EnquêteVieAuTravail] Nouvelle réponse')
+                    ->setFrom(array('noreply@univ-nantes.fr'))
+                    ->setTo(array('vincent.beauvivre@gmail.com', 'kristina.beauvivre@gmail.com'))
+                    ->setBody("Une nouvelle réponse au formulaire :\n\n".implode("\n",$data));
+
+                $app['mailer']->send($message);
+
+                $handle = fopen(__DIR__ . '/../reponses/_toutes.csv', 'w');
+                fputcsv($handle, $data);
+
+                $handle = fopen(__DIR__ . '/../reponses/'.$time.'.csv', 'w');
+                fputcsv($handle, $data, chr(13));
+
+                $app['session']->set('data',null);
+
               $nextPage = '/merci';
-          } else {
+            } else {
               $nextPage = '/questionnaire';
-          }
-          return $app->redirect($nextPage);
-      }
+            }
+
+        return $app->redirect($nextPage);
+        }
     }
 
             // display the form

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"array_",
+				"array_merge"
+			],
+			[
 				"sc",
 				"scroll"
 			],
@@ -359,7 +363,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 8854,
+				"buffer_size": 9987,
 				"line_ending": "Unix"
 			}
 		},
@@ -383,7 +387,7 @@
 			"file": "web/view/merci.html.twig",
 			"settings":
 			{
-				"buffer_size": 123,
+				"buffer_size": 625,
 				"line_ending": "Unix"
 			}
 		},
@@ -415,7 +419,7 @@
 			"file": "web/view/form.html.twig",
 			"settings":
 			{
-				"buffer_size": 1939,
+				"buffer_size": 2259,
 				"line_ending": "Unix"
 			}
 		},
@@ -423,7 +427,23 @@
 			"file": "web/js/likert.js",
 			"settings":
 			{
-				"buffer_size": 2780,
+				"buffer_size": 2899,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "composer.json",
+			"settings":
+			{
+				"buffer_size": 469,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "reponses/_toutes.csv",
+			"settings":
+			{
+				"buffer_size": 440,
 				"line_ending": "Unix"
 			}
 		}
@@ -716,6 +736,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"row",
 			"steps",
 			"img",
 			"322",
@@ -842,8 +863,7 @@
 			"TODO",
 			"createListQuery",
 			"trackingCode",
-			"gette",
-			"todo"
+			"gette"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -915,7 +935,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -951,15 +971,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 8854,
+						"buffer_size": 9987,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4668,
-								4668
+								724,
+								724
 							]
 						],
 						"settings":
@@ -969,7 +989,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1014,8 +1034,8 @@
 						"selection":
 						[
 							[
-								1042,
-								1042
+								101,
+								101
 							]
 						],
 						"settings":
@@ -1035,15 +1055,15 @@
 					"file": "web/view/merci.html.twig",
 					"settings":
 					{
-						"buffer_size": 123,
+						"buffer_size": 625,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								123,
-								123
+								625,
+								625
 							]
 						],
 						"settings":
@@ -1096,8 +1116,8 @@
 						"selection":
 						[
 							[
-								1596,
-								1596
+								472,
+								472
 							]
 						],
 						"settings":
@@ -1107,7 +1127,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 13.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1124,8 +1144,8 @@
 						"selection":
 						[
 							[
-								6801,
-								6775
+								7258,
+								7258
 							]
 						],
 						"settings":
@@ -1135,7 +1155,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3666.0,
+						"translation.y": 3081.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1145,15 +1165,15 @@
 					"file": "web/view/form.html.twig",
 					"settings":
 					{
-						"buffer_size": 1939,
+						"buffer_size": 2259,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								977,
-								977
+								877,
+								877
 							]
 						],
 						"settings":
@@ -1163,7 +1183,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 195.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1173,15 +1193,15 @@
 					"file": "web/js/likert.js",
 					"settings":
 					{
-						"buffer_size": 2780,
+						"buffer_size": 2899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								725,
-								725
+								1050,
+								1050
 							]
 						],
 						"settings":
@@ -1189,6 +1209,60 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "composer.json",
+					"settings":
+					{
+						"buffer_size": 469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								375,
+								375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "reponses/_toutes.csv",
+					"settings":
+					{
+						"buffer_size": 440,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1240,6 +1314,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"fieltwig",
+				"vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig"
+			],
 			[
 				"form.html.",
 				"vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig"
@@ -1747,10 +1825,6 @@
 			[
 				"respon",
 				"vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Response.php"
-			],
-			[
-				"closretreerepo",
-				"vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity/Repository/ClosureTreeRepository.php"
 			]
 		],
 		"width": 0.0
