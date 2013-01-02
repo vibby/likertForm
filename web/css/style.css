@@ -49,7 +49,7 @@ body {
 }
 
 form {
-    overflow-x:scroll;
+    overflow-x:hidden;
     overflow-y:hidden;
     width: 940px;
     height: 500px;
@@ -182,6 +182,7 @@ body:before{
     position: absolute;
     right: 0;
     top: 0;
+    background-color: #0A396B;
     background-image: linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
     background-image: -o-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
     background-image: -moz-linear-gradient(bottom, #18305E 0%, #0D305A 37%, #0259A5 100%);
@@ -292,12 +293,10 @@ input.button {
     font-size: .9em;
     margin-right: 0.6em;
 }
-.steps .separator{
-    color: #ccc;
-}
 .steps .item{
     display: inline-block;
     padding: .5em .25em;
+    margin: 0 .1em;
     vertical-align: middle;
     text-align: center;
     color: #777;
@@ -330,6 +329,15 @@ input.button {
     padding: .2em .9em;
     font-size: 1.6em;
     color: #777;
+}
+.nav a.last {
+    letter-spacing: -.2em;
+}
+.nav a.last span {
+    display: inline-block;
+    font-size: 60%;
+    position: relative;
+    top: -0.2em;
 }
 #form .needed{
     border-color:#F00;

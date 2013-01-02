@@ -21,15 +21,24 @@ $(document).ready(function() {
         }, 500);
     });
 
+    $('.nav .last').click(function() {
+      var dec = $('form').scrollLeft() % 302;
+      dec = dec > 0 ? dec : 302;
+      $('form').stop().animate({
+            scrollLeft: $('form').scrollLeft() - dec
+        }, 500);
+    });
+
     $('.nav .next').click(function() {
       var count = Math.floor($('form').scrollLeft() / 302) + 1;
       var item = ($('#form>div:nth-child(' + count + ')'));
-      if (item.hasClass('none') || item.find('input:checked').length || item.find('input').val() != "") {
+      if (item.hasClass('none') || item.find('input:checked').length || (item.find('input').lentgh && item.find('input').val() != "")) {
         var dec = 302 - $('form').scrollLeft() % 302;
         dec = dec > 0 ? dec : 302;
         $('form').stop().animate({
               scrollLeft: $('form').scrollLeft() + dec
         }, 500);
+        item.removeClass('needed');
       } else {
         item.addClass('needed');
       }
