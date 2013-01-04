@@ -21,16 +21,11 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.options' => array('debug' => true)
     ));
     // $app['twig']->addExtension(new Twig_Extensions_Extension_Debug());
-    
+
+$config  = Yaml::parse(file_get_contents(__DIR__ . '/../config/config.yml'));
+
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
-$app['swiftmailer.options'] = array(
-        'host' => 'smtp.gmail.com',
-        'port' => 465,
-        'username' => 'vincent.beauvivre@gmail.com',
-        'password' => 'nononono',
-        'encryption' => 'ssl',
-        'auth_mode' => 'login'
-);
+$app['swiftmailer.options'] = $config['swiftmailer']['options'];
 
 $app->match('/', function (Request $request) use ($app) {
     return $app['twig']->render('index.html.twig');

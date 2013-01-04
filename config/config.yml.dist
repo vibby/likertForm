@@ -1,0 +1,9 @@
+
+swiftmailer:
+    options:
+        host: ~
+        port: ~
+        username: ~
+        password: ~
+        encryption: ~
+        auth_mode: ~

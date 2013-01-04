@@ -1,5 +1,6 @@
 /phpunit.xml
 /vendor
 /build
+/config/config.yml
 /composer.lock
 /composer.phar

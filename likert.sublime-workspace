@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
 				"array_",
 				"array_merge"
 			],
@@ -28,10 +44,6 @@
 				"sessionData"
 			],
 			[
-				"in",
-				"inline-block"
-			],
-			[
 				"fo",
 				"font-size"
 			],
@@ -42,10 +54,6 @@
 			[
 				"posi",
 				"position"
-			],
-			[
-				"ma",
-				"margin-bottom"
 			],
 			[
 				"array_ke",
@@ -102,10 +110,6 @@
 			[
 				"ta",
 				"table-cell"
-			],
-			[
-				"di",
-				"display"
 			],
 			[
 				"Date",
@@ -363,7 +367,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 9987,
+				"buffer_size": 9925,
 				"line_ending": "Unix"
 			}
 		},
@@ -371,7 +375,7 @@
 			"file": "web/view/layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 943,
+				"buffer_size": 997,
 				"line_ending": "Unix"
 			}
 		},
@@ -411,7 +415,7 @@
 			"file": "web/css/style.css",
 			"settings":
 			{
-				"buffer_size": 7495,
+				"buffer_size": 7660,
 				"line_ending": "Unix"
 			}
 		},
@@ -419,7 +423,7 @@
 			"file": "web/view/form.html.twig",
 			"settings":
 			{
-				"buffer_size": 2259,
+				"buffer_size": 2267,
 				"line_ending": "Unix"
 			}
 		},
@@ -427,7 +431,7 @@
 			"file": "web/js/likert.js",
 			"settings":
 			{
-				"buffer_size": 2899,
+				"buffer_size": 3196,
 				"line_ending": "Unix"
 			}
 		},
@@ -443,7 +447,7 @@
 			"file": "reponses/_toutes.csv",
 			"settings":
 			{
-				"buffer_size": 440,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -679,7 +683,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			"<project>",
@@ -736,6 +740,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";\n",
+			"nav",
 			"row",
 			"steps",
 			"img",
@@ -861,9 +867,7 @@
 			"id",
 			"actions",
 			"TODO",
-			"createListQuery",
-			"trackingCode",
-			"gette"
+			"createListQuery"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -935,7 +939,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -950,8 +954,8 @@
 						"selection":
 						[
 							[
-								17654,
-								17654
+								20,
+								20
 							]
 						],
 						"settings":
@@ -961,7 +965,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6305.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -971,15 +975,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 9987,
+						"buffer_size": 9925,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								724,
-								724
+								907,
+								907
 							]
 						],
 						"settings":
@@ -999,15 +1003,15 @@
 					"file": "web/view/layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 943,
+						"buffer_size": 997,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								777,
-								777
+								818,
+								818
 							]
 						],
 						"settings":
@@ -1137,15 +1141,15 @@
 					"file": "web/css/style.css",
 					"settings":
 					{
-						"buffer_size": 7495,
+						"buffer_size": 7660,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7258,
-								7258
+								7301,
+								7301
 							]
 						],
 						"settings":
@@ -1155,7 +1159,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3081.0,
+						"translation.y": 4089.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1165,15 +1169,15 @@
 					"file": "web/view/form.html.twig",
 					"settings":
 					{
-						"buffer_size": 2259,
+						"buffer_size": 2267,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								877,
-								877
+								1365,
+								1365
 							]
 						],
 						"settings":
@@ -1183,7 +1187,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 378.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1193,15 +1197,15 @@
 					"file": "web/js/likert.js",
 					"settings":
 					{
-						"buffer_size": 2899,
+						"buffer_size": 3196,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1050,
-								1050
+								282,
+								282
 							]
 						],
 						"settings":
@@ -1249,7 +1253,7 @@
 					"file": "reponses/_toutes.csv",
 					"settings":
 					{
-						"buffer_size": 440,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -1841,6 +1845,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 335.0,
+	"side_bar_width": 194.0,
 	"status_bar_visible": true
 }

@@ -1,5 +1,4 @@
 
-
 $(document).ready(function() {
     $('select').change(function() {
       $('.nav .next').trigger('click');
@@ -22,11 +21,22 @@ $(document).ready(function() {
     });
 
     $('.nav .last').click(function() {
-      var dec = $('form').scrollLeft() % 302;
-      dec = dec > 0 ? dec : 302;
+      var count = 0;
+      var stop = false;
+      var lastWasIntro = false;
+      $('#form>div').each(function(){
+        var item = ($(this));
+        if (!stop && (item.hasClass('none') || item.find('input:checked').length || (item.find('input').lentgh && item.find('input').val() != ""))) {
+          count = count + 1;
+          lastWasIntro = item.hasClass('none');
+        } else {
+          stop = true;
+        };
+      });
+      if (lastWasIntro) count = count - 1;
       $('form').stop().animate({
-            scrollLeft: $('form').scrollLeft() - dec
-        }, 500);
+            scrollLeft: count * 302
+      }, 500);
     });
 
     $('.nav .next').click(function() {
@@ -43,6 +53,8 @@ $(document).ready(function() {
         item.addClass('needed');
       }
     });
+
+    $('.nav .last').trigger('click');
 
 });
 
