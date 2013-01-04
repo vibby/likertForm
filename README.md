@@ -8,13 +8,17 @@ Installation
 
 *Copy all this in your web server’s www folder
 
-*Dl composer from getcomposer.com
+*Download composer from getcomposer.com
 
-*Run composer install
+*Run «composer install» in commad line
 
 *Configure your server to point /web folder
+
+*Copy config/config.yml.dist to config/config.yml and edit this file to your needs
+
+*Edit config/questions.yml to enter your likert scales and associated question
 
 *Run the website
 
 
-Configuration inside index.php (for the moment)
+Some other configuration inside index.php (for the moment)
