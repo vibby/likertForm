@@ -56,16 +56,13 @@ form {
     margin-bottom: 20px;
 }
 form>div {
-    width: 9338px; /* (27 questions max + 2) * 322 = 9016 */
-}
-form>div>div {
-    float: left;
+    width: 9800px;
 }
 @media screen and (min-width: 400px) {
     div.mask {
         position: absolute;
         display: block;
-        width: 30%;
+        width: 8%;
         height: 95%;
         right: -2%;
         z-index: 100;
@@ -260,7 +257,6 @@ input.button {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 #form>div, form>div>div:last-child, .button, .choiceItem > label {
-    background-repeat: repeat-x;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -276,8 +272,18 @@ input.button {
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-    background-color: #F5F5F5;
-    background-image: linear-gradient(to bottom, #EFEFEF, #D8D8D8);
+    background-color: #D8D8D8;
+    /*background-image: linear-gradient(to bottom, #EFEFEF, #D8D8D8);*/
+    background: #efefef; /* Old browsers */
+    background: -moz-linear-gradient(top,  hsla(0,0%,94%,1) 0%, hsla(0,0%,85%,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,94%,1)), color-stop(100%,hsla(0,0%,85%,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  hsla(0,0%,94%,1) 0%,hsla(0,0%,85%,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  hsla(0,0%,94%,1) 0%,hsla(0,0%,85%,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  hsla(0,0%,94%,1) 0%,hsla(0,0%,85%,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  hsla(0,0%,94%,1) 0%,hsla(0,0%,85%,1) 100%); /* W3C */
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+
 }
 .button-primary, .choiceItem > input:checked + label {
     background-color: #0074CC;
@@ -285,8 +291,7 @@ input.button {
     color: #FFFFFF;
 }
 .choiceItem label:hover {
-    background-color: #F5F5F5;
-    background-image: linear-gradient(to bottom, #FFFFFF, #E8E8E8);
+    background: #F5F5F5;
 }
 .steps{
     float: right;
