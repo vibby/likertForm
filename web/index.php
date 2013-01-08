@@ -128,7 +128,8 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
     } else {
         $formBuilder
         ->add( 'age', 'integer', array(
-            'label' => "Votre age"
+            'label' => "Votre age",
+            'required' => true,
             ))
         ->add( 'Sexe', 'choice', array(
             'choices' => array('Homme','Femme') ,
@@ -136,7 +137,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'multiple' => false,
             'constraints' => new Assert\Choice(array(0,1)),
             'label' => "Sexe :",
-            'empty_value' => '',
+            'required' => true,
             ))
         ->add( 'Situation_famille', 'choice', array(
             'choices' => array('Seul','En couple') ,
@@ -144,7 +145,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'multiple' => false,
             'constraints' => new Assert\Choice(array(0,1)),
             'label' => "Situation familiale :",
-            'empty_value' => '',
+            'required' => true,
             ))
         ->add( 'Nombre_enfants_a_charge', 'integer', array(
             'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
@@ -157,6 +158,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'constraints' => new Assert\Choice(array_keys($jobs)),
             'label' => "Quelle est votre profession ?",
             'empty_value' => '',
+            'required' => true,
             ))
         ->add( 'Secteur', 'choice', array(
             'choices' => $sectors ,
@@ -165,28 +167,35 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'constraints' => new Assert\Choice(array_keys($sectors)),
             'label' => "Quel est le type de secteur de votre entreprise ?",
             'empty_value' => '',
+            'required' => true,
             ))
         ->add( 'Intitule_poste', 'text', array(
-            'label' => "Quel est l'intitulé exact de votre poste actuel ?"
+            'label' => "Quel est l'intitulé exact de votre poste actuel ?",
+            'required' => true,
             ))
         ->add( 'Heures_travail_semaine', 'integer', array(
-            'label' => "Combien d'heures par semaine travaillez-vous ?"
+            'label' => "Combien d'heures par semaine travaillez-vous ?",
+            'required' => true,
             ))
         ->add( 'Heures_travail_semaine', 'integer', array(
-            'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?"
+            'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?",
+            'required' => true,
             ))
         ->add( 'Satisfaction_salaire', 'text', array(
-            'label' => "Êtes-vous satisfait(e) de votre salaire net mensuel ?"
+            'label' => "Êtes-vous satisfait(e) de votre salaire net mensuel ?",
+            'required' => true,
             ))
         ->add( 'Duree_poste', 'text', array(
-            'label' => "Depuis quand travaillez-vous dans votre poste actuel ?"
+            'label' => "Depuis quand travaillez-vous dans votre poste actuel ?",
+            'required' => true,
             ))
         ->add( 'Duree_entreprise', 'text', array(
-            'label' => "Depuis quand travaillez-vous dans votre entreprise actuelle ?"
+            'label' => "Depuis quand travaillez-vous dans votre entreprise actuelle ?",
+            'required' => true,
             ))
         ->add( 'Societe', 'text', array(
+            'label' => "Nom de votre entreprise (facultatif) :",
             'required' => false ,
-            'label' => "Nom de votre entreprise (facultatif) :"
             ))
         ->add( 'Domain', 'choice', array(
             'choices' => $domains ,
@@ -195,18 +204,19 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'constraints' => new Assert\Choice(array_keys($domains)),
             'label' => "A quelle branche appartient votre entreprise ?",
             'empty_value' => '',
+            'required' => true,
             ))
         ->add( 'Domain_other', 'text', array(
+            'label' => "Si autre, préciser",
             'required' => false ,
-            'label' => "Si autre, préciser"
             ))
         ->add( 'Nombre_salaries_etablissement', 'integer', array(
+            'label' => "Nombre de salariés dans votre  établissement (facultatif) :",
             'required' => false ,
-            'label' => "Nombre de salariés dans votre  établissement (facultatif) :"
             ))
         ->add( 'Nombre_salaries_entreprise', 'integer', array(
+            'label' => "Nombre total de salariés dans votre entreprise (facultatif) :",
             'required' => false ,
-            'label' => "Nombre total de salariés dans votre entreprise (facultatif) :"
             ))
         ;
     }

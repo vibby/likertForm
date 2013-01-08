@@ -367,7 +367,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 9925,
+				"buffer_size": 10143,
 				"line_ending": "Unix"
 			}
 		},
@@ -375,7 +375,7 @@
 			"file": "web/view/layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 997,
+				"buffer_size": 993,
 				"line_ending": "Unix"
 			}
 		},
@@ -383,7 +383,7 @@
 			"file": "web/view/index.html.twig",
 			"settings":
 			{
-				"buffer_size": 1155,
+				"buffer_size": 1169,
 				"line_ending": "Unix"
 			}
 		},
@@ -415,7 +415,7 @@
 			"file": "web/css/style.css",
 			"settings":
 			{
-				"buffer_size": 7660,
+				"buffer_size": 8364,
 				"line_ending": "Unix"
 			}
 		},
@@ -423,7 +423,7 @@
 			"file": "web/view/form.html.twig",
 			"settings":
 			{
-				"buffer_size": 2267,
+				"buffer_size": 2287,
 				"line_ending": "Unix"
 			}
 		},
@@ -431,7 +431,7 @@
 			"file": "web/js/likert.js",
 			"settings":
 			{
-				"buffer_size": 3196,
+				"buffer_size": 3804,
 				"line_ending": "Unix"
 			}
 		},
@@ -683,7 +683,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"<project>",
@@ -740,6 +740,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gradi",
+			"whiteSmoke",
 			";\n",
 			"nav",
 			"row",
@@ -865,9 +867,7 @@
 			"event->getRequest()",
 			"passw",
 			"id",
-			"actions",
-			"TODO",
-			"createListQuery"
+			"actions"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -939,7 +939,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -975,15 +975,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 9925,
+						"buffer_size": 10143,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								907,
-								907
+								7035,
+								7035
 							]
 						],
 						"settings":
@@ -993,7 +993,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 39.0,
+						"translation.y": 2155.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1003,15 +1003,15 @@
 					"file": "web/view/layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 997,
+						"buffer_size": 993,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								818,
-								818
+								993,
+								993
 							]
 						],
 						"settings":
@@ -1031,15 +1031,15 @@
 					"file": "web/view/index.html.twig",
 					"settings":
 					{
-						"buffer_size": 1155,
+						"buffer_size": 1169,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								101,
-								101
+								1169,
+								1169
 							]
 						],
 						"settings":
@@ -1141,15 +1141,15 @@
 					"file": "web/css/style.css",
 					"settings":
 					{
-						"buffer_size": 7660,
+						"buffer_size": 8364,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7301,
-								7301
+								563,
+								563
 							]
 						],
 						"settings":
@@ -1159,7 +1159,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4089.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1169,15 +1169,15 @@
 					"file": "web/view/form.html.twig",
 					"settings":
 					{
-						"buffer_size": 2267,
+						"buffer_size": 2287,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1365,
-								1365
+								1075,
+								1075
 							]
 						],
 						"settings":
@@ -1187,7 +1187,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 66.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1197,15 +1197,15 @@
 					"file": "web/js/likert.js",
 					"settings":
 					{
-						"buffer_size": 3196,
+						"buffer_size": 3804,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								282,
-								282
+								1291,
+								1291
 							]
 						],
 						"settings":
@@ -1215,7 +1215,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 156.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

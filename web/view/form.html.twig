@@ -22,7 +22,7 @@
 {% spaceless %}
     {% set type = type|default('text') %}
     <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
-    {% if type == 'text' %}
+    {% if type == 'text' or type == 'number' %}
         <button type="button">ok</button>
     {% endif %}
 {% endspaceless %}
