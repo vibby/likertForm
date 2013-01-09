@@ -1,0 +1,15 @@
+
+
+
+<table>
+    {% for response in responses %}
+        <tr>
+            {% for item in response %}
+                <td>
+                    {{ item }}
+                </td>
+            {% endfor %}
+        <tr>
+    {% endfor %}
+</table>
+

@@ -367,7 +367,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 10143,
+				"buffer_size": 13224,
 				"line_ending": "Unix"
 			}
 		},
@@ -380,10 +380,10 @@
 			}
 		},
 		{
-			"file": "web/view/index.html.twig",
+			"file": "web/view/data.html.twig",
 			"settings":
 			{
-				"buffer_size": 1169,
+				"buffer_size": 238,
 				"line_ending": "Unix"
 			}
 		},
@@ -447,7 +447,23 @@
 			"file": "reponses/_toutes.csv",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 87,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/config.yml",
+			"settings":
+			{
+				"buffer_size": 243,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/config.yml.dist",
+			"settings":
+			{
+				"buffer_size": 178,
 				"line_ending": "Unix"
 			}
 		}
@@ -740,6 +756,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			",",
+			"->add( ",
 			"gradi",
 			"whiteSmoke",
 			";\n",
@@ -865,9 +883,7 @@
 			"fixtures",
 			"class",
 			"event->getRequest()",
-			"passw",
-			"id",
-			"actions"
+			"passw"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -939,7 +955,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -954,8 +970,8 @@
 						"selection":
 						[
 							[
-								20,
-								20
+								1051,
+								1051
 							]
 						],
 						"settings":
@@ -965,7 +981,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 663.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -975,15 +991,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 10143,
+						"buffer_size": 13224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7035,
-								7035
+								2386,
+								2386
 							]
 						],
 						"settings":
@@ -993,7 +1009,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2155.0,
+						"translation.y": 629.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1010,8 +1026,8 @@
 						"selection":
 						[
 							[
-								993,
-								993
+								578,
+								578
 							]
 						],
 						"settings":
@@ -1028,18 +1044,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "web/view/index.html.twig",
+					"file": "web/view/data.html.twig",
 					"settings":
 					{
-						"buffer_size": 1169,
+						"buffer_size": 238,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1169,
-								1169
+								150,
+								150
 							]
 						],
 						"settings":
@@ -1253,15 +1269,67 @@
 					"file": "reponses/_toutes.csv",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 87,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "config/config.yml",
+					"settings":
+					{
+						"buffer_size": 243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "config/config.yml.dist",
+					"settings":
+					{
+						"buffer_size": 178,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								178,
+								178
 							]
 						],
 						"settings":

@@ -6,6 +6,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Silex\Provider\FormServiceProvider;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\HttpFoundation\Response;
 
 $app = new Silex\Application();
 $app['debug'] = true;
@@ -33,6 +34,91 @@ $app->match('/', function (Request $request) use ($app) {
 
 $app->match('/merci', function (Request $request) use ($app) {
     return $app['twig']->render('merci.html.twig');
+});
+
+$app->get('/login', function () use ($app) {
+    $config  = Yaml::parse(file_get_contents(__DIR__ . '/../config/config.yml'));
+
+    $username = $app['request']->server->get('PHP_AUTH_USER', false);
+    $password = $app['request']->server->get('PHP_AUTH_PW');
+
+    if ($config['user']['login'] === $username && $config['user']['password'] === $password) {
+        $app['session']->set('user', array('username' => $username));
+        return $app->redirect('/resultat');
+    }
+
+    $response = new Response();
+    $response->headers->set('WWW-Authenticate', sprintf('Basic realm="%s"', 'Affichage des Resultats'));
+    $response->setStatusCode(401, 'Connectez-vous');
+    return $response;
+});
+
+$app->get('/resultat', function () use ($app) {
+    if (null === $user = $app['session']->get('user')) {
+        return $app->redirect('/login');
+    }
+
+    $responses = array();
+    if (($handle = fopen(__DIR__ . '/../reponses/_toutes.csv', "r")) !== FALSE) {
+        while (($line = fgetcsv($handle, 1000, ";")) !== FALSE) {
+            $responses[] = $line;
+        }
+        fclose($handle);
+    }
+
+    $data  = Yaml::parse(file_get_contents(__DIR__ . '/../config/questions.yml'));
+    // $likertScales = $data['likertScales'];
+    $likertQuestions = $data['likertQuestions'];
+    $questionsFlat = array();
+    foreach ($likertQuestions as $page => $questions) {
+        foreach ($questions as $question) {
+            // $question['scale'] = $likertScales[$question['scale']];
+            $questionsFlat[] = $question;
+        }
+    }
+    $questionsFlat = array_merge($questionsFlat,array(
+        array('label'=>'age'),
+        array('label'=>'Sexe'),
+        array('label'=>'Situation_famille'),
+        array('label'=>'Nombre_enfants_a_charge'),
+        array('label'=>'Profession'),
+        array('label'=>'Secteur'),
+        array('label'=>'Intitule_poste'),
+        array('label'=>'Heures_travail_semaine'),
+        array('label'=>'Heures_travail_semaine'),
+        array('label'=>'Satisfaction_salaire'),
+        array('label'=>'Duree_poste'),
+        array('label'=>'Duree_entreprise'),
+        array('label'=>'Societe'),
+        array('label'=>'Domain'),
+        array('label'=>'Domain_other'),
+        array('label'=>'Nombre_salaries_etablissement'),
+        array('label'=>'Nombre_salaries_entreprise'),
+    ));
+
+    $inversedResponses = array();
+    foreach ($responses as $x => $line) {
+        foreach ($line as $y => $item) {
+            $inversedResponses[$y][$x] = $item;
+        }
+    }
+
+    $iResponse = 0;
+    $data = array();
+    foreach ($questionsFlat as &$question) {
+        if ("none" != $question['scale']) {
+            if (array_key_exists($iResponse, $inversedResponses)) {
+                $data[] = array_merge(array($question['label']),$inversedResponses[$iResponse]);
+                $iResponse++;
+            } else {
+                $data[] = array($question['label']);
+            }
+        }
+    }
+
+    return $app['twig']->render('data.html.twig', array(
+        'responses' => $data,
+    ));
 });
 
 $app->match('/questionnaire', function (Request $request) use ($app) {
