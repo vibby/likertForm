@@ -26,7 +26,15 @@ $(document).ready(function() {
       var lastWasIntro = false;
       $('#form>div').each(function(){
         var item = ($(this));
-        if (!stop && (item.hasClass('none') || item.find('input:checked').length || (item.find('input').lentgh && item.find('input').val() != ""))) {
+        if (!stop && (
+          (item.hasClass('none')
+            || (!item.find('.required').length)
+            || item.find('input:checked').length
+            || (item.find('input[type=text]').length && item.find('input').val() != "")
+            || (item.find('input[type=number]').length && item.find('input').val() != "")
+            || (item.find('select').length && item.find('select').val() != "")
+          )
+        )) {
           count = count + 1;
           lastWasIntro = item.hasClass('none');
         } else {
@@ -46,7 +54,8 @@ $(document).ready(function() {
       if (item.hasClass('none')
         || (!item.find('.required').length)
         || item.find('input:checked').length
-        || (item.find('input').length && item.find('input').val() != "")
+        || (item.find('input[type=text]').length && item.find('input').val() != "")
+        || (item.find('input[type=number]').length && item.find('input').val() != "")
         || (item.find('select').length && item.find('select').val() != "")
       ) {
         var dec = 302 - $('form').scrollLeft() % 302;

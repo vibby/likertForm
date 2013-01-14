@@ -76,25 +76,32 @@ $app->get('/resultat', function () use ($app) {
             $questionsFlat[] = $question;
         }
     }
-    $questionsFlat = array_merge($questionsFlat,array(
-        array('label'=>'age'),
-        array('label'=>'Sexe'),
-        array('label'=>'Situation_famille'),
-        array('label'=>'Nombre_enfants_a_charge'),
-        array('label'=>'Profession'),
-        array('label'=>'Secteur'),
-        array('label'=>'Intitule_poste'),
-        array('label'=>'Heures_travail_semaine'),
-        array('label'=>'Heures_travail_semaine'),
-        array('label'=>'Satisfaction_salaire'),
-        array('label'=>'Duree_poste'),
-        array('label'=>'Duree_entreprise'),
-        array('label'=>'Societe'),
-        array('label'=>'Domain'),
-        array('label'=>'Domain_other'),
-        array('label'=>'Nombre_salaries_etablissement'),
-        array('label'=>'Nombre_salaries_entreprise'),
-    ));
+    $questionsFlat = array_merge(
+        array(
+            array('label'=>'date_debut'),
+            array('label'=>'date_fin'),
+        ),
+        $questionsFlat,
+        array(
+            array('label'=>'age'),
+            array('label'=>'Sexe'),
+            array('label'=>'Situation_famille'),
+            array('label'=>'Nombre_enfants_a_charge'),
+            array('label'=>'Profession'),
+            array('label'=>'Secteur'),
+            array('label'=>'Intitule_poste'),
+            array('label'=>'Heures_travail_semaine'),
+            array('label'=>'Heures_travail_mois'),
+            array('label'=>'Satisfaction_salaire'),
+            array('label'=>'Duree_poste'),
+            array('label'=>'Duree_entreprise'),
+            array('label'=>'Societe'),
+            array('label'=>'Domain'),
+            array('label'=>'Domain_other'),
+            array('label'=>'Nombre_salaries_etablissement'),
+            array('label'=>'Nombre_salaries_entreprise'),
+        )
+    );
 
     $inversedResponses = array();
     foreach ($responses as $x => $line) {
@@ -106,13 +113,11 @@ $app->get('/resultat', function () use ($app) {
     $iResponse = 0;
     $data = array();
     foreach ($questionsFlat as &$question) {
-        if ("none" != $question['scale']) {
-            if (array_key_exists($iResponse, $inversedResponses)) {
-                $data[] = array_merge(array($question['label']),$inversedResponses[$iResponse]);
-                $iResponse++;
-            } else {
-                $data[] = array($question['label']);
-            }
+        if (array_key_exists($iResponse, $inversedResponses)) {
+            $data[] = array_merge(array($question['label']),$inversedResponses[$iResponse]);
+            $iResponse++;
+        } else {
+            $data[] = array($question['label']);
         }
     }
 
@@ -177,7 +182,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
 
     $sessionData = $app['session']->get('data');
     if(!$sessionData) {
-      $sessionData = array(time());
+      $sessionData = array('dateDebut' => time());
     }
 
     $idPage = 0;
@@ -263,7 +268,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'label' => "Combien d'heures par semaine travaillez-vous ?",
             'required' => true,
             ))
-        ->add( 'Heures_travail_semaine', 'integer', array(
+        ->add( 'Heures_travail_mois', 'integer', array(
             'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?",
             'required' => true,
             ))
@@ -321,21 +326,28 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
                 $time = time();
                 $data = array_merge(array('dateFin' => $time),$data);
 
+                $dataList = "";
+                foreach ($data as $key => $value) {
+                    $dataList .= $key .': '. $value. "\n";
+                }
+
                 $message = \Swift_Message::newInstance()
                     ->setSubject('[EnquêteVieAuTravail] Nouvelle réponse')
                     ->setFrom(array('noreply@univ-nantes.fr'))
                     ->setTo(array('vincent.beauvivre@gmail.com', 'kristina.beauvivre@gmail.com'))
-                    ->setBody("Une nouvelle réponse au formulaire :\n\n".implode("\n",$data));
+                    ->setBody("Une nouvelle réponse au formulaire :\n\n".$dataList);
 
                 $app['mailer']->send($message);
 
-                $handle = fopen(__DIR__ . '/../reponses/_toutes.csv', 'w');
-                fputcsv($handle, $data);
+                $handle = fopen(__DIR__ . '/../reponses/_toutes.csv', 'a');
+                fputcsv($handle, $data. ';');
+                fclose($handle);
 
                 $handle = fopen(__DIR__ . '/../reponses/'.$time.'.csv', 'w');
-                fputcsv($handle, $data, chr(13));
+                fwrite($handle, $dataList);
+                fclose($handle);
 
-                $app['session']->set('data',null);
+               $app['session']->set('data',null);
 
               $nextPage = '/merci';
             } else {
