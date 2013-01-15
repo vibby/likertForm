@@ -7,4 +7,5 @@ SetEnv PHP_VER 5_4
     #RewriteBase /path/to/app
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+   	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization},L]
 </IfModule>

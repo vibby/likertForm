@@ -39,8 +39,20 @@ $app->match('/merci', function (Request $request) use ($app) {
 $app->get('/login', function () use ($app) {
     $config  = Yaml::parse(file_get_contents(__DIR__ . '/../config/config.yml'));
 
-    $username = $app['request']->server->get('PHP_AUTH_USER', false);
-    $password = $app['request']->server->get('PHP_AUTH_PW');
+// Because my hoster refuse to give me PHP_AUTH_USER and PHP_AUTH_PW ...
+//    $username = $app['request']->server->get('PHP_AUTH_USER', false);
+//    $password = $app['request']->server->get('PHP_AUTH_PW');
+    if( $app['request']->server->get('REMOTE_USER') &&
+    preg_match('/Basic+(.*)$/i', $app['request']->server->get('REMOTE_USER'), $matches) )
+    {
+        // on obtient le login et le password sous la forme : user:password via
+        $identifiers = base64_decode($matches[1]);
+        // on l'exporte dans un tableau
+        $identifiers_tab = explode(':', $identifiers);
+        // on récupère le tout dans des variables
+        $username = strip_tags($identifiers_tab[0]);
+        $password = strip_tags($identifiers_tab[1]);
+    }
 
     if ($config['user']['login'] === $username && $config['user']['password'] === $password) {
         $app['session']->set('user', array('username' => $username));

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"arra",
+				"array_map"
+			],
+			[
 				"ma",
 				"margin-top"
 			],
@@ -150,10 +154,6 @@
 			[
 				"array_key",
 				"array_keys"
-			],
-			[
-				"arra",
-				"array_unique"
 			],
 			[
 				"r",
@@ -367,7 +367,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 13224,
+				"buffer_size": 13574,
 				"line_ending": "Unix"
 			}
 		},
@@ -431,7 +431,7 @@
 			"file": "web/js/likert.js",
 			"settings":
 			{
-				"buffer_size": 3804,
+				"buffer_size": 4186,
 				"line_ending": "Unix"
 			}
 		},
@@ -447,7 +447,7 @@
 			"file": "reponses/_toutes.csv",
 			"settings":
 			{
-				"buffer_size": 87,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -756,6 +756,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Heures_travail_semaine",
+			"$sessionData",
+			"data",
 			",",
 			"->add( ",
 			"gradi",
@@ -880,10 +883,7 @@
 			"2012",
 			"send",
 			"\n#Routing Page\npsb_page_show:\n    pattern:  /page/{page}\n    defaults: { _controller: PonroyShopBundle:Page:show }",
-			"fixtures",
-			"class",
-			"event->getRequest()",
-			"passw"
+			"fixtures"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -955,7 +955,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 12,
 			"sheets":
 			[
 				{
@@ -970,8 +970,8 @@
 						"selection":
 						[
 							[
-								1051,
-								1051
+								22251,
+								22251
 							]
 						],
 						"settings":
@@ -981,7 +981,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 663.0,
+						"translation.y": 8307.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -991,15 +991,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 13224,
+						"buffer_size": 13574,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2386,
-								2386
+								718,
+								763
 							]
 						],
 						"settings":
@@ -1009,7 +1009,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 629.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1213,15 +1213,15 @@
 					"file": "web/js/likert.js",
 					"settings":
 					{
-						"buffer_size": 3804,
+						"buffer_size": 4186,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1291,
-								1291
+								1233,
+								1233
 							]
 						],
 						"settings":
@@ -1231,7 +1231,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 156.0,
+						"translation.y": 117.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1269,15 +1269,15 @@
 					"file": "reponses/_toutes.csv",
 					"settings":
 					{
-						"buffer_size": 87,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								87,
-								87
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1302,8 +1302,8 @@
 						"selection":
 						[
 							[
-								243,
-								243
+								220,
+								220
 							]
 						],
 						"settings":
