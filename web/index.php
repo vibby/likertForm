@@ -1,5 +1,16 @@
 <?php
 
+/**
+ *  Application of questions answering, based on Likert scale concept
+ *
+ * @category  Silex_Based_App
+ * @package   Likert
+ * @author    vibby <vibby@example.com>
+ * @copyright 1997-2005 The PHP Group
+ * @license   GNU GPL
+ * @link      https://github.com/vibby/likertForm
+ */
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 use Symfony\Component\Validator\Constraints as Assert;
@@ -24,7 +35,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     // $app['twig']->addExtension(new Twig_Extensions_Extension_Debug());
 
 $config  = Yaml::parse(file_get_contents(__DIR__ . '/../config/config.yml'));
-
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 $app['swiftmailer.options'] = $config['swiftmailer']['options'];
 
@@ -284,6 +294,21 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'label' => "Combien d'heures supplémentaires effectuez-vous par mois, environ ?",
             'required' => true,
             ))
+        ->add( 'travaillez_vous', 'choice', array(
+            'label' => 'Travaillez-vous',
+            'required' => true,
+            'choices' => array(
+                'de jour',
+                'de nuit',
+                'en 2/8',
+                'en 3/8',
+                'autre (précisez)',
+            ) 
+        ))
+        ->add('travaillez_vous_other', 'text', array(
+            'label' => 'Si autre, précisez',
+            'required' => false,
+            ))
         ->add( 'Satisfaction_salaire', 'text', array(
             'label' => "Êtes-vous satisfait(e) de votre salaire net mensuel ?",
             'required' => true,
@@ -310,7 +335,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'required' => true,
             ))
         ->add( 'Domain_other', 'text', array(
-            'label' => "Si autre, préciser",
+            'label' => "Si autre, précisez",
             'required' => false ,
             ))
         ->add( 'Nombre_salaries_etablissement', 'integer', array(

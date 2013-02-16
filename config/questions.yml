@@ -60,7 +60,7 @@ likertQuestions:
 
   page1:
     intro0:
-      label: "Voici une série de propositions suivies d’une échelle de réponse allant de «pas du tout d’accord» à «tout à fait d’accord». Entourez le chiffre qui correspond le mieux à votre opinion. Vous pouvez nuancer votre jugement grâce aux chiffres proposés."
+      label: "Voici une série de propositions suivies d’une échelle de réponse allant de «pas du tout d’accord» à «tout à fait d’accord». Sélectionnez la réponse qui correspond le mieux à votre opinion."
       scale: none
     q1:
       label: "J’éprouve vraiment un sentiment d’appartenance à mon organisation"
@@ -118,18 +118,104 @@ likertQuestions:
       scale: ok4
     q19:
       label: "J’envisage parfois de changer d’emploi"
-      scale: yesno
+      scale: ok4
     q20:
       label: "J’envisage parfois de chercher du travail en dehors de cette organisation"
-      scale: yesno
+      scale: ok4
     q21:
       label: "J’ai l’intention de changer d’emploi l’année prochaine"
-      scale: yesno
+      scale: ok4
     q22:
       label: "L’année prochaine, j’ai l’intention de chercher un emploi en dehors de cette organisation"
-      scale: yesno
+      scale: ok4
 
   page2:
+    q22bis:
+      label: A propos de votre projet professionel et/ou personnel
+      scale: none
+    q22bis1:
+      label: Vous pouvez vous projeter dans 5 ans
+      scale: ok4
+    q22bis2:
+      label: Vous savez dans quel type de stucture vous souhaitez travailler
+      scale: ok4
+    q22bis3:
+      label: Vous savez quelle activité vous souhaitez réaliser
+      scale: ok4
+    q22bis4:
+      label: Vous savez quelles compétences vous seront nécessaires
+      scale: ok4
+    q22bis5:
+      label: Vous avez identifié les mesures nécessaires pour réaliser votre projet (stage, détachement, formation, création d’entreprise, congé …)
+      scale: ok4
+    q22bis6intro:
+      label: De façon plus précise, vous envisagez dans environ 5 ans…
+    q22bis6:
+      label: d’occuper toujours le même emploi dans la même entreprise
+      scale: ok4
+    q22bis7:
+      label: d’occuper un emploi différent dans la même entreprise
+      scale: ok4
+    q22bis8:
+      label: de trouver le même type d’emploi dans une autre entreprise
+      scale: ok4
+    q22bis9:
+      label: de trouver un emploi différent dans une autre entreprise
+      scale: ok4
+    q22bis10:
+      label: de rester mais en réduisant votre temps de travail
+    q22bis11:
+      label: de ne plus travailler et vous consacrer à autre chose (famille, loisirs,…)
+      scale: ok4
+    q22bis12:
+      label: Vous avez du mal à vous projeter dans 5 ans
+      scale: ok4
+    q22ter:
+      label: Votre projet (ou absence de projet) repose sur les motivations suivantes
+      scale: none
+    q22ter1:
+      label: Je veux conserver les avantages de mon entreprise actuelle
+      scale: ok4
+    q22ter2:
+      label: Je considère avant tout mon travail d’un point de vue alimentaire      
+      scale: ok4
+    q22ter3:
+      label: Je veux m’épanouir dans mon travail, me sentir à ma place
+      scale: ok4
+    q22ter4:
+      label: Je veux acquérir de nouvelles compétences ou connaissances
+      scale: ok4
+    q22ter5:
+      label: Je veux me consacrer à une passion
+      scale: ok4
+    q22ter6:
+      label: Mon emploi actuel est une étape nécessaire pour occuper un emploi plus intéressant ou valorisant / pour ma carrière
+      scale: ok4
+    q22ter7:
+      label: J’ai d’autres priorités que le travail
+      scale: ok4
+    q22ter8:
+      label: Mon entreprise actuelle ne permet pas le déroulement de carrière voulu
+      scale: ok4
+    q22ter9:
+      label: Je trouverais incorrect de quitter mon entreprise
+      scale: ok4
+    q22ter10: 
+      label: Je me sens en rupture avec mon entreprise
+      scale: ok4
+    q22ter11: 
+      label: Je risque d’avoir des difficultés à trouver un autre emploi au vu du contexte économique et/ou je n’ai pas envie de me retrouver en recherche d’emploi
+      scale: ok4
+    q22ter12: 
+      label: La santé financière ou l’organisation (dépôt de bilan, délocalisation…) de l’entreprise me contraint à partir
+      scale: ok4
+
+
+
+
+      
+
+  page3:
     q23:
       label: "Pour la plupart de ses aspects, ma vie est proche de mon idéal"
       scale: ok7
@@ -209,7 +295,7 @@ likertQuestions:
       label: "Je pense être Craintif(ve)"
       scale: freq5
 
-  page3:
+  page4:
     intro2:
       label: "Les questions qui suivent se réfèrent à votre rémunération. Globalement vous trouvez que"
       scale: none
@@ -284,7 +370,7 @@ likertQuestions:
       scale: fewhigh5
 
 
-  page4:
+  page5:
     intro6:
       label: "Les propositions suivantes se réfèrent à ce que vous pensez en général"
       scale: none
@@ -355,7 +441,7 @@ likertQuestions:
       label: "Il est parfois nécessaire que des sacrifices humains soient consentis lors de situations problématiques"
       scale: ok5
 
-  page5:
+  page6:
     intro7:
       label: "Les propositions suivantes traitent des relations que vous entretenez avec vos collègues et supérieurs hiérarchiques. En général, vous trouvez qu’ils "
       scale: none
@@ -396,10 +482,10 @@ likertQuestions:
       label: "Dévalorisent votre travail et vos efforts"
       scale: freq4
     q102:
-      label: "Négligent  vos points de vues"
+      label: "Négligent vos points de vues"
       scale: freq4
     q103:
-      label: "Vous font des « blagues », « surprises » désagréables"
+      label: "Vous font des «blagues», «surprises» désagréables"
       scale: freq4
     q104:
       label: "Ne respectent pas vos droits et opinions en raison de votre âge"
@@ -417,7 +503,7 @@ likertQuestions:
       label: "Quelqu’un m’agresse physiquement sur mon lieu de travail"
       scale: freq4
     q108:
-      label: "J’ai dû répondre à des frais causés par l’un de mes collègues volontairement"
+      label: "J’ai subi des frais causés par l’un de mes collègues volontairement"
       scale: freq4
     q109:
       label: "Je suis agressé(e) sexuellement sur mon lieu de travaillez"
@@ -435,7 +521,7 @@ likertQuestions:
       label: "Avez-vous été témoin de harcèlement ces derniers mois ?"
       scale: yesnofreq5
 
-  page6:
+  page7:
     q114:
       label: "Les collègues avec qui je travaille sont des gens professionnellement compétents"
       scale: ok4
@@ -518,7 +604,7 @@ likertQuestions:
       label: "Je ne peux pas avoir confiance en mes amis"
       scale: ok4
 
-  page7:
+  page8:
     q141:
       label: "Je me sens accepté(e) et aimé(e) par ma famille"
       scale: ok4
@@ -592,7 +678,7 @@ likertQuestions:
       label: "Je me sens mal dans ma peau"
       scale: freq5
     q165:
-      label: "Je me sens stressé(e) sous pression"
+      label: "Je me sens stressé(e), sous pression"
       scale: freq5
     q166:
       label: "J’ai tendance à être moins réceptif(ve) aux idées (opinions) de mes collègues de travail"
@@ -601,67 +687,70 @@ likertQuestions:
       label: "J’éprouve de la difficulté à me concentrer sur quoi que ce soit"
       scale: freq5
 
-  page8:
+  page9:
     q168:
-      label: "Je me sens émotionnellement pompé(e) par mon travail"
+      label: "Je me sens vidé(e) nerveusement par mon travail"
       scale: freq7
     q169:
-      label: "Je me sens à bout à la fin d’une journée"
+      label: "la fin d’une journée de travail, je me sens totalement épuisé(e)"
       scale: freq7
     q170:
-      label: "Je me sens fatigué(e) lorsque je me lève le matin et que je vais affronter une autre journée de travail"
+      label: "Je suis fatigué(e) quand je me lève le matin et que je dois affronter une nouvelle journée de travail"
       scale: freq7
     q171:
-      label: "Je peux comprendre facilement ce que les autres ressentent"
+      label: "Il m’est facile de comprendre ce que ressentent les autres"
       scale: freq7
     q172:
-      label: "Je sens que je traite les autres de façon impersonnelle"
+      label: "J’ai l’impression de traiter certaines personnes comme si elles étaient des «objets impersonnels»"
       scale: freq7
     q173:
-      label: "Travailler chaque jour avec des gens, c’est vraiment un fardeau pour moi"
+      label: "Travailler toute la journée avec d’autres personnes est pour moi une source de tension"
       scale: freq7
     q174:
-      label: "Je résous avec efficacité les problèmes des gens"
+      label: "Je m’occupe très efficacement des problèmes des gens"
       scale: freq7
     q175:
-      label: "Je sens que j’ai brûlé toutes mes cartes face à mon travail"
+      label: "Je me sens totalement lessivé(e) par mon travail"
       scale: freq7
     q176:
-      label: "Je crée une influence positive sur les gens que je côtoie à mon travail"
+      label: "Je crois que par mon activité professionnelle, j’exerce une influence positive sur la vie des gens"
       scale: freq7
     q177:
-      label: "Je suis devenu(e) plus insensible aux gens depuis que j’ai cet emploi"
+      label: "J’ai l’impression que, depuis mes débuts, dans cette profession, je suis devenu(e) nettement moins sensible envers les autres"
       scale: freq7
     q178:
-      label: "Je crains que ce travail ne m’endurcisse émotionnellement"
+      label: "J’ai peur que mon travail m’endurcisse"
       scale: freq7
     q179:
-      label: "Je me sens très énergique"
+      label: "Je me sens plein(e) d’ énergie"
       scale: freq7
     q180:
       label: "Je me sens frustré(e) par mon travail"
       scale: freq7
     q181:
-      label: "Je sens que je travaille trop fort à mon emploi"
+      label: "J’ai l’impression de travailler trop dur"
       scale: freq7
     q182:
-      label: "Je ne fais pas vraiment attention à ce qui arrive aux autres"
+      label: "Je ne me soucie pas vraiment de ce qui peut arriver aux autres"
       scale: freq7
     q183:
-      label: "Travailler directement avec des gens me stresse beaucoup"
+      label: "Travailler en contact direct avec d’autres personnes représente pour moi un stress très intense"
       scale: freq7
     q184:
-      label: "Je peux facilement créer une atmosphère détendue avec les autres"
+      label: "Avec les autres,  je peux facilement créer une atmosphère très détendue"
       scale: freq7
     q185:
-      label: "J’ai accompli plusieurs choses utiles dans ce travail"
+      label: "J’estime avoir accompli de nombreux actes de valeur dans mon travail"
       scale: freq7
     q186:
-      label: "Je me sens au bout du rouleau"
+      label: "J’ai l’impression d’être au bout du rouleau"
       scale: freq7
     q187:
-      label: "Dans mon travail, je traite les problèmes émotionnels très calmement"
+      label: "Dans mon travail, je traite très calmement les problèmes émotionnels et affectifs"
       scale: freq7
     q188:
-      label: "Je ressens que les autres me critiquent indûment"
+      label: "J’ai l’impression que les autres me rendent responsable de certains de leurs problèmes"
+      scale: freq7
+    q188bis:
+      label: "Je me sens « regonflé(e) », « ranimé(e) », quand je peux suivre de plus près, le cas des autres"
       scale: freq7

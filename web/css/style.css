@@ -225,10 +225,15 @@ body>div.content {
     clear: both;
 }
 
+body>header>img+img {
+    float: right;
+}
 body>header>img {
     margin: 3%;
     max-width: 24%;
 }
+
+
 
 body>footer {
     text-align: center;
