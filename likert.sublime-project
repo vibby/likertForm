@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/var/www/html/likertForm"
+		},
+		{
+			"path": "/home/vibby/dev/likertForm"
 		}
 	]
 }

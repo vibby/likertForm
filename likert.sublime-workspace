@@ -356,10 +356,13 @@
 	"buffers":
 	[
 		{
+			"contents": "likertScales:\n  ok4:\n    - Pas du tout d’accord\n    - Pas d’accord\n    - D’accord\n    - Tout à fait d’accord\n  yesno:\n    - Oui\n    - Non\n  ok7:\n    - Pas du tout d’accord\n    - Plutôt en désaccord\n    - Pas d’accord\n    - Neutre\n    - D’accord\n    - Plutôt d’accord\n    - Tout à fait d’accord\n  ok5:\n    - Fortement en désaccord\n    - En désaccord\n    - Neutre\n    - D’accord\n    - Fortement d’accord\n  freq5:\n    - Presque jamais\n    - Rarement\n    - La moitié du temps\n    - Fréquemment\n    - Presque toujours\n  fewhigh5:\n    - Dans une très faible mesure\n    - Dans une faible mesure\n    - Neutre\n    - Dans une large mesure\n    - Dans une très large mesure\n  freq4:\n    - Jamais\n    - Parfois\n    - Une fois par mois\n    - Une fois par semaine\n  freq7:\n    - Jamais\n    - Presque jamais\n    - Rarement\n    - Parfois\n    - Souvent\n    - Très souvent\n    - Toujours\n  yesnofreq5:\n    - \"Non, jamais\"\n    - \"Oui, rarement\"\n    - \"Oui, parfois\"\n    - \"Oui, plusieurs fois par semaine\"\n    - \"Oui, presque tous les jours\"\n  none: ~\n\n\n\nlikertQuestions:\n\n  page1:\n    intro0:\n      label: \"Voici une série de propositions suivies d’une échelle de réponse allant de «pas du tout d’accord» à «tout à fait d’accord». Sélectionnez la réponse qui correspond le mieux à votre opinion.\"\n      scale: none\n    q1:\n      label: \"J’éprouve vraiment un sentiment d’appartenance à mon organisation\"\n      scale: ok4\n    q2:\n      label: \"Il ne serait pas moralement correct de quitter mon entreprise actuelle maintenant\"\n      scale: ok4\n    q3:\n      label: \"Je ne voudrais pas quitter mon entreprise actuelle parce que j’aurais beaucoup à y perdre\"\n      scale: ok4\n    q4:\n      label: \"Mon entreprise représente beaucoup pour moi\"\n      scale: ok4\n    q5:\n      label: \"Il ne serait pas correct de quitter maintenant mon entreprise actuelle, même si j’y trouvais avantage\"\n      scale: ok4\n    q6:\n      label: \"Pour moi, personnellement, quitter mon entreprise actuelle aurait beaucoup plus d’inconvénients que d’avantages\"\n      scale: ok4\n    q7:\n      label: \"Je suis fier d’appartenir à cette organisation\"\n      scale: ok4\n    q8:\n      label: \"Si on m’offre un poste dans une autre entreprise, je ne trouverai pas correct de quitter mon entreprise actuelle\"\n      scale: ok4\n    q9:\n      label: \"Je continue à travailler pour cette entreprise parce que je ne pense pas qu’une autre pourrait m’offrir les mêmes avantages\"\n      scale: ok4\n    q10:\n      label: \"Je ne me sens pas affectivement attaché(e) à mon entreprise\"\n      scale: ok4\n    q11:\n      label: \"J’estime que je serais coupable si je quittais maintenant mon entreprise actuelle\"\n      scale: ok4\n    q12:\n      label: \"Je reste dans mon entreprise actuelle parce que je ne vois pas où je pourrais aller ailleurs\"\n      scale: ok4\n    q13:\n      label: \"Je ressens vraiment les problèmes de mon entreprise comme si c’était les miens\"\n      scale: ok4\n    q14:\n      label: \"Je trahirais la confiance que l’on me fait si je quittais maintenant mon entreprise actuelle\"\n      scale: ok4\n    q15:\n      label: \"J’estime mes possibilités de choix très limitées pour envisager de quitter mon entreprise actuelle\"\n      scale: ok4\n    q16:\n      label: \"Je n’ai pas le sentiment de « faire partie de la famille » dans mon entreprise\"\n      scale: ok4\n    q17:\n      label: \"Je ne quitterais pas mon entreprise maintenant parce que j’estime avoir des obligations envers certaines personnes qui y travaillent\"\n      scale: ok4\n    q18:\n      label: \"Je n’ai pas d’autre choix que de rester dans mon entreprise actuelle\"\n      scale: ok4\n    q19:\n      label: \"J’envisage parfois de changer d’emploi\"\n      scale: ok4\n    q20:\n      label: \"J’envisage parfois de chercher du travail en dehors de cette organisation\"\n      scale: ok4\n    q21:\n      label: \"J’ai l’intention de changer d’emploi l’année prochaine\"\n      scale: ok4\n    q22:\n      label: \"L’année prochaine, j’ai l’intention de chercher un emploi en dehors de cette organisation\"\n      scale: ok4\n\n  page2:\n    q22bis:\n      label: A propos de votre projet professionel et/ou personnel\n      scale: none\n    q22bis1:\n      label: Vous pouvez vous projeter dans 5 ans\n      scale: ok4\n    q22bis2:\n      label: Vous savez dans quel type de stucture vous souhaitez travailler\n      scale: ok4\n    q22bis3:\n      label: Vous savez quelle activité vous souhaitez réaliser\n      scale: ok4\n    q22bis4:\n      label: Vous savez quelles compétences vous seront nécessaires\n      scale: ok4\n    q22bis5:\n      label: Vous avez identifié les mesures nécessaires pour réaliser votre projet (stage, détachement, formation, création d’entreprise, congé …)\n      scale: ok4\n    q22bis6intro:\n      label: 'De façon plus précise, vous envisagez dans environ 5 ans…'\n      scale: none\n    q22bis6:\n      label: D’occuper toujours le même emploi dans la même entreprise\n      scale: ok4\n    q22bis7:\n      label: D’occuper un emploi différent dans la même entreprise\n      scale: ok4\n    q22bis8:\n      label: De trouver le même type d’emploi dans une autre entreprise\n      scale: ok4\n    q22bis9:\n      label: De trouver un emploi différent dans une autre entreprise\n      scale: ok4\n    q22bis10:\n      label: De rester mais en réduisant votre temps de travail\n      scale: ok4\n    q22bis11:\n      label: De ne plus travailler et vous consacrer à autre chose (famille, loisirs,…)\n      scale: ok4\n    q22bis12:\n      label: Vous avez du mal à vous projeter dans 5 ans\n      scale: ok4\n    q22ter:\n      label: Votre projet (ou absence de projet) repose sur les motivations suivantes\n      scale: none\n    q22ter1:\n      label: Je veux conserver les avantages de mon entreprise actuelle\n      scale: ok4\n    q22ter2:\n      label: Je considère avant tout mon travail d’un point de vue alimentaire      \n      scale: ok4\n    q22ter3:\n      label: Je veux m’épanouir dans mon travail, me sentir à ma place\n      scale: ok4\n    q22ter4:\n      label: Je veux acquérir de nouvelles compétences ou connaissances\n      scale: ok4\n    q22ter5:\n      label: Je veux me consacrer à une passion\n      scale: ok4\n    q22ter6:\n      label: Mon emploi actuel est une étape nécessaire pour occuper un emploi plus intéressant ou valorisant / pour ma carrière\n      scale: ok4\n    q22ter7:\n      label: J’ai d’autres priorités que le travail\n      scale: ok4\n    q22ter8:\n      label: Mon entreprise actuelle ne permet pas le déroulement de carrière voulu\n      scale: ok4\n    q22ter9:\n      label: Je trouverais incorrect de quitter mon entreprise\n      scale: ok4\n    q22ter10: \n      label: Je me sens en rupture avec mon entreprise\n      scale: ok4\n    q22ter11: \n      label: Je risque d’avoir des difficultés à trouver un autre emploi au vu du contexte économique et/ou je n’ai pas envie de me retrouver en recherche d’emploi\n      scale: ok4\n    q22ter12: \n      label: La santé financière ou l’organisation (dépôt de bilan, délocalisation…) de l’entreprise me contraint à partir\n      scale: ok4\n\n  page3:\n    q23:\n      label: \"Pour la plupart de ses aspects, ma vie est proche de mon idéal\"\n      scale: ok7\n    q24:\n      label: \"Les conditions de vie qui sont les miennes sont excellentes\"\n      scale: ok7\n    q25:\n      label: \"Je suis satisfait(e) de ma vie\"\n      scale: ok7\n    q26:\n      label: \"Jusqu’à présent, j’ai obtenu les choses importantes que je voulais atteindre dans la vie\"\n      scale: ok7\n    q27:\n      label: \"Si je pouvais revivre ma vie, je ne changerais presque rien\"\n      scale: ok7\n    intro1:\n      label: \"Les propositions suivantes se réfèrent à votre personnalité. Globalement vous pensez être\"\n      scale: none\n    q28:\n      label: \"Je pense être intéressé(e), curieux(se), motivé(e)\"\n      scale: freq5\n    q29:\n      label: \"Je pense être angoissé(e)\"\n      scale: freq5\n    q30:\n      label: \"Je pense être excité(e), animé(e), éveillé(e)\"\n      scale: freq5\n    q31:\n      label: \"Je pense être contrarié(e)\"\n      scale: freq5\n    q32:\n      label: \"Je pense être fort(e)\"\n      scale: freq5\n    q33:\n      label: \"Je pense être coupable\"\n      scale: freq5\n    q34:\n      label: \"Je pense être effrayé(e)\"\n      scale: freq5\n    q35:\n      label: \"Je pense être hostile\"\n      scale: freq5\n    q36:\n      label: \"Je pense être enthousiaste\"\n      scale: freq5\n    q37:\n      label: \"Je pense être fier(e)\"\n      scale: freq5\n    q38:\n      label: \"Je pense être irritable\"\n      scale: freq5\n    q39:\n      label: \"Je pense être alerte, vigilant(e)\"\n      scale: freq5\n    q40:\n      label: \"Je pense être honteux(se)\"\n      scale: freq5\n    q41:\n      label: \"Je pense être inspiré(e), stimulé(e)\"\n      scale: freq5\n    q42:\n      label: \"Je pense être nerveux(se)\"\n      scale: freq5\n    q43:\n      label: \"Je pense être déterminé(e)\"\n      scale: freq5\n    q44:\n      label: \"Je pense être attentif(ve), soigneux(se)\"\n      scale: freq5\n    q45:\n      label: \"Je pense être froussard(e), peureux(se)\"\n      scale: freq5\n    q46:\n      label: \"Je pense être actif(ve)\"\n      scale: freq5\n    q47:\n      label: \"Je pense être craintif(ve)\"\n      scale: freq5\n\n  page4:\n    intro2:\n      label: \"Les questions qui suivent se réfèrent à votre rémunération. Globalement vous trouvez que\"\n      scale: none\n    q48:\n      label: \"Votre rémunération reflète l’effort que vous mettez dans votre travail\"\n      scale: fewhigh5\n    q49:\n      label: \"Votre rémunération est appropriée au travail que vous fournissez\"\n      scale: fewhigh5\n    q50:\n      label: \"Votre rémunération reflète votre contribution à l’entreprise\"\n      scale: fewhigh5\n    q51:\n      label: \"Votre rémunération est justifiée, au regard de votre performance\"\n      scale: fewhigh5\n    intro3:\n      label: \"Les propositions suivantes se réfèrent aux procédures utilisées par l’entreprise pour prendre des décisions vous concernant. Dans quelle mesure ces procédures\"\n      scale: none\n    q52:\n      label: \"Vous permettent d’exprimer vos opinions et sentiments durant la prise de décisions\"\n      scale: fewhigh5\n    q53:\n      label: \"Vous permettent d’avoir de l’influence sur les décisions\"\n      scale: fewhigh5\n    q54:\n      label: \"Sont toujours appliquées de la même façon\"\n      scale: fewhigh5\n    q55:\n      label: \"Ne font pas intervenir de préjugés\"\n      scale: fewhigh5\n    q56:\n      label: \"Sont basées sur des informations exactes\"\n      scale: fewhigh5\n    q57:\n      label: \"Vous permettent de demander de réexaminer la décision une fois qu’elle est prise\"\n      scale: fewhigh5\n    q58:\n      label: \"Respectent des règles de morale\"\n      scale: fewhigh5\n    intro4:\n      label: \"Les propositions suivantes se réfèrent aux personnes responsables des décisions vous concernant. Dans quelle mesure vous trouvez que ces personnes\"\n      scale: none\n    q59:\n      label: \"Vous traitent poliment\"\n      scale: fewhigh5\n    q60:\n      label: \"Vous traitent avec dignité\"\n      scale: fewhigh5\n    q61:\n      label: \"Vous traitent avec respect\"\n      scale: fewhigh5\n    q62:\n      label: \"Évitent de vous faire des remarques ou des commentaires déplacés\"\n      scale: fewhigh5\n    intro5:\n      label: \"Les propositions suivantes se réfèrent aux personnes responsables des décisions vous concernant. Dans quelle mesure vous trouvez que ces personnes\"\n      scale: none\n    q63:\n      label: \"Ont eu une communication franche avec vous\"\n      scale: fewhigh5\n    q64:\n      label: \"Expliquent de façon complète les procédures utilisées pour prendre les décisions\"\n      scale: fewhigh5\n    q65:\n      label: \"Vous donnent des explications pertinentes sur les procédures servant aux prises de décisions\"\n      scale: fewhigh5\n    q66:\n      label: \"Vous communiquent des informations détaillées dans des délais raisonnables\"\n      scale: fewhigh5\n    q67:\n      label: \"Semblent adapter leurs communications selon les besoins spécifiques de chaque personne\"\n      scale: fewhigh5\n\n\n  page5:\n    intro6:\n      label: \"Les propositions suivantes se réfèrent à ce que vous pensez en général\"\n      scale: none\n    q68:\n      label: \"Je pense que, dans la vie, je reçois en général ce que je mérite\"\n      scale: ok5\n    q69:\n      label: \"Je pense que les efforts que fait une personne sont remarqués et récompensés\"\n      scale: ok5\n    q70:\n      label: \"Les gens sont traités le plus souvent de façon juste\"\n      scale: ok5\n    q71:\n      label: \"Je pense que les efforts que je fais sont remarqués et récompensés\"\n      scale: ok5\n    q72:\n      label: \"Je pense que, dans la vie, les gens reçoivent en général ce qu’ils méritent\"\n      scale: ok5\n    q73:\n      label: \"On me traite le plus souvent de façon juste\"\n      scale: ok5\n    q74:\n      label: \"Naturellement, le fait de désigner des personnes qui vont porter le poids des problèmes va soulager les maux\"\n      scale: ok5\n    q75:\n      label: \"Je crois qu’il est nécessaire que certaines personnes payent lors d’une situation problématique\"\n      scale: ok5\n    q76:\n      label: \"Je crois que la désignation de victimes participe à l’équilibre de la société\"\n      scale: ok5\n    q77:\n      label: \"Afin d’éviter le pire pour une collectivité, il vaut mieux que des personnes soient désignées comme responsables de ce qui arrive\"\n      scale: ok5\n    q78:\n      label: \"La paix au sein d’une collectivité s’obtient au prix de sacrifices humains\"\n      scale: ok5\n    q79:\n      label: \"La présence de boucs émissaires dans notre société permet de se libérer\"\n      scale: ok5\n    q80:\n      label: \"Je pense qu’il est juste que des personnes soient sacrifiées\"\n      scale: ok5\n    q81:\n      label: \"Je pense que le fait de désigner des victimes permet de canaliser la violence dans la société\"\n      scale: ok5\n    q82:\n      label: \"Je pense qu’il est juste qu’il y ait des victimes dans notre société\"\n      scale: ok5\n    q83:\n      label: \"Dans l’ensemble, je pense que la société a besoin de victimes pour survivre\"\n      scale: ok5\n    q84:\n      label: \"En cas de problème, il est important qu’un responsable de celui-ci soit désigné afin que la situation ne dégénère pas\"\n      scale: ok5\n    q85:\n      label: \"Je pense qu’il est juste que des personnes soient sacrifiées\"\n      scale: ok5\n    q86:\n      label: \"Je pense que, globalement, l’existence de victimes est utile\"\n      scale: ok5\n    q87:\n      label: \"Le fait de désigner des responsables à l’origine d’un problème permet, en partie, la résolution de ce dernier\"\n      scale: ok5\n    q88:\n      label: \"Il y a toujours eu des boucs émissaires dans notre société et on ne peut faire sans\"\n      scale: ok5\n    q89:\n      label: \"Il est parfois nécessaire que des sacrifices humains soient consentis lors de situations problématiques\"\n      scale: ok5\n\n  page6:\n    intro7:\n      label: \"Les propositions suivantes traitent des relations que vous entretenez avec vos collègues et supérieurs hiérarchiques. En général, vous trouvez qu’ils \"\n      scale: none\n    q90:\n      label: \"Retiennent de l’information qui vous est nécessaire et rend ainsi votre travail plus difficile\"\n      scale: freq4\n    q91:\n      label: \"Vous font des plaisanteries insultantes ou ridiculisantes\"\n      scale: freq4\n    q92:\n      label: \"Vous imposent du travail en dessous de votre niveau de compétence\"\n      scale: freq4\n    q93:\n      label: \"Vous privent de votre travail ou on vous enlèvent vos responsabilités\"\n      scale: freq4\n    q94:\n      label: \"Lancent des rumeurs à votre encontre\"\n      scale: freq4\n    q95:\n      label: \"Vous excluent des activités de groupe, exclusion de la part des collègues\"\n      scale: freq4\n    q96:\n      label: \"Vous font des remarques répétées à l’encontre de votre vie privée ou de vous-même\"\n      scale: freq4\n    q97:\n      label: \"Vous insultent\"\n      scale: freq4\n    q98:\n      label: \"Ont des remarques ou comportements vous indiquant que vous deviez quitter votre travail\"\n      scale: freq4\n    q99:\n      label: \"Font des remarques répétées concernant vos erreurs\"\n      scale: freq4\n    q100:\n      label: \"Portent silence ou hostilité face à vos questions ou vos tentatives d’entrer en conversation\"\n      scale: freq4\n    q101:\n      label: \"Dévalorisent votre travail et vos efforts\"\n      scale: freq4\n    q102:\n      label: \"Négligent vos points de vues\"\n      scale: freq4\n    q103:\n      label: \"Vous font des «blagues», «surprises» désagréables\"\n      scale: freq4\n    q104:\n      label: \"Ne respectent pas vos droits et opinions en raison de votre âge\"\n      scale: freq4\n    q105:\n      label: \"Exploitent votre travail à des fins privées\"\n      scale: freq4\n    intro8:\n      label: \"En quelle mesure pouvez-vous témoigner de ces comportements\"\n      scale: none\n    q106:\n      label: \"Réactions négatives des autres parce que vous travaillez trop dur\"\n      scale: freq4\n    q107:\n      label: \"Quelqu’un m’agresse physiquement sur mon lieu de travail\"\n      scale: freq4\n    q108:\n      label: \"J’ai subi des frais causés par l’un de mes collègues volontairement\"\n      scale: freq4\n    q109:\n      label: \"Je suis agressé(e) sexuellement sur mon lieu de travaillez\"\n      scale: freq4\n    q110:\n      label: \"Certains de mes collègues refusent tout contact, même visuel, avec moi, comme si je n’existais pas\"\n      scale: freq4\n    q111:\n      label: \"Avez-vous été harcelé(e) ces six derniers mois ?\"\n      scale: yesnofreq5\n    q112:\n      label: \"Avez-vous le sentiment d’avoir harcelé d’autres personnes pendant ces six derniers mois ?\"\n      scale: yesnofreq5\n    q113:\n      label: \"Avez-vous été témoin de harcèlement ces derniers mois ?\"\n      scale: yesnofreq5\n\n  page7:\n    q114:\n      label: \"Les collègues avec qui je travaille sont des gens professionnellement compétents\"\n      scale: ok4\n    q115:\n      label: \"Les collègues avec qui je travaille me manifestent de l’intérêt\"\n      scale: ok4\n    q116:\n      label: \"Les collègues avec qui je travaille ont des attitudes hostiles ou conflictuelles avec moi\"\n      scale: ok4\n    q117:\n      label: \"Les collègues avec qui je travaille sont amicaux\"\n      scale: ok4\n    q118:\n      label: \"Les collègues avec qui je travaille s’encouragent mutuellement à travailler ensemble\"\n      scale: ok4\n    q119:\n      label: \"Les collègues avec qui je travaille m’aident à mener à bien les tâches\"\n      scale: ok4\n    q120:\n      label: \"Mon chef immédiat se soucie du bien être des travailleurs qui sont sous ses ordres\"\n      scale: ok4\n    q121:\n      label: \"Mon chef immédiat fait attention à ce que je lui dis\"\n      scale: ok4\n    q122:\n      label: \"Mon chef immédiat a une attitude hostile et conflictuelle avec moi\"\n      scale: ok4\n    q123:\n      label: \"Mon chef immédiat facilite la réalisation du travail\"\n      scale: ok4\n    q124:\n      label: \"Mon chef immédiat réussit à faire travailler les gens ensemble\"\n      scale: ok4\n    q125:\n      label: \"Je peux partager mes problèmes professionnels autant avec ma famille\"\n      scale: ok4\n    q126:\n      label: \"Je peux partager mes problèmes professionnels autant avec mes amis\"\n      scale: ok4\n    q127:\n      label: \"Je ne peux pas me confier à ma famille quand je rentre du travail\"\n      scale: ok4\n    q128:\n      label: \"Je ne peux pas me confier à mes amis quand je rentre du travail\"\n      scale: ok4\n    q129:\n      label: \"Ma famille me manifeste de l’intérêt en ce qui concerne ma vie de travail\"\n      scale: ok4\n    q130:\n      label: \"Mes amis me manifestent de l’intérêt en ce qui concerne ma vie de travail\"\n      scale: ok4\n    q131:\n      label: \"Ma famille a tendance à prendre mes problèmes professionnels à la légère\"\n      scale: ok4\n    q132:\n      label: \"Mes amis ont tendance à prendre mes problèmes professionnels à la légère\"\n      scale: ok4\n    q133:\n      label: \"Je discute facilement de mes difficultés professionnelles avec ma famille\"\n      scale: ok4\n    q134:\n      label: \"Je discute facilement de mes difficultés professionnelles avec mes amis\"\n      scale: ok4\n    q135:\n      label: \"Je bénéficie de conseils de ma famille pour les domaines professionnel et personnel\"\n      scale: ok4\n    q136:\n      label: \"Je bénéficie de conseils de mes amis pour les domaines professionnel et personnel\"\n      scale: ok4\n    q137:\n      label: \"J’entretiens de bonnes relations avec ma famille\"\n      scale: ok4\n    q138:\n      label: \"J’entretiens de bonnes relations avec mes amis\"\n      scale: ok4\n    q139:\n      label: \"Je ne peux pas avoir confiance en ma famille\"\n      scale: ok4\n    q140:\n      label: \"Je ne peux pas avoir confiance en mes amis\"\n      scale: ok4\n\n  page8:\n    q141:\n      label: \"Je me sens accepté(e) et aimé(e) par ma famille\"\n      scale: ok4\n    q142:\n      label: \"Je me sens accepté(e) et aimé(e) par mes amis\"\n      scale: ok4\n    q143:\n      label: \"Je peux être aidé(e) financièrement par ma famille\"\n      scale: ok4\n    q144:\n      label: \"Je peux être aidé(e) financièrement par mes amis\"\n      scale: ok4\n    q145:\n      label: \"Je suis agressif(ve) pour tout et pour rien\"\n      scale: freq5\n    q146:\n      label: \"J’ai tendance à m’isoler, à me couper du monde\"\n      scale: freq5\n    q147:\n      label: \"J’ai l’impression d’avoir raté ma carrière\"\n      scale: freq5\n    q148:\n      label: \"J’éprouve de la difficulté à faire face à mes problèmes\"\n      scale: freq5\n    q149:\n      label: \"Je suis facilement irritable, je réagis plutôt mal et/ou avec colère aux commentaires qu’on me fait\"\n      scale: freq5\n    q150:\n      label: \"Je n’ai plus le goût de faire quoi que ce soit de plus\"\n      scale: freq5\n    q151:\n      label: \"Je me sens dévalorisé(e), je me sens diminué(e)\"\n      scale: freq5\n    q152:\n      label: \"Je suis en conflit avec mes collègues de travail\"\n      scale: freq5\n    q153:\n      label: \"J’ai envie de tout lâcher, de tout abandonner\"\n      scale: freq5\n    q154:\n      label: \"Je me sens triste\"\n      scale: freq5\n    q155:\n      label: \"J’ai l’impression que personne ne m’aime\"\n      scale: freq5\n    q156:\n      label: \"Je suis arrogant(e) et même maladroit(e) avec mes collègues de travail\"\n      scale: freq5\n    q157:\n      label: \"Je manque de confiance en moi\"\n      scale: freq5\n    q158:\n      label: \"Je suis préoccupé(e), anxieux(se)\"\n      scale: freq5\n    q159:\n      label: \"Je perds patience facilement\"\n      scale: freq5\n    q160:\n      label: \"Je me sens déprimé(e)\"\n      scale: freq5\n    q161:\n      label: \"Je manque d’initiative en général, je suis moins fonceur(se)\"\n      scale: freq5\n    q162:\n      label: \"J’ai le sentiment d’être inutile\"\n      scale: freq5\n    q163:\n      label: \"Je me sens désintéressé(e) par mon travail\"\n      scale: freq5\n    q164:\n      label: \"Je me sens mal dans ma peau\"\n      scale: freq5\n    q165:\n      label: \"Je me sens stressé(e), sous pression\"\n      scale: freq5\n    q166:\n      label: \"J’ai tendance à être moins réceptif(ve) aux idées (opinions) de mes collègues de travail\"\n      scale: freq5\n    q167:\n      label: \"J’éprouve de la difficulté à me concentrer sur quoi que ce soit\"\n      scale: freq5\n\n  page9:\n    q168:\n      label: \"Je me sens vidé(e) nerveusement par mon travail\"\n      scale: freq7\n    q169:\n      label: \"la fin d’une journée de travail, je me sens totalement épuisé(e)\"\n      scale: freq7\n    q170:\n      label: \"Je suis fatigué(e) quand je me lève le matin et que je dois affronter une nouvelle journée de travail\"\n      scale: freq7\n    q171:\n      label: \"Il m’est facile de comprendre ce que ressentent les autres\"\n      scale: freq7\n    q172:\n      label: \"J’ai l’impression de traiter certaines personnes comme si elles étaient des «objets impersonnels»\"\n      scale: freq7\n    q173:\n      label: \"Travailler toute la journée avec d’autres personnes est pour moi une source de tension\"\n      scale: freq7\n    q174:\n      label: \"Je m’occupe très efficacement des problèmes des gens\"\n      scale: freq7\n    q175:\n      label: \"Je me sens totalement lessivé(e) par mon travail\"\n      scale: freq7\n    q176:\n      label: \"Je crois que par mon activité professionnelle, j’exerce une influence positive sur la vie des gens\"\n      scale: freq7\n    q177:\n      label: \"J’ai l’impression que, depuis mes débuts, dans cette profession, je suis devenu(e) nettement moins sensible envers les autres\"\n      scale: freq7\n    q178:\n      label: \"J’ai peur que mon travail m’endurcisse\"\n      scale: freq7\n    q179:\n      label: \"Je me sens plein(e) d’ énergie\"\n      scale: freq7\n    q180:\n      label: \"Je me sens frustré(e) par mon travail\"\n      scale: freq7\n    q181:\n      label: \"J’ai l’impression de travailler trop dur\"\n      scale: freq7\n    q182:\n      label: \"Je ne me soucie pas vraiment de ce qui peut arriver aux autres\"\n      scale: freq7\n    q183:\n      label: \"Travailler en contact direct avec d’autres personnes représente pour moi un stress très intense\"\n      scale: freq7\n    q184:\n      label: \"Avec les autres,  je peux facilement créer une atmosphère très détendue\"\n      scale: freq7\n    q185:\n      label: \"J’estime avoir accompli de nombreux actes de valeur dans mon travail\"\n      scale: freq7\n    q186:\n      label: \"J’ai l’impression d’être au bout du rouleau\"\n      scale: freq7\n    q187:\n      label: \"Dans mon travail, je traite très calmement les problèmes émotionnels et affectifs\"\n      scale: freq7\n    q188:\n      label: \"J’ai l’impression que les autres me rendent responsable de certains de leurs problèmes\"\n      scale: freq7\n    q188bis:\n      label: \"Je me sens « regonflé(e) », « ranimé(e) », quand je peux suivre de plus près, le cas des autres\"\n      scale: freq7\n",
 			"file": "config/questions.yml",
+			"file_size": 1460,
+			"file_write_time": 1362085638000000,
 			"settings":
 			{
-				"buffer_size": 22251,
+				"buffer_size": 25544,
 				"line_ending": "Unix"
 			}
 		},
@@ -367,7 +370,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 13574,
+				"buffer_size": 15426,
 				"line_ending": "Unix"
 			}
 		},
@@ -375,7 +378,7 @@
 			"file": "web/view/layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 993,
+				"buffer_size": 1041,
 				"line_ending": "Unix"
 			}
 		},
@@ -415,7 +418,7 @@
 			"file": "web/css/style.css",
 			"settings":
 			{
-				"buffer_size": 8364,
+				"buffer_size": 9628,
 				"line_ending": "Unix"
 			}
 		},
@@ -431,7 +434,7 @@
 			"file": "web/js/likert.js",
 			"settings":
 			{
-				"buffer_size": 4186,
+				"buffer_size": 4004,
 				"line_ending": "Unix"
 			}
 		},
@@ -439,15 +442,7 @@
 			"file": "composer.json",
 			"settings":
 			{
-				"buffer_size": 469,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "reponses/_toutes.csv",
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 470,
 				"line_ending": "Unix"
 			}
 		},
@@ -455,7 +450,7 @@
 			"file": "config/config.yml",
 			"settings":
 			{
-				"buffer_size": 243,
+				"buffer_size": 178,
 				"line_ending": "Unix"
 			}
 		},
@@ -564,6 +559,7 @@
 	},
 	"file_history":
 	[
+		"/home/vibby/dev/likertForm/reponses/_toutes.csv",
 		"/var/www/html/likertForm/web/css/knacss.css",
 		"/var/www/html/likertForm/web/view/layout.html",
 		"/var/www/html/likertForm/web/css/style.css",
@@ -690,8 +686,7 @@
 		"/var/www/html/Ponroy/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/form_row.html.php",
 		"/mnt/Projets/O-Z/PonroyYves/Refonte Site_2012/code_exe/src/templates/guide/conf-guide-envoi.html.twig",
 		"/var/www/html/Ponroy/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_widget.html.php",
-		"/var/www/html/Ponroy/vendor/doctrine/dbal/bin/doctrine-dbal.php",
-		"/var/www/html/Ponroy/src/Faros/AdminBundle/Entity/FormRequest.php"
+		"/var/www/html/Ponroy/vendor/doctrine/dbal/bin/doctrine-dbal.php"
 	],
 	"find":
 	{
@@ -756,6 +751,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"label: d’",
+			"label: de",
+			"small",
+			"intro",
 			"Heures_travail_semaine",
 			"$sessionData",
 			"data",
@@ -879,11 +878,7 @@
 			"'page'",
 			"\"page\"",
 			"'page'",
-			"civility",
-			"2012",
-			"send",
-			"\n#Routing Page\npsb_page_show:\n    pattern:  /page/{page}\n    defaults: { _controller: PonroyShopBundle:Page:show }",
-			"fixtures"
+			"civility"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -955,7 +950,7 @@
 	"groups":
 	[
 		{
-			"selected": 12,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -963,15 +958,15 @@
 					"file": "config/questions.yml",
 					"settings":
 					{
-						"buffer_size": 22251,
+						"buffer_size": 25544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22251,
-								22251
+								25544,
+								25544
 							]
 						],
 						"settings":
@@ -981,7 +976,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 8307.0,
+						"translation.y": 12317.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -991,15 +986,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 13574,
+						"buffer_size": 15426,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								718,
-								763
+								14676,
+								14676
 							]
 						],
 						"settings":
@@ -1009,7 +1004,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 234.0,
+						"translation.y": 6176.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1019,15 +1014,15 @@
 					"file": "web/view/layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 993,
+						"buffer_size": 1041,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								578,
-								578
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1157,15 +1152,15 @@
 					"file": "web/css/style.css",
 					"settings":
 					{
-						"buffer_size": 8364,
+						"buffer_size": 9628,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								563,
-								563
+								2730,
+								2730
 							]
 						],
 						"settings":
@@ -1175,7 +1170,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1122.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1203,7 +1198,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 66.0,
+						"translation.y": 714.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1213,15 +1208,15 @@
 					"file": "web/js/likert.js",
 					"settings":
 					{
-						"buffer_size": 4186,
+						"buffer_size": 4004,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1233,
-								1233
+								138,
+								138
 							]
 						],
 						"settings":
@@ -1231,7 +1226,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 117.0,
+						"translation.y": 663.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1241,15 +1236,15 @@
 					"file": "composer.json",
 					"settings":
 					{
-						"buffer_size": 469,
+						"buffer_size": 470,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								375,
-								375
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1266,10 +1261,10 @@
 				},
 				{
 					"buffer": 11,
-					"file": "reponses/_toutes.csv",
+					"file": "config/config.yml",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 178,
 						"regions":
 						{
 						},
@@ -1278,32 +1273,6 @@
 							[
 								0,
 								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "config/config.yml",
-					"settings":
-					{
-						"buffer_size": 243,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								220,
-								220
 							]
 						],
 						"settings":
@@ -1317,7 +1286,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "config/config.yml.dist",
 					"settings":
 					{
