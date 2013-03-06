@@ -1,11 +1,26 @@
 
 $(document).ready(function() {
     $('select').change(function() {
+      someUnselected = false;
+      item = $(this).parent().parent().parent();
+      if (item.find('select').length){
+        item.find('select').each(function(){
+          someUnselected = someUnselected || ($(this).val() == "");
+        })
+      }
+      if (!someUnselected) {
+        $('.nav .next').trigger('click');
+      }
+    });
+
+    $('button').click(function() {
       $('.nav .next').trigger('click');
     });
 
     $('input').change(function() {
-      $('.nav .next').trigger('click');
+      if ($(this).attr('type') != 'number') {
+        $('.nav .next').trigger('click');        
+      }
     });
 
     $('.likert.none').click(function() {
@@ -26,15 +41,7 @@ $(document).ready(function() {
       var lastWasIntro = false;
       $('#form>div').each(function(){
         var item = ($(this));
-        if (!stop && (
-          (item.hasClass('none')
-            || (!item.find('.required').length)
-            || item.find('input:checked').length
-            || (item.find('input[type=text]').length && item.find('input').val() != "")
-            || (item.find('input[type=number]').length && item.find('input').val() != "")
-            || (item.find('select').length && item.find('select').val() != "")
-          )
-        )) {
+        if (!stop && isItemValid(item)) {
           count = count + 1;
           lastWasIntro = item.hasClass('none');
         } else {
@@ -50,14 +57,7 @@ $(document).ready(function() {
     $('.nav .next').click(function() {
       var count = Math.floor($('form').scrollLeft() / 302) + 1;
       var item = ($('#form>div:nth-child(' + count + ')'));
-      // TODO : correct this test for last page !
-      if (item.hasClass('none')
-        || (!item.find('.required').length)
-        || item.find('input:checked').length
-        || (item.find('input[type=text]').length && item.find('input').val() != "")
-        || (item.find('input[type=number]').length && item.find('input').val() != "")
-        || (item.find('select').length && item.find('select').val() != "")
-      ) {
+      if (isItemValid(item)) {
         var dec = 302 - $('form').scrollLeft() % 302;
         dec = dec > 0 ? dec : 302;
         $('form').stop().animate({
@@ -73,6 +73,24 @@ $(document).ready(function() {
 
 });
 
+function isItemValid(item) {
+
+    if (item.find('select').length){
+      isSelectInvalid = false;
+      item.find('select').each(function(){
+        isSelectInvalid = isSelectInvalid || ($(this).val() == "");
+      })
+    }
+
+    return (
+        item.hasClass('none')
+        || (!item.find('.required').length)
+        || item.find('input:checked').length
+        || (item.find('input[type=text]').length && item.find('input').val() != "")
+        || (item.find('input[type=number]').length && (/^[+]?[0-9]+$/.test(item.find('input').val())))
+        || (item.find('select').length && !isSelectInvalid )
+      );
+}
 
 
 

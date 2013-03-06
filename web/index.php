@@ -224,9 +224,9 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
     if ($idPage <= count($likertQuestions)) {
         foreach( $likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
             $constraint =
-            null == is_array($likertQuestion['scale']) ?
-            null :
-            new Assert\Choice(array_keys($likertScales[ $likertQuestion['scale'] ])) ;
+                null == is_array($likertQuestion['scale']) ?
+                null :
+                new Assert\Choice(array_keys($likertScales[ $likertQuestion['scale'] ])) ;
             $formBuilder->add( 'page'.$idPage.'_item'.$qKey , 'choice', array(
                 'choices' => $likertScales[ $likertQuestion['scale'] ] ,
                 'expanded' => true,
@@ -245,6 +245,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'required' => true,
             ))
         ->add( 'Sexe', 'choice', array(
+            'empty_value' => '-sélectionner-',
             'choices' => array('Homme','Femme') ,
             'expanded' => true,
             'multiple' => false,
@@ -253,6 +254,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'required' => true,
             ))
         ->add( 'Situation_famille', 'choice', array(
+            'empty_value' => '-sélectionner-',
             'choices' => array('Seul','En couple') ,
             'expanded' => true,
             'multiple' => false,
@@ -260,26 +262,28 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'label' => "Situation familiale :",
             'required' => true,
             ))
-        ->add( 'Nombre_enfants_a_charge', 'integer', array(
+        ->add( 'Nombre_enfants_a_charge', 'choice', array(
             'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
-            'label' => "Nombre d'enfants ou de personnes à votre charge :"
+            'label' => "Nombre d'enfants ou de personnes à votre charge :",
+            'empty_value' => '-sélectionner-',
+            'choices' => range(0, 10) 
             ))
         ->add( 'Profession', 'choice', array(
+            'empty_value' => '-sélectionner-',
             'choices' => $jobs ,
             'expanded' => false,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($jobs)),
             'label' => "Quelle est votre profession ?",
-            'empty_value' => '',
             'required' => true,
             ))
         ->add( 'Secteur', 'choice', array(
+            'empty_value' => '-sélectionner-',
             'choices' => $sectors ,
             'expanded' => false,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($sectors)),
             'label' => "Quel est le type de secteur de votre entreprise ?",
-            'empty_value' => '',
             'required' => true,
             ))
         ->add( 'Intitule_poste', 'text', array(
@@ -295,6 +299,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'required' => true,
             ))
         ->add( 'travaillez_vous', 'choice', array(
+            'empty_value' => '-sélectionner-',
             'label' => 'Travaillez-vous',
             'required' => true,
             'choices' => array(
@@ -309,16 +314,59 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'label' => 'Si autre, précisez',
             'required' => false,
             ))
-        ->add( 'Satisfaction_salaire', 'text', array(
+        ->add( 'Satisfaction_salaire', 'choice', array(
             'label' => "Êtes-vous satisfait(e) de votre salaire net mensuel ?",
             'required' => true,
+            'expanded' => true,
+            'choices' => array(
+                'oui',
+                'non',
+            ) 
             ))
-        ->add( 'Duree_poste', 'text', array(
-            'label' => "Depuis quand travaillez-vous dans votre poste actuel ?",
+        ;
+
+        $formBuilder2 = $app['form.factory']
+        ->createNamedBuilder('Duree_poste', 'form', null, array(
+            'label' => "Depuis quand travaillez-vous à votre poste actuel (années et mois) ?",
             'required' => true,
             ))
-        ->add( 'Duree_entreprise', 'text', array(
-            'label' => "Depuis quand travaillez-vous dans votre entreprise actuelle ?",
+        ->add('Duree_poste_ans', 'choice', array(
+            'label' => ' ',
+            'required' => true,
+            'empty_value' => '-années-',
+            'choices' => range(0, 45) 
+            ))
+        ->add('Duree_poste_mois', 'choice', array(
+            'label' => ' ',
+            'required' => true,
+            'empty_value' => '-mois-',
+            'choices' => range(0, 11) 
+            ))
+        ;
+        $formBuilder3 = $app['form.factory']
+        ->createNamedBuilder('Duree_societe', 'form', null, array(
+            'label' => "Depuis quand travaillez-vous dans votre entreprise actuel (années et mois) ?",
+            'required' => true,
+            ))
+        ->add('Duree_societe_ans', 'choice', array(
+            'label' => ' ',
+            'required' => true,
+            'empty_value' => '-années-',
+            'choices' => range(0, 45) 
+            ))
+        ->add('Duree_societe_mois', 'choice', array(
+            'label' => ' ',
+            'required' => true,
+            'empty_value' => '-mois-',
+            'choices' => range(0, 11) 
+            ))
+        ;
+
+        $formBuilder
+        ->add($formBuilder2, null, array(
+            'required' => true,
+            ))
+        ->add($formBuilder3, null, array(
             'required' => true,
             ))
         ->add( 'Societe', 'text', array(
@@ -330,8 +378,8 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'expanded' => false,
             'multiple' => false,
             'constraints' => new Assert\Choice(array_keys($domains)),
-            'label' => "A quelle branche appartient votre entreprise ?",
-            'empty_value' => '',
+            'label' => "À quelle branche appartient votre entreprise ?",
+            'empty_value' => '-sélectionner-',
             'required' => true,
             ))
         ->add( 'Domain_other', 'text', array(
@@ -355,6 +403,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
 
         if ($form->isValid()) {
             $formData = $form->getData();
+            // var_dump($formData);die;
             $data = array_merge($sessionData, $formData);
             $app['session']->set('data',$data);
 
@@ -364,7 +413,10 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
                 $data = array_merge(array('dateFin' => $time),$data);
 
                 $dataList = "";
-                foreach ($data as $key => $value) {
+                foreach ($data as $key => &$value) {
+                    if (is_array($value)) {
+                        $value = implode('-', $value);
+                    }
                     $dataList .= $key .': '. $value. "\n";
                 }
 
@@ -377,7 +429,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
                 $app['mailer']->send($message);
 
                 $handle = fopen(__DIR__ . '/../reponses/_toutes.csv', 'a');
-                fputcsv($handle, $data. ';');
+                fputcsv($handle, $data, ';');
                 fclose($handle);
 
                 $handle = fopen(__DIR__ . '/../reponses/'.$time.'.csv', 'w');
