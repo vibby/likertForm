@@ -1,5 +1,6 @@
 
 $(document).ready(function() {
+  /*
     $('select').change(function() {
       someUnselected = false;
       item = $(this).parent().parent().parent();
@@ -10,6 +11,12 @@ $(document).ready(function() {
       }
       if (!someUnselected) {
         $('.nav .next').trigger('click');
+      }
+    });
+*/
+    $('#form>div').each(function(){
+      if ($(this).find('select').length) {
+        $(this).append('<button type="button">ok</button>');        
       }
     });
 

@@ -364,5 +364,8 @@ input.button {
 #form .needed{
     border-color:#F00;
 }
+#form div div div{
+    display: inline-block;
+}
 
 

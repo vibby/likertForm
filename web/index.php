@@ -5,7 +5,7 @@
  *
  * @category  Silex_Based_App
  * @package   Likert
- * @author    vibby <vibby@example.com>
+ * @author    vibby <vincent@beauvivre.com>
  * @copyright 1997-2005 The PHP Group
  * @license   GNU GPL
  * @link      https://github.com/vibby/likertForm
@@ -20,7 +20,7 @@ use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\HttpFoundation\Response;
 
 $app = new Silex\Application();
-$app['debug'] = true;
+// $app['debug'] = true;
 
 $app->register(new FormServiceProvider());
 $app->register(new Silex\Provider\ValidatorServiceProvider());
@@ -30,7 +30,7 @@ $app->register(new Silex\Provider\TranslationServiceProvider(), array(
     ));
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/view',
-    'twig.options' => array('debug' => true)
+    // 'twig.options' => array('debug' => true)
     ));
     // $app['twig']->addExtension(new Twig_Extensions_Extension_Debug());
 
@@ -39,7 +39,9 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 $app['swiftmailer.options'] = $config['swiftmailer']['options'];
 
 $app->match('/', function (Request $request) use ($app) {
-    return $app['twig']->render('index.html.twig');
+    return $app['twig']->render('index.html.twig', array(
+        'dataFound' => $app['session']->get('data') ? true : false,
+    ));
 });
 
 $app->match('/merci', function (Request $request) use ($app) {
