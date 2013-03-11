@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="../css/style.css" media="all">
     {% block head %}
     {% endblock %}
+
+    {% if ie is not defined %}
+    <!--[if IE]>
+        <meta HTTP-EQUIV="REFRESH" content="0; url=http://likert.beauvivre.fr/ie-no-more">
+    <![endif]-->
+    <!--[if IE]>
+    <script type="text/javascript">
+    window.location = "http://likert.beauvivre.fr/ie-no-more";
+    </script>
+    <![endif]-->
+    {% endif %}
 </head>
 
 

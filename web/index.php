@@ -44,6 +44,10 @@ $app->match('/', function (Request $request) use ($app) {
     ));
 });
 
+$app->match('/ie-no-more', function (Request $request) use ($app) {
+    return $app['twig']->render('ie-no-more.html.twig', array('ie' => true));
+});
+
 $app->match('/merci', function (Request $request) use ($app) {
     return $app['twig']->render('merci.html.twig');
 });
