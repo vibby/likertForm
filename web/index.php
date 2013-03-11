@@ -223,6 +223,8 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
     } while (array_key_exists('page'. $idPage, $likertQuestions) && !$found);
 
     $formBuilder = $app['form.factory']->createBuilder('form', $sessionData);
+    $isLastPage = false;
+
     if ($idPage <= count($likertQuestions)) {
         foreach( $likertQuestions['page'. $idPage] as $qKey => $likertQuestion) {
             $constraint =
@@ -241,6 +243,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
                 ));
         }
     } else {
+        $isLastPage = true;
         $formBuilder
         ->add( 'age', 'integer', array(
             'label' => "Votre age",
@@ -268,7 +271,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'constraints' => new Assert\Type('Integer', 'Cette valeur doit être un nombre entier'),
             'label' => "Nombre d'enfants ou de personnes à votre charge :",
             'empty_value' => '-sélectionner-',
-            'choices' => range(0, 10) 
+            'choices' => range(0, 10)
             ))
         ->add( 'Profession', 'choice', array(
             'empty_value' => '-sélectionner-',
@@ -310,7 +313,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
                 'en 2/8',
                 'en 3/8',
                 'autre (précisez)',
-            ) 
+            )
         ))
         ->add('travaillez_vous_other', 'text', array(
             'label' => 'Si autre, précisez',
@@ -323,7 +326,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'choices' => array(
                 'oui',
                 'non',
-            ) 
+            )
             ))
         ;
 
@@ -336,13 +339,13 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'label' => ' ',
             'required' => true,
             'empty_value' => '-années-',
-            'choices' => range(0, 45) 
+            'choices' => range(0, 45)
             ))
         ->add('Duree_poste_mois', 'choice', array(
             'label' => ' ',
             'required' => true,
             'empty_value' => '-mois-',
-            'choices' => range(0, 11) 
+            'choices' => range(0, 11)
             ))
         ;
         $formBuilder3 = $app['form.factory']
@@ -354,13 +357,13 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
             'label' => ' ',
             'required' => true,
             'empty_value' => '-années-',
-            'choices' => range(0, 45) 
+            'choices' => range(0, 45)
             ))
         ->add('Duree_societe_mois', 'choice', array(
             'label' => ' ',
             'required' => true,
             'empty_value' => '-mois-',
-            'choices' => range(0, 11) 
+            'choices' => range(0, 11)
             ))
         ;
 
@@ -455,6 +458,7 @@ $app->match('/questionnaire', function (Request $request) use ($app) {
         'shownPage' => $idPage,
         'scales' => array_keys($likertScales),
         'pages' => range(1, count($likertQuestions) + 1),
+        'isLastPage' => $isLastPage,
         ));
 })->convert('idPage', function ($id) { return (int) $id; });
 

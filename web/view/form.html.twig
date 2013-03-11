@@ -81,8 +81,13 @@
             <div>
                 {{ form_widget(form) }}
                 <div>
-                    <p>Valider cette partie et commencer la suivante :</p>
-                    <input type="submit" class="button button-primary right" name="submit" value="Continuer" />
+                    {% if isLastPage %}
+                        <p>Valider votre participation à l’enquête</p>
+                        <input type="submit" class="button button-primary right" name="submit" value="Valider" />
+                    {% else %}
+                        <p>Valider cette partie et commencer la suivante</p>
+                        <input type="submit" class="button button-primary right" name="submit" value="Continuer" />
+                    {% endif %}
                 </div>
             </div>
        </form>

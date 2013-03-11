@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"inline-block"
+			],
+			[
 				"imp",
 				"implode"
 			],
@@ -94,10 +98,6 @@
 			[
 				"font",
 				"font-weight"
-			],
-			[
-				"i",
-				"intro7"
 			],
 			[
 				"text",
@@ -375,7 +375,7 @@
 			"file": "web/index.php",
 			"settings":
 			{
-				"buffer_size": 16733,
+				"buffer_size": 16815,
 				"line_ending": "Unix"
 			}
 		},
@@ -423,7 +423,7 @@
 			"file": "web/css/style.css",
 			"settings":
 			{
-				"buffer_size": 9703,
+				"buffer_size": 9751,
 				"line_ending": "Unix"
 			}
 		},
@@ -431,15 +431,25 @@
 			"file": "web/view/form.html.twig",
 			"settings":
 			{
-				"buffer_size": 2286,
+				"buffer_size": 3095,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 3942 files for \"<input type=\"{{ type }}\"\"\n\n/home/vibby/dev/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig:\n   14  {% spaceless %}\n   15      {% set type = type|default('text') %}\n   16:     <input type=\"{{ type }}\" {{ block('widget_attributes') }} {% if value is not empty %}value=\"{{ value }}\" {% endif %}/>\n   17  {% endspaceless %}\n   18  {% endblock form_widget_simple %}\n\n/home/vibby/dev/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Tests/Extension/theme.html.twig:\n    2  {% spaceless %}\n    3      {% set type = type|default('text') %}\n    4:     <input type=\"{{ type }}\" {{ block('widget_attributes') }} value=\"{{ value }}\" rel=\"theme\" />\n    5  {% endspaceless %}\n    6  {% endblock form_widget_simple %}\n\n/home/vibby/dev/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Tests/Extension/theme_extends.html.twig:\n    4  {% spaceless %}\n    5      {% set type = type|default('text') %}\n    6:     <input type=\"{{ type }}\" {{ block('widget_attributes') }} value=\"{{ value }}\" rel=\"theme\" />\n    7  {% endspaceless %}\n    8  {% endblock form_widget_simple %}\n\n/home/vibby/dev/likertForm/vendor/symfony/twig-bridge/Symfony/Bridge/Twig/Tests/Extension/theme_use.html.twig:\n    4  {% spaceless %}\n    5      {% set type = type|default('text') %}\n    6:     <input type=\"{{ type }}\" {{ block('widget_attributes') }} value=\"{{ value }}\" rel=\"theme\" />\n    7  {% endspaceless %}\n    8  {% endblock form_widget_simple %}\n\n/home/vibby/dev/likertForm/vendor/twig/twig/doc/templates.rst:\n  542  \n  543      {% macro input(name, value = \"\", type = \"text\", size = 20) %}\n  544:         <input type=\"{{ type }}\" name=\"{{ name }}\" value=\"{{ value|e }}\" size=\"{{ size }}\" />\n  545      {% endmacro %}\n  546  \n\n5 matches across 5 files\n",
+			"settings":
+			{
+				"buffer_size": 1815,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
 			"file": "web/js/likert.js",
 			"settings":
 			{
-				"buffer_size": 4451,
+				"buffer_size": 4623,
 				"line_ending": "Unix"
 			}
 		},
@@ -471,7 +481,15 @@
 			"file": "reponses/_toutes.csv",
 			"settings":
 			{
-				"buffer_size": 338,
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/view/index.html.twig",
+			"settings":
+			{
+				"buffer_size": 1873,
 				"line_ending": "Unix"
 			}
 		}
@@ -710,6 +728,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/home/vibby/dev/likertForm/vendor",
 			"<project>",
 			"/var/www/html/likertForm/vendor",
 			"/var/www/html/Ponroy/vendor",
@@ -764,6 +783,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<sele",
+			"sele",
+			"<input type=\"{{ type }}\"",
 			"likert",
 			"Likert",
 			"Test",
@@ -888,9 +910,6 @@
 			"faros_admin.menu.main_nav",
 			"faros_admin.menu.builder",
 			"faros_admin.menu.sub_nav",
-			"menu",
-			"POSTCONFIGURE",
-			"post",
 			"menu"
 		],
 		"highlight": true,
@@ -963,7 +982,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -999,15 +1018,15 @@
 					"file": "web/index.php",
 					"settings":
 					{
-						"buffer_size": 16733,
+						"buffer_size": 16815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								564,
-								564
+								1532,
+								1532
 							]
 						],
 						"settings":
@@ -1017,7 +1036,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 646.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1034,8 +1053,8 @@
 						"selection":
 						[
 							[
-								1011,
-								1011
+								473,
+								473
 							]
 						],
 						"settings":
@@ -1144,8 +1163,8 @@
 						"selection":
 						[
 							[
-								472,
-								472
+								1776,
+								1776
 							]
 						],
 						"settings":
@@ -1155,7 +1174,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13.0,
+						"translation.y": 721.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1165,15 +1184,15 @@
 					"file": "web/css/style.css",
 					"settings":
 					{
-						"buffer_size": 9703,
+						"buffer_size": 9751,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2717,
-								2717
+								9037,
+								9037
 							]
 						],
 						"settings":
@@ -1183,7 +1202,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 882.0,
+						"translation.y": 5289.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1193,15 +1212,15 @@
 					"file": "web/view/form.html.twig",
 					"settings":
 					{
-						"buffer_size": 2286,
+						"buffer_size": 3095,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2014,
-								2014
+								1695,
+								1695
 							]
 						],
 						"settings":
@@ -1211,25 +1230,84 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 292.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 9,
+					"settings":
+					{
+						"buffer_size": 1815,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										258,
+										282
+									],
+									[
+										635,
+										659
+									],
+									[
+										994,
+										1018
+									],
+									[
+										1349,
+										1373
+									],
+									[
+										1669,
+										1693
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								278,
+								278
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "web/js/likert.js",
 					"settings":
 					{
-						"buffer_size": 4451,
+						"buffer_size": 4623,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								146,
-								146
+								488,
+								488
 							]
 						],
 						"settings":
@@ -1245,7 +1323,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "composer.json",
 					"settings":
 					{
@@ -1273,7 +1351,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "config/config.yml",
 					"settings":
 					{
@@ -1299,7 +1377,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "config/config.yml.dist",
 					"settings":
 					{
@@ -1325,11 +1403,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "reponses/_toutes.csv",
 					"settings":
 					{
-						"buffer_size": 338,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -1343,6 +1421,34 @@
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "web/view/index.html.twig",
+					"settings":
+					{
+						"buffer_size": 1873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								448,
+								448
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1921,6 +2027,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 194.0,
+	"side_bar_width": 353.0,
 	"status_bar_visible": true
 }
